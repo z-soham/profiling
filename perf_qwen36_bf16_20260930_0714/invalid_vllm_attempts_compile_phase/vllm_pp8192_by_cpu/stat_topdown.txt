@@ -1,0 +1,29 @@
+# started on Wed Sep 30 08:11:48 2026
+
+
+ Performance counter stats for 'CPU(s) 32-63':
+
+          51188040      ex_ret_brn_misp                  #      0.1 %ops  bad_speculation_from_mispredicts
+                                                         #      0.1 %ops  bad_speculation_from_pipeline_restarts  (20.00%)
+          27519031      bp_redirects.resync                                                     (20.00%)
+      310012814649      de_src_op_disp.all               #      0.2 %ops  bad_speculation       (20.00%)
+      195953894428      ls_not_halted_cyc                                                       (20.00%)
+      306501629698      ex_ret_ops                       #     19.6 %slots  retiring            (20.00%)
+       65545912292      ex_no_retire.load_not_complete   #      4.8 %slots  backend_bound_by_cpu
+                                                         #     45.5 %slots  backend_bound_by_memory  (20.00%)
+      792058758603      de_no_dispatch_per_slot.backend_stalls #     50.3 %slots  backend_bound       (20.00%)
+       72492021637      ex_no_retire.not_complete                                               (20.00%)
+      196796843386      ls_not_halted_cyc                                                       (20.00%)
+       34305019700      ex_ret_ucode_ops                 #     17.3 %slots  retiring_from_fastpath
+                                                         #      2.2 %slots  retiring_from_microcode  (20.01%)
+      196893875408      ls_not_halted_cyc                                                       (20.01%)
+      306283390520      ex_ret_ops                                                              (20.01%)
+      462208708673      de_no_dispatch_per_slot.no_ops_from_frontend #     29.5 %slots  frontend_bound    
+                                                         #     22.7 %slots  frontend_bound_by_bandwidth  (40.00%)
+      196108520764      ls_not_halted_cyc                                                       (40.00%)
+       13166563855      cpu/de_no_dispatch_per_slot.no_ops_from_frontend,cmask=0x8/ #      6.7 %slots  frontend_bound_by_latency  (40.00%)
+                 0      de_no_dispatch_per_slot.smt_contention #      0.0 %slots  smt_contention      (39.99%)
+      194905297510      ls_not_halted_cyc                                                       (39.99%)
+
+      15.007860834 seconds time elapsed
+

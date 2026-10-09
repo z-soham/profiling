@@ -1,0 +1,49 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 396K of event 'cpu/cycles/P'
+# Event count (approx.): 1054518154979
+#
+# Overhead  Shared Object           Symbol                                                                                                                                                                                                                                                                                   
+# ........  ......................  .........................................................................................................................................................................................................................................................................................
+#
+    42.87%  libggml-cpu.so.0.26.0   [.] ggml_vec_dot_bf16
+    14.49%  libggml-cpu.so.0.26.0   [.] void (anonymous namespace)::tinyBLAS<32, float __vector(16), std::bfloat16_t __vector(32), ggml_bf16_t, ggml_bf16_t, float>::gemm_bloc<4, 6>(long, long)
+    12.80%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_flash_attn_ext_tiled(ggml_compute_params const*, ggml_tensor*, int, int)
+     5.16%  libomp.so.5             [.] 0x000000000007df00
+     4.62%  libggml-cpu.so.0.26.0   [.] ggml_graph_compute_thread.isra.0
+     3.34%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_gated_delta_net
+     2.31%  libggml-cpu.so.0.26.0   [.] ggml_vec_dot_f32
+     1.75%  libggml-cpu.so.0.26.0   [.] ggml_cpu_fp32_to_bf16
+     1.69%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_ssm_conv
+     1.05%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_mul
+     0.97%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_rms_norm_mul_fused
+     0.88%  libggml-cpu.so.0.26.0   [.] void (anonymous namespace)::tinyBLAS<16, float __vector(16), float __vector(16), float, float, float>::gemm_bloc<4, 6>(long, long)
+     0.71%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_concat
+     0.68%  libggml-cpu.so.0.26.0   [.] ggml_vec_silu_f32
+     0.59%  libggml-cpu.so.0.26.0   [.] ggml_vec_swiglu_f32
+     0.51%  libggml-cpu.so.0.26.0   [.] ggml_cpu_fp16_to_fp32
+     0.50%  libggml-cpu.so.0.26.0   [.] void (anonymous namespace)::tinyBLAS<32, float __vector(16), std::bfloat16_t __vector(32), ggml_bf16_t, ggml_bf16_t, float>::gemm_bloc<4, 5>(long, long)
+     0.48%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_add_non_quantized
+     0.33%  libomp.so.5             [.] 0x00000000000e1140
+     0.27%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_rms_norm
+     0.20%  libggml-cpu.so.0.26.0   [.] ggml_vec_soft_max_f32
+     0.19%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_scale
+     0.18%  libggml-cpu.so.0.26.0   [.] void std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> > >(int*, int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> >)
+     0.08%  libomp.so.5             [.] 0x000000000007dfc6
+     0.08%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_mul_mat
+     0.08%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_argsort
+     0.08%  libggml-cpu.so.0.26.0   [.] void (anonymous namespace)::tinyBLAS<32, float __vector(16), std::bfloat16_t __vector(32), ggml_bf16_t, ggml_bf16_t, float>::gemm<4, 6, 4>(long, long, long) [clone .constprop.0]
+     0.08%  [kernel.kallsyms]       [k] __calc_delta.constprop.0
+     0.07%  libomp.so.5             [.] 0x000000000007ad1f
+     0.07%  libggml-cpu.so.0.26.0   [.] ggml_compute_forward_sigmoid
+     0.07%  libggml-cpu.so.0.26.0   [.] void ggml_compute_forward_rope_flt<float>(ggml_compute_params const*, ggml_tensor*, bool)
+     0.06%  libggml-cpu.so.0.26.0   [.] memcpy@plt
+     0.06%  libggml-cpu.so.0.26.0   [.] ggml_vec_dot_f32@plt
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

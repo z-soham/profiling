@@ -1,0 +1,12 @@
+# started on Wed Oct  7 05:34:32 2026
+
+
+ Performance counter stats for process id '1960383':
+
+     1010652758031      cycles                                                                
+     1844200831716      instructions                                                          
+    24409078929912      fp_ret_sse_avx_ops.all                                                
+    24078421825218      fp_ret_sse_avx_ops.mac_flops                                          
+
+      15.007019189 seconds time elapsed
+

@@ -1,0 +1,72 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 381K of event 'cpu/cycles/P'
+# Event count (approx.): 1021021019872
+#
+# Overhead  Command          Shared Object                                               
+# ........  ...............  ............................................................
+#
+    43.22%  VLLM::Worker     [JIT] tid 922302                                            
+    33.40%  VLLM::Worker     _C.abi3.so                                                  
+    13.95%  VLLM::Worker     libiomp5.so                                                 
+     3.90%  VLLM::Worker     libtorch_cpu.so                                             
+     1.50%  VLLM::Worker     libzentorch.so                                              
+     0.90%  VLLM::Worker     cjkl35cnfyz3knsmpysdahluwuqbz3vi44g32vo2k5eb3lpfcgvr.main.so
+     0.85%  VLLM::Worker     [kernel.kallsyms]                                           
+     0.65%  VLLM::Worker     libc.so.6                                                   
+     0.46%  VLLM::Worker     ctvju5drqthy3adws5jblb5tumifdpeifd4f4dqxoz7u4jz5eztt.main.so
+     0.33%  VLLM::Worker     c2p6m3t4emmkzeip24xxcwhgl2v2b4wn2pcnzie2n3tr5ncgefb5.main.so
+     0.23%  VLLM::Worker     cg4uldivffnmxssnvgc2mvtwhjoxcbtecv2a5ra5ddwdq3h3rsur.main.so
+     0.18%  VLLM::Worker     ck6utlskpnvwob7pfdb7z7l2kxtr7i36rz6sau4spfo2ke5al2in.main.so
+     0.14%  VLLM::Worker     cimydndyut47bzsj6h3plzncmsqbjcgqayge227kcfjupzzl4sbh.main.so
+     0.05%  VLLM::EngineCor  python3.12                                                  
+     0.04%  VLLM::Worker     ch5gv5wmsnomkkawlapz2xjb6prixwisx4rh6zm5qbq6hikychls.main.so
+     0.04%  gloo_tcp_loop    [kernel.kallsyms]                                           
+     0.03%  sleep            [kernel.kallsyms]                                           
+     0.02%  VLLM::Worker     cpismtrwtz634uqfyhw6mjz5n55va2kyf5mt4pz6n2qr7osneoqw.main.so
+     0.01%  VLLM::EngineCor  [kernel.kallsyms]                                           
+     0.01%  longhorn         [kernel.kallsyms]                                           
+     0.01%  VLLM::Worker     libm.so.6                                                   
+     0.01%  perf.bin         [kernel.kallsyms]                                           
+     0.01%  VLLM::Worker     ck5h7zpsyuxwky5cin75ussbmcbnxy4od5rkb676zhi2hsbuy6v3.main.so
+     0.01%  VLLM::Worker     cq2fhxv4c3fngztoi2genog45ryxdkzxz6bhqfvoje3m6etvrelm.main.so
+     0.01%  VLLM::Worker     python3.12                                                  
+     0.00%  iptables         [kernel.kallsyms]                                           
+     0.00%  VLLM::Worker     libtcmalloc_minimal.so.4.5.16                               
+     0.00%  VLLM::Worker     csmsfxokqu5c6edvwo3qkutu5uk3vk3jmyh266clsfl6seti5dtt.main.so
+     0.00%  VLLM::Worker     libc10.so                                                   
+     0.00%  VLLM::EngineCor  libc.so.6                                                   
+     0.00%  VLLM::Worker     libtorch_python.so                                          
+     0.00%  VLLM::Worker     ld-linux-x86-64.so.2                                        
+     0.00%  VLLM::EngineCor  [vdso]                                                      
+     0.00%  bash             [kernel.kallsyms]                                           
+     0.00%  nft              [kernel.kallsyms]                                           
+     0.00%  VLLM::Worker     ci4utbdgewvgl7fbz5twegfur4s223mmn6ex6rov3enlmudeoszx.main.so
+     0.00%  VLLM::Worker     libstdc++.so.6.0.33                                         
+     0.00%  nc               [kernel.kallsyms]                                           
+     0.00%  vllm             tokenizers.abi3.so                                          
+     0.00%  gloo_tcp_loop    libtorch_cpu.so                                             
+     0.00%  ip6tables        [kernel.kallsyms]                                           
+     0.00%  gloo_tcp_loop    libc.so.6                                                   
+     0.00%  perf-exec        [kernel.kallsyms]                                           
+     0.00%  perf.bin         perf.bin                                                    
+     0.00%  umount           [kernel.kallsyms]                                           
+     0.00%  6                [kernel.kallsyms]                                           
+     0.00%  workqueue        [kernel.kallsyms]                                           
+     0.00%  bash             libc.so.6 (deleted)                                         
+     0.00%  vllm             _core.cpython-312-x86_64-linux-gnu.so                       
+     0.00%  runc             [kernel.kallsyms]                                           
+     0.00%  VLLM::EngineCor  _core.cpython-312-x86_64-linux-gnu.so                       
+     0.00%  vllm             python3.12                                                  
+     0.00%  sleep            ld-linux-x86-64.so.2                                        
+     0.00%  vllm             [kernel.kallsyms]                                           
+     0.00%  sleep            libc.so.6                                                   
+     0.00%  perf.bin         libc.so.6                                                   
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

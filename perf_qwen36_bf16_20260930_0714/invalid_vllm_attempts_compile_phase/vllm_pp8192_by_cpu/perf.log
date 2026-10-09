@@ -1,0 +1,4 @@
+[ perf record: Woken up 4 times to write data ]
+[ perf record: Captured and wrote 1.600 MB /tmp/perf_llama.fseAjo/vllm_pp8192/flat.data (15794 samples) ]
+[ perf record: Woken up 16 times to write data ]
+[ perf record: Captured and wrote 6.013 MB /tmp/perf_llama.fseAjo/vllm_pp8192/stacks.data (18776 samples) ]

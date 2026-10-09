@@ -1,0 +1,27 @@
+op           backend  count
+ADD          CPU  430
+ARGSORT      CPU  40
+CLAMP        CPU  40
+CONCAT       CPU  30
+CONT         CPU  10
+CPY          CPU  120
+DIV          CPU  40
+FLASH_ATTN   CPU  10
+GATED_DELT   CPU  30
+GET_ROWS     CPU  162
+MUL          CPU  281
+MUL_MAT      ZenDN  391
+MUL_MAT_ID   ZenDN  120
+RMS_NORM     CPU  191
+ROPE         CPU  20
+SCALE        CPU  120
+SET_ROWS     CPU  20
+SIGMOID      CPU  80
+SILU         CPU  60
+SOFTPLUS     CPU  30
+SOFT_MAX     CPU  40
+SSM_CONV     CPU  30
+SUM_ROWS     CPU  40
+SWIGLU       CPU  80
+
+splits:  CPU=381  ZenDNN=381

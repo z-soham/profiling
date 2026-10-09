@@ -1,0 +1,14 @@
+# started on Wed Sep 30 07:40:43 2026
+
+
+ Performance counter stats for process id '221633':
+
+      574537381380      cycles                                                                
+       56289851500      l2_request_g1.all                                                     
+        3123747597      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        1800121433      l2_pf_miss_l2_l3.l2_hwpf                                              
+        3454705493      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        1788695475      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.004502875 seconds time elapsed
+

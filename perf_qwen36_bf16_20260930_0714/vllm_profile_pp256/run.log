@@ -1,0 +1,175 @@
+INFO 09-30 07:48:09 [__init__.py:211] AMD Zen CPU detected with zentorch installed, using ZenCpuPlatform.
+INFO 09-30 07:48:09 [__init__.py:211] AMD Zen CPU detected with zentorch installed, using ZenCpuPlatform.
+WARNING 09-30 07:48:20 [importing.py:45] Triton is installed, but doesn't include CPU backend. Disabling Triton.
+INFO 09-30 07:48:20 [importing.py:74] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 09-30 07:48:20 [importing.py:98] Triton not installed or not compatible; certain GPU-related functions will not be available.
+INFO 09-30 07:48:23 [api_utils.py:286] non-default args: {'max_model_len': 16384, 'distributed_executor_backend': 'mp', 'enable_prefix_caching': False, 'max_num_batched_tokens': 4096, 'max_num_seqs': 1, 'language_model_only': True, 'mm_device_do_normalize': None, 'enable_lora': None, 'reasoning_parser_plugin': '', 'enable_bf16x3_router_gemm': False, 'profiler_config': ProfilerConfig(profiler='torch', torch_profiler_dir='/proj/aigstaff/sohroy/profiling/perf_qwen36_bf16_20260930_0714/vllm_profile_pp256', proton_profiler_dir='', proton_context='shadow', proton_data='tree', proton_backend=None, proton_mode=None, proton_hook=None, proton_output_format=None, torch_profiler_with_stack=False, torch_profiler_with_flops=False, torch_profiler_use_gzip=True, torch_profiler_dump_cuda_time_total=False, torch_profiler_record_shapes=True, torch_profiler_with_memory=False, capture_torch_profiler=False, detailed_trace_annotation=False, ignore_frontend=False, delay_iterations=0, max_iterations=0, warmup_iterations=0, active_iterations=5, wait_iterations=0), 'model': '/proj/rdi/staff/sacsharm/models/hf/Qwen3.6-35B-A3B'}
+INFO 09-30 07:48:23 [model.py:691] Resolved architecture: Qwen3_5MoeForConditionalGeneration
+INFO 09-30 07:48:23 [model.py:2031] Using max model len 16384
+INFO 09-30 07:48:24 [registry.py:146] All limits of multimodal modalities supported by the model are set to 0, running in text-only mode.
+INFO 09-30 07:48:24 [model.py:897] Disabled mm_prefix attention mode because multimodal inputs are configuration-disabled. Attention backends without mm_prefix support may now be selected.
+INFO 09-30 07:48:24 [scheduler.py:277] Chunked prefill is enabled with max_num_batched_tokens=4096.
+INFO 09-30 07:48:24 [kernel.py:372] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+WARNING 09-30 07:48:24 [vllm.py:674] Model Runner V2 requires Triton; using the V1 model runner instead.
+INFO 09-30 07:48:31 [__init__.py:211] AMD Zen CPU detected with zentorch installed, using ZenCpuPlatform.
+INFO 09-30 07:48:31 [__init__.py:211] AMD Zen CPU detected with zentorch installed, using ZenCpuPlatform.
+WARNING 09-30 07:48:36 [importing.py:45] Triton is installed, but doesn't include CPU backend. Disabling Triton.
+INFO 09-30 07:48:36 [importing.py:74] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 09-30 07:48:36 [importing.py:98] Triton not installed or not compatible; certain GPU-related functions will not be available.
+(EngineCore pid=222973) INFO 09-30 07:48:36 [core.py:123] Initializing a V1 LLM engine (v0.28.1rc1.dev485+g58ad1f3b8) with config: model='/proj/rdi/staff/sacsharm/models/hf/Qwen3.6-35B-A3B', speculative_config=None, tokenizer='/proj/rdi/staff/sacsharm/models/hf/Qwen3.6-35B-A3B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=16384, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=True, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cpu, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=/proj/rdi/staff/sacsharm/models/hf/Qwen3.6-35B-A3B, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.DYNAMO_TRACE_ONCE: 2>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': [4096], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'dce': True, 'size_asserts': False, 'nan_asserts': False, 'epilogue_fusion': True, 'cpp.dynamic_threads': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': None, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=222973) INFO 09-30 07:48:36 [multiproc_executor.py:153] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=192.168.13.32 (local), world_size=1, local_world_size=1
+(EngineCore pid=222973) INFO 09-30 07:48:36 [ompmultiprocessing.py:185] OpenMP thread binding info: 
+(EngineCore pid=222973) INFO 09-30 07:48:36 [ompmultiprocessing.py:185] 	VLLM_CPU_OMP_THREADS_BIND='32-63', auto_setup=False, skip_setup=False
+(EngineCore pid=222973) INFO 09-30 07:48:36 [ompmultiprocessing.py:185] 	local_world_size=1, reserve_cpu_num=1
+(EngineCore pid=222973) INFO 09-30 07:48:36 [ompmultiprocessing.py:185] 	local_rank=0, core ids=[32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]
+(EngineCore pid=222973) INFO 09-30 07:48:36 [ompmultiprocessing.py:185] 	reserved_cpus=[]
+INFO 09-30 07:48:40 [__init__.py:211] AMD Zen CPU detected with zentorch installed, using ZenCpuPlatform.
+INFO 09-30 07:48:40 [__init__.py:211] AMD Zen CPU detected with zentorch installed, using ZenCpuPlatform.
+WARNING 09-30 07:48:45 [importing.py:45] Triton is installed, but doesn't include CPU backend. Disabling Triton.
+INFO 09-30 07:48:45 [importing.py:74] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 09-30 07:48:45 [importing.py:98] Triton not installed or not compatible; certain GPU-related functions will not be available.
+INFO 09-30 07:48:47 [registry.py:146] All limits of multimodal modalities supported by the model are set to 0, running in text-only mode.
+[W930 07:48:47.849069147 utils.cpp:68] Warning: NUMA binding: Using MEMBIND policy for memory allocation on the NUMA nodes (1). Memory allocations will be strictly bound to these NUMA nodes. (function init_cpu_memory_env)
+WARNING 09-30 07:48:47 [vllm.py:674] Model Runner V2 requires Triton; using the V1 model runner instead.
+INFO 09-30 07:48:47 [wrapper.py:191] Torch profiling enabled. Traces will be saved to: /proj/aigstaff/sohroy/profiling/perf_qwen36_bf16_20260930_0714/vllm_profile_pp256
+(Worker pid=223054) INFO 09-30 07:48:47 [parallel_state.py:1798] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_e80c4105a1dc4a4bb9410b157bc17839 backend=gloo
+(Worker pid=223054) INFO 09-30 07:48:47 [parallel_state.py:2142] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0, EPLB rank N/A
+(Worker pid=223054) INFO 09-30 07:48:48 [cpu_model_runner.py:131] Starting to load model /proj/rdi/staff/sacsharm/models/hf/Qwen3.6-35B-A3B...
+(Worker pid=223054) INFO 09-30 07:48:48 [interface.py:414] Using default backend AttentionBackendEnum.TORCH_SDPA for vit attention
+(Worker pid=223054) INFO 09-30 07:48:48 [mm_encoder_attention.py:372] Using AttentionBackendEnum.TORCH_SDPA for MMEncoderAttention.
+(Worker pid=223054) INFO 09-30 07:48:48 [qwen_gdn_linear_attn.py:156] Using CPU GDN prefill kernel (head_k_dim=128).
+(Worker pid=223054) INFO 09-30 07:48:48 [qwen_gdn_linear_attn.py:520] GDN decode kernel: CPU
+(Worker pid=223054) INFO 09-30 07:48:48 [unquantized.py:319] Using CPU Unquantized MoE backend out of potential backends: ['CPU'].
+(Worker pid=223054) INFO 09-30 07:48:48 [weight_utils.py:895] Filesystem type for checkpoints: NFS. Checkpoint size: 66.97 GiB. Available RAM: 2014.03 GiB.
+(Worker pid=223054) INFO 09-30 07:48:48 [weight_utils.py:857] Prefetching checkpoint files into page cache started (in background, num_threads=8, block_size=16777216 bytes)
+(Worker pid=223054) Loading safetensors checkpoint shards:   0% Completed | 0/26 [00:00<?, ?it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:   4% Completed | 1/26 [00:01<00:29,  1.16s/it]
+(Worker pid=223054) Loading safetensors checkpoint shards:   8% Completed | 2/26 [00:01<00:19,  1.21it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  12% Completed | 3/26 [00:03<00:26,  1.16s/it]
+(Worker pid=223054) Loading safetensors checkpoint shards:  15% Completed | 4/26 [00:05<00:31,  1.44s/it]
+(Worker pid=223054) INFO 09-30 07:48:53 [weight_utils.py:829] Prefetching checkpoint files: 10% (3/26)
+(Worker pid=223054) Loading safetensors checkpoint shards:  19% Completed | 5/26 [00:07<00:35,  1.71s/it]
+(Worker pid=223054) INFO 09-30 07:48:56 [weight_utils.py:829] Prefetching checkpoint files: 20% (6/26)
+(Worker pid=223054) INFO 09-30 07:48:56 [weight_utils.py:829] Prefetching checkpoint files: 30% (8/26)
+(Worker pid=223054) INFO 09-30 07:48:57 [weight_utils.py:829] Prefetching checkpoint files: 40% (11/26)
+(Worker pid=223054) INFO 09-30 07:48:58 [weight_utils.py:829] Prefetching checkpoint files: 50% (13/26)
+(Worker pid=223054) INFO 09-30 07:48:58 [weight_utils.py:829] Prefetching checkpoint files: 60% (16/26)
+(Worker pid=223054) INFO 09-30 07:49:00 [weight_utils.py:829] Prefetching checkpoint files: 70% (19/26)
+(Worker pid=223054) INFO 09-30 07:49:00 [weight_utils.py:829] Prefetching checkpoint files: 80% (21/26)
+(Worker pid=223054) INFO 09-30 07:49:00 [weight_utils.py:829] Prefetching checkpoint files: 90% (24/26)
+(Worker pid=223054) Loading safetensors checkpoint shards:  23% Completed | 6/26 [00:12<00:55,  2.78s/it]
+(Worker pid=223054) Loading safetensors checkpoint shards:  27% Completed | 7/26 [00:12<00:36,  1.92s/it]
+(Worker pid=223054) Loading safetensors checkpoint shards:  31% Completed | 8/26 [00:12<00:25,  1.44s/it]
+(Worker pid=223054) Loading safetensors checkpoint shards:  35% Completed | 9/26 [00:12<00:17,  1.04s/it]
+(Worker pid=223054) Loading safetensors checkpoint shards:  38% Completed | 10/26 [00:13<00:13,  1.15it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  42% Completed | 11/26 [00:13<00:09,  1.55it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  46% Completed | 12/26 [00:14<00:08,  1.73it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  50% Completed | 13/26 [00:14<00:05,  2.17it/s]
+(Worker pid=223054) INFO 09-30 07:49:03 [weight_utils.py:829] Prefetching checkpoint files: 100% (26/26)
+(Worker pid=223054) INFO 09-30 07:49:03 [weight_utils.py:852] Prefetching checkpoint files into page cache finished in 14.52s
+(Worker pid=223054) Loading safetensors checkpoint shards:  54% Completed | 14/26 [00:14<00:05,  2.29it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  58% Completed | 15/26 [00:14<00:03,  2.80it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  62% Completed | 16/26 [00:15<00:03,  2.63it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  65% Completed | 17/26 [00:15<00:02,  3.07it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  69% Completed | 18/26 [00:15<00:02,  2.69it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  73% Completed | 19/26 [00:16<00:02,  3.20it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  77% Completed | 20/26 [00:16<00:01,  3.05it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  81% Completed | 21/26 [00:16<00:01,  3.46it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  85% Completed | 22/26 [00:16<00:01,  3.41it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  88% Completed | 23/26 [00:17<00:01,  2.93it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  92% Completed | 24/26 [00:17<00:00,  2.62it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards:  96% Completed | 25/26 [00:18<00:00,  2.66it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards: 100% Completed | 26/26 [00:18<00:00,  3.19it/s]
+(Worker pid=223054) Loading safetensors checkpoint shards: 100% Completed | 26/26 [00:18<00:00,  1.42it/s]
+(Worker pid=223054) 
+(Worker pid=223054) INFO 09-30 07:49:07 [default_loader.py:430] Loading weights took 18.39 seconds
+(Worker pid=223054) INFO 09-30 07:49:07 [unquantized.py:400] Using MoEPrepareAndFinalizeNoDPEPMonolithic
+(Worker pid=223054) INFO 09-30 07:49:07 [unquantized.py:401] Using CPUUnquantizedExperts MoE backend
+(Worker pid=223054) INFO 09-30 07:49:07 [mamba_utils.py:38] VLLM_SSM_CONV_STATE_LAYOUT env detected. Setting SSM conv state layout to SD.
+(Worker pid=223054) INFO 09-30 07:49:07 [interface.py:933] Setting attention block size to 1152 tokens to ensure that attention page size is >= mamba page size.
+(Worker pid=223054) INFO 09-30 07:49:07 [interface.py:957] Padding mamba page size by 9.92% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=222973) WARNING 09-30 07:49:07 [torch_utils.py:268] OMP_NUM_THREADS=32 is set; leaving Torch threads at 32 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(EngineCore pid=222973) INFO 09-30 07:49:07 [utils.py:306] Using LBHNC KV cache layout.
+(Worker pid=223054) INFO 09-30 07:49:07 [cpu_model_runner.py:150] Warming up model for the compilation...
+(Worker pid=223054) WARNING 09-30 07:49:12 [decorators.py:323] Compiling model again due to a load failure from /proj/rdi/staff/sohroy/.cache/vllm/torch_compile_cache/torch_aot_compile/1f4637354cfa0936e910a06be9a0ad41ffde39f842299e58c66d3649f0e3b245/rank_0_0/model, reason: 'function' object has no attribute 'finalize_loading'
+(Worker pid=223054) INFO 09-30 07:49:58 [decorators.py:719] saved AOT compiled function to /proj/rdi/staff/sohroy/.cache/vllm/torch_compile_cache/torch_aot_compile/1f4637354cfa0936e910a06be9a0ad41ffde39f842299e58c66d3649f0e3b245/rank_0_0/model
+(EngineCore pid=222973) INFO 09-30 07:50:08 [shm_broadcast.py:801] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(Worker pid=223054) INFO 09-30 07:51:04 [monitor.py:81] Initial profiling/warmup run took 65.42 s
+(Worker pid=223054) INFO 09-30 07:51:05 [cpu_model_runner.py:154] Warming up done.
+(Worker pid=223054) INFO 09-30 07:51:05 [cpu_worker.py:255] Explicitly set (32.0/283.49) GiB for KV cache on node 1.
+(EngineCore pid=222973) INFO 09-30 07:51:05 [kv_cache_utils.py:2312] GPU KV cache size: 1,325,283 tokens, Maximum concurrency for 16,384 tokens per request: 80.89x
+(EngineCore pid=222973) INFO 09-30 07:51:06 [core.py:379] init engine (profile, create kv cache, warmup model) took 118.68 s
+(EngineCore pid=222973) INFO 09-30 07:51:07 [registry.py:146] All limits of multimodal modalities supported by the model are set to 0, running in text-only mode.
+(EngineCore pid=222973) WARNING 09-30 07:51:08 [vllm.py:674] Model Runner V2 requires Triton; using the V1 model runner instead.
+(EngineCore pid=222973) WARNING 09-30 07:51:08 [vllm.py:1417] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore pid=222973) INFO 09-30 07:51:08 [kernel.py:372] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+INFO 09-30 07:51:08 [hf.py:590] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this.
+Warming up...
+Warmup iterations:   0%|          | 0/2 [00:00<?, ?it/s]Warmup iterations:  50%|█████     | 1/2 [00:00<00:00,  1.50it/s]Warmup iterations: 100%|██████████| 2/2 [00:01<00:00,  1.66it/s]Warmup iterations: 100%|██████████| 2/2 [00:01<00:00,  1.63it/s]
+USDT:2026-09-30 07:51:10 223054:223054 SyncActivityProfilerHandler.cpp:52] profiler_start
+USDT:2026-09-30 07:51:10 223054:223054 SyncActivityProfilerHandler.cpp:59] profiler_stop
+(Worker pid=223054) -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+(Worker pid=223054)                                                    Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+(Worker pid=223054) -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+(Worker pid=223054)                            zentorch::zentorch_fused_moe        58.08%     337.579ms        60.46%     351.382ms       8.785ms            40  
+(Worker pid=223054)                                   zentorch_linear_unary        16.85%      97.949ms        17.14%      99.636ms     369.021us           270  
+(Worker pid=223054)                  execute_context_1(256)_generation_0(0)         3.36%      19.543ms        99.85%     580.356ms     580.356ms             1  
+(Worker pid=223054)                         ## Call CompiledFxGraph None ##         3.35%      19.446ms        94.39%     548.618ms     548.618ms             1  
+(Worker pid=223054)                          _C::chunk_gated_delta_rule_cpu         3.05%      17.742ms         3.14%      18.248ms     608.263us            30  
+(Worker pid=223054)                                              aten::topk         2.88%      16.723ms         2.88%      16.723ms     418.081us            40  
+(Worker pid=223054)                            vllm::cpu_gdn_attention_core         1.67%       9.683ms         8.71%      50.625ms       1.688ms            30  
+(Worker pid=223054)                                             aten::copy_         1.60%       9.302ms         1.60%       9.302ms      29.625us           314  
+(Worker pid=223054)                         zentorch::zentorch_linear_unary         1.54%       8.947ms        18.68%     108.587ms     400.688us           271  
+(Worker pid=223054)              zentorch::fused_moe::pass2_parallel_memcpy         1.48%       8.580ms         1.48%       8.580ms     214.492us            40  
+(Worker pid=223054)                          _C::cpu_attn_reshape_and_cache         0.72%       4.198ms         0.72%       4.198ms     419.785us            10  
+(Worker pid=223054)                         _C::cpu_attention_with_kv_cache         0.72%       4.196ms         0.72%       4.196ms     419.607us            10  
+(Worker pid=223054)             zentorch::fused_moe::pass1_active_set_build         0.54%       3.136ms         0.54%       3.136ms      78.406us            40  
+(Worker pid=223054)                               _C::causal_conv1d_fwd_cpu         0.51%       2.980ms         0.53%       3.082ms     102.733us            30  
+(Worker pid=223054)                                               aten::cat         0.40%       2.310ms         0.45%       2.611ms      79.125us            33  
+(Worker pid=223054)              zentorch::fused_moe::scratchpad_allocation         0.30%       1.744ms         0.30%       1.744ms      43.590us            40  
+(Worker pid=223054)                                          aten::_to_copy         0.21%       1.203ms         0.28%       1.636ms      20.709us            79  
+(Worker pid=223054)                                  aten::_index_put_impl_         0.19%       1.088ms         0.23%       1.314ms      43.787us            30  
+(Worker pid=223054)                                             aten::clone         0.17%       1.016ms         1.61%       9.343ms      51.908us           180  
+(Worker pid=223054)                                             aten::slice         0.17%       1.003ms         0.20%       1.177ms       2.246us           524  
+(Worker pid=223054)                                            aten::select         0.16%     927.100us         0.17%     962.635us       8.371us           115  
+(Worker pid=223054)                                               aten::sum         0.15%     846.889us         0.15%     858.726us     286.242us             3  
+(Worker pid=223054)                                         aten::transpose         0.13%     740.840us         0.18%       1.022ms       2.832us           361  
+(Worker pid=223054)                           vllm::unified_kv_cache_update         0.12%     716.041us         0.92%       5.341ms     534.137us            10  
+(Worker pid=223054)                                             aten::empty         0.12%     713.652us         0.12%     713.652us       1.329us           537  
+(Worker pid=223054)                                             aten::index         0.12%     672.644us         0.28%       1.632ms      50.994us            32  
+(Worker pid=223054)                                        aten::as_strided         0.11%     668.074us         0.11%     668.074us       0.562us          1189  
+(Worker pid=223054)                                                 aten::t         0.10%     594.142us         0.24%       1.376ms       5.079us           271  
+(Worker pid=223054)                                              aten::view         0.09%     550.288us         0.09%     550.288us       0.542us          1016  
+(Worker pid=223054)                                           aten::nonzero         0.09%     495.821us         0.12%     670.243us      22.341us            30  
+(Worker pid=223054)                     vllm::unified_attention_with_output         0.08%     467.233us         0.82%       4.775ms     477.477us            10  
+(Worker pid=223054)                                       Pregraph bytecode         0.08%     447.337us         0.08%     447.337us     223.669us             2  
+(Worker pid=223054)                                _C::fused_gdn_gating_cpu         0.08%     441.932us         0.09%     530.236us      17.675us            30  
+(Worker pid=223054)                                           aten::reshape         0.08%     441.133us         0.95%       5.505ms      36.220us           152  
+(Worker pid=223054)                                               aten::sub         0.07%     407.237us         0.15%     872.423us      19.387us            45  
+(Worker pid=223054)                                             aten::fill_         0.07%     394.006us         0.07%     394.937us       4.340us            91  
+(Worker pid=223054)                                        aten::empty_like         0.06%     357.358us         0.12%     711.221us       2.634us           270  
+(Worker pid=223054)              zentorch::fused_moe::token_expert_grouping         0.05%     314.934us         2.37%      13.803ms     345.083us            40  
+(Worker pid=223054)                    execute_context_0(0)_generation_0(0)         0.05%     279.455us         0.05%     294.496us     294.496us             1  
+(Worker pid=223054)                                            aten::narrow         0.05%     262.760us         0.09%     530.134us       3.870us           137  
+(Worker pid=223054) ## Call CompiledFxGraph fiy6dve4qae7wub5lq5huedfdaug...         0.03%     200.487us         0.04%     234.914us     234.914us             1  
+(Worker pid=223054)                                     aten::empty_strided         0.03%     197.866us         0.03%     197.866us       1.171us           169  
+(Worker pid=223054)                                  aten::split_with_sizes         0.03%     183.373us         0.04%     237.059us       7.902us            30  
+(Worker pid=223054)                                       aten::as_strided_         0.03%     158.160us         0.03%     158.160us       5.272us            30  
+(Worker pid=223054)                                       aten::bitwise_not         0.02%     141.293us         0.02%     141.293us       4.710us            30  
+(Worker pid=223054)                                           aten::squeeze         0.02%     128.647us         0.03%     147.093us       4.903us            30  
+(Worker pid=223054)                                                aten::to         0.02%     127.641us         0.30%       1.764ms      20.042us            88  
+(Worker pid=223054)                                        aten::index_put_         0.02%     117.418us         0.25%       1.431ms      47.701us            30  
+(Worker pid=223054)                                        aten::contiguous         0.02%     105.192us         0.77%       4.477ms      49.746us            90  
+(Worker pid=223054)                                             aten::chunk         0.02%     103.705us         0.07%     382.840us      19.142us            20  
+(Worker pid=223054) -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+(Worker pid=223054) Self CPU time total: 581.212ms
+(Worker pid=223054) 
+(Worker pid=223054) INFO 09-30 07:51:11 [wrapper.py:80] Profiler stopped successfully.
+Profiling with torch profiler (results will be saved to /proj/aigstaff/sohroy/profiling/perf_qwen36_bf16_20260930_0714/vllm_profile_pp256)...
+INFO 09-30 07:51:11 [utils.py:620] [shutdown] Process manager: send sigterm to process EngineCore
+WARNING 09-30 07:51:16 [utils.py:640] [shutdown] Process manager: force killing remaining processes count=1
+WARNING 09-30 07:51:16 [utils.py:645] [shutdown] Process manager: force killing remaining process EngineCore pid 222973
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 2 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

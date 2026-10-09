@@ -1,0 +1,13 @@
+# started on Wed Oct  7 09:42:47 2026
+
+
+ Performance counter stats for 'CPU(s) 192-223':
+
+      160176159766      ls_any_fills_from_sys.local_l2                                        
+        2605633297      ls_any_fills_from_sys.local_ccx                                       
+         245796032      ls_any_fills_from_sys.near_cache                                      
+        2757334206      ls_any_fills_from_sys.dram_io_near                                      
+            999357      ls_any_fills_from_sys.dram_io_far                                      
+
+      15.006399398 seconds time elapsed
+

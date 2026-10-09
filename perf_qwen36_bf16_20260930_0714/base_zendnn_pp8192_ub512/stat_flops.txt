@@ -1,0 +1,12 @@
+# started on Wed Sep 30 07:17:32 2026
+
+
+ Performance counter stats for process id '218064':
+
+     1046866393580      cycles                                                                
+     1983436103301      instructions                                                          
+    24891354584879      fp_ret_sse_avx_ops.all                                                
+    24550643292656      fp_ret_sse_avx_ops.mac_flops                                          
+
+      15.007207864 seconds time elapsed
+

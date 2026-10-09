@@ -1,0 +1,1 @@
+engine=llama.cpp cfg=latest_zendnn_algo3 pp=8192 ub=512 reps=10 load_s=156 settle_s=10 window_s=15

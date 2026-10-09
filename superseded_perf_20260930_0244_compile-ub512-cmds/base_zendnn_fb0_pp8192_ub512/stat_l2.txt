@@ -1,0 +1,14 @@
+# started on Wed Sep 30 03:04:38 2026
+
+
+ Performance counter stats for process id '199536':
+
+     1303326726022      cycles                                                                
+      215395377491      l2_request_g1.all                                                     
+        6009023088      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        3947176576      l2_pf_miss_l2_l3.l2_hwpf                                              
+        6469239854      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        5972475276      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.005662710 seconds time elapsed
+

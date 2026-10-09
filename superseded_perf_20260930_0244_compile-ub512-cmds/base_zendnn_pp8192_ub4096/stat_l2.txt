@@ -1,0 +1,14 @@
+# started on Wed Sep 30 03:08:17 2026
+
+
+ Performance counter stats for process id '200242':
+
+     1194632150471      cycles                                                                
+      236934850122      l2_request_g1.all                                                     
+       10743932668      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        1536958777      l2_pf_miss_l2_l3.l2_hwpf                                              
+        2972011108      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        7055842765      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.002651145 seconds time elapsed
+

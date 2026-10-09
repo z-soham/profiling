@@ -1,0 +1,6 @@
+1791365463.781113 llama-bench: benchmark 1/1: starting
+1791365548.572553 llama-bench: benchmark 1/1: warmup prompt run
+1791365618.940829 llama-bench: benchmark 1/1: prompt run 1/10
+1791365653.035793 llama-bench: benchmark 1/1: prompt run 2/10
+1791365683.981575 llama-bench: benchmark 1/1: prompt run 3/10
+1791365713.721346 llama-bench: benchmark 1/1: prompt run 4/10

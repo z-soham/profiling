@@ -1,0 +1,26 @@
+output: /proj/aigstaff/sohroy/profiling/qwen36_bf16_20260929_2252
+[2026-09-29 22:52:05] >>> environment
+[2026-09-29 22:52:08] >>> build_opprof
+[2026-09-29 22:52:09] >>> bench_stock
+[2026-09-29 22:59:22] >>> bench_zendnn
+[2026-09-29 23:04:26] >>> bench_zendnn_fb0
+[2026-09-29 23:14:28] >>> bench_zendnn_fb0_grp1
+[2026-09-29 23:15:42] >>> bench_zendnn_fb0_grp3
+[2026-09-29 23:16:46] >>> bench_zendnn_fb0_grp5
+[2026-09-29 23:17:24] >>> vllm_pp256
+[2026-09-29 23:20:59] >>> vllm_pp8192
+[2026-09-29 23:25:28] >>> placement_zendnn
+[2026-09-29 23:28:22] >>> placement_zendnn_fb0
+[2026-09-29 23:29:17] >>> opprof_stock_pp256_ub512
+[2026-09-29 23:29:44] >>> opprof_zendnn_pp256_ub512
+[2026-09-29 23:30:10] >>> opprof_zendnn_fb0_pp256_ub512
+[2026-09-29 23:31:16] >>> opprof_stock_pp8192_ub512
+[2026-09-29 23:33:18] >>> opprof_zendnn_pp8192_ub512
+[2026-09-29 23:35:22] >>> opprof_zendnn_fb0_pp8192_ub512
+[2026-09-29 23:39:03] >>> opprof_stock_pp8192_ub4096
+[2026-09-29 23:41:27] >>> opprof_zendnn_pp8192_ub4096
+[2026-09-29 23:43:49] >>> opprof_zendnn_fb0_pp8192_ub4096
+[2026-09-29 23:47:43] >>> vllm_profile_pp256
+[2026-09-29 23:51:26] >>> vllm_profile_pp8192
+[2026-09-29 23:55:30] >>> zendnnl_log
+done: /proj/aigstaff/sohroy/profiling/qwen36_bf16_20260929_2252/summary.md, /proj/aigstaff/sohroy/profiling/qwen36_bf16_20260929_2252.tar.gz

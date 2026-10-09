@@ -1,0 +1,24 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'page-faults'
+# Event count (approx.): 70150
+#
+# Overhead  Symbol                
+# ........  ......................
+#
+    86.10%  [.] 0x000073e49e69c290
+            |
+            ---0x73e4aea947f8
+
+    13.90%  [.] 0x00000000005e6656
+            |
+            ---0x7ffd6bf98d1f73f6
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

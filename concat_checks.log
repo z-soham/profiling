@@ -1,0 +1,12 @@
+turin-xcovoid0023-pod-6
+compared 4051740 elements, 0 mismatches
+concat_view_check.cpp: In function 'int main()':
+concat_view_check.cpp:26:119: error: deducing from brace-enclosed initializer list requires '#include <initializer_list>'
+    7 | #include <cstring>
+  +++ |+#include <initializer_list>
+    8 | static ggml_tensor * make(ggml_context * ctx, ggml_type t, const int64_t * ne, bool transposed, int seed) {
+......
+   26 |     for (ggml_type t : types) for (int dim = 0; dim < 4; dim++) for (int tr = 0; tr < 4; tr++) for (int nt : {1, 3, 32}) {
+      |                                                                                                                       ^
+command terminated with exit code 1
+cases 480 (360 with a non-contiguous input), compared 25309560 elements, 0 mismatches

@@ -1,0 +1,14 @@
+# started on Wed Sep 30 02:51:38 2026
+
+
+ Performance counter stats for process id '197869':
+
+     1304637694574      cycles                                                                
+      337954127814      l2_request_g1.all                                                     
+       15115822388      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        2820263526      l2_pf_miss_l2_l3.l2_hwpf                                              
+        6496971332      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        5974993851      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.005593982 seconds time elapsed
+

@@ -1,0 +1,152 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 436K of event 'cpu/cycles/P'
+# Event count (approx.): 1177626141694
+#
+# Overhead  Shared Object             Symbol                                                                                                                                                                                                     
+# ........  ........................  ...........................................................................................................................................................................................................
+#
+    32.10%  libomp.so.5               [.] 0x000000000007e920
+    23.80%  libggml-cpu.so.0.23.0     [.] ggml_vec_dot_bf16
+     9.18%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_flash_attn_ext_tiled(ggml_compute_params const*, ggml_tensor*, int, int)
+     2.79%  libggml-cpu.so.0.23.0     [.] ggml_graph_compute_thread.isra.0
+     2.36%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_gated_delta_net
+     2.02%  libomp.so.5               [.] 0x00000000000e1140
+     1.74%  libggml-cpu.so.0.23.0     [.] ggml_vec_dot_f32
+     1.45%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_concat
+     1.41%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_mul
+     1.35%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_ssm_conv
+     1.10%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_add_non_quantized
+     0.85%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_rms_norm_mul_fused
+     0.75%  libggml-base.so.0.23.0    [.] ggml_fp32_to_bf16_row_ref
+     0.58%  libggml-cpu.so.0.23.0     [.] ggml_vec_silu_f32
+     0.56%  libggml-cpu.so.0.23.0     [.] ggml_vec_swiglu_f32
+     0.51%  libomp.so.5               [.] 0x000000000007e8c8
+     0.49%  libomp.so.5               [.] 0x000000000007e7c7
+     0.37%  libomp.so.5               [.] 0x000000000007e560
+     0.34%  libggml-cpu.so.0.23.0     [.] ggml_cpu_fp32_to_bf16
+     0.32%  libomp.so.5               [.] 0x000000000007e9e6
+     0.25%  [JIT] tid 200242          [.] 0x0000785ce62e7165
+     0.21%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_rms_norm
+     0.21%  [JIT] tid 200242          [.] 0x0000785ce62e71ad
+     0.20%  [JIT] tid 200242          [.] 0x0000785ce62e71b9
+     0.20%  [JIT] tid 200242          [.] 0x0000785ce62e71a7
+     0.20%  [JIT] tid 200242          [.] 0x0000785ce62e7177
+     0.20%  [JIT] tid 200242          [.] 0x0000785ce62e719b
+     0.19%  [JIT] tid 200242          [.] 0x0000785ce62e71b3
+     0.19%  [JIT] tid 200242          [.] 0x0000785ce62e7171
+     0.19%  libomp.so.5               [.] 0x000000000007e7f3
+     0.19%  libggml-cpu.so.0.23.0     [.] void std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> > >(int*, int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> >)
+     0.19%  [JIT] tid 200242          [.] 0x0000785ce62e716b
+     0.19%  [JIT] tid 200242          [.] 0x0000785ce62e7144
+     0.18%  [JIT] tid 200242          [.] 0x0000785ce62e71a1
+     0.18%  libomp.so.5               [.] 0x000000000007e7ea
+     0.18%  libomp.so.5               [.] 0x000000000007e9cd
+     0.18%  [JIT] tid 200242          [.] 0x0000785ce62e7192
+     0.17%  libggml-cpu.so.0.23.0     [.] ggml_cpu_fp16_to_fp32
+     0.17%  [JIT] tid 200242          [.] 0x0000785ce62e7198
+     0.17%  [JIT] tid 200242          [.] 0x0000785ce62e70f0
+     0.17%  [JIT] tid 200242          [.] 0x0000785ce62e717a
+     0.17%  [JIT] tid 200242          [.] 0x0000785ce62e7186
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e71c2
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e7180
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e71d8
+     0.16%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_scale
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e718c
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e7129
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e712f
+     0.16%  [JIT] tid 200242          [.] 0x0000785ce62e7156
+     0.16%  libggml-cpu.so.0.23.0     [.] void (anonymous namespace)::tinyBLAS<32, float __vector(16), short __vector(32), ggml_bf16_t, ggml_bf16_t, float>::gemm_bloc<4, 6>(long, long)
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e7123
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e7159
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e7135
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e713e
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e715f
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e7150
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e7138
+     0.15%  [JIT] tid 200242          [.] 0x0000785ce62e711d
+     0.14%  [JIT] tid 200242          [.] 0x0000785ce62e71bc
+     0.14%  libomp.so.5               [.] 0x000000000007e980
+     0.14%  [JIT] tid 200242          [.] 0x0000785ce62e714a
+     0.14%  [JIT] tid 200242          [.] 0x0000785ce62e71c8
+     0.14%  [JIT] tid 200242          [.] 0x0000785ce62e71ce
+     0.13%  libomp.so.5               [.] 0x000000000007e985
+     0.13%  libggml-cpu.so.0.23.0     [.] ggml_vec_soft_max_f32
+     0.13%  libomp.so.5               [.] 0x000000000007e945
+     0.13%  libomp.so.5               [.] 0x000000000004bc2f
+     0.13%  libomp.so.5               [.] 0x000000000007e995
+     0.13%  libomp.so.5               [.] 0x000000000007e95d
+     0.13%  [JIT] tid 200242          [.] 0x0000785ce62e70f6
+     0.13%  libomp.so.5               [.] 0x000000000007e952
+     0.12%  [JIT] tid 200242          [.] 0x0000785ce62e71d4
+     0.12%  [JIT] tid 200242          [.] 0x0000785ce62e70ed
+     0.12%  libomp.so.5               [.] 0x000000000007e9a9
+     0.12%  libomp.so.5               [.] 0x000000000007e9b0
+     0.12%  libomp.so.5               [.] 0x000000000007e7c0
+     0.12%  libomp.so.5               [.] 0x000000000007e93a
+     0.12%  libomp.so.5               [.] 0x000000000007e8b0
+     0.12%  libomp.so.5               [.] 0x000000000007e9eb
+     0.12%  [JIT] tid 200242          [.] 0x0000785ce62e710b
+     0.12%  libomp.so.5               [.] 0x000000000007e874
+     0.12%  libomp.so.5               [.] 0x000000000007e8b7
+     0.12%  [JIT] tid 200242          [.] 0x0000785ce62e7114
+     0.12%  libomp.so.5               [.] 0x000000000007e7de
+     0.11%  [JIT] tid 200242          [.] 0x0000785ce62e7104
+     0.11%  [JIT] tid 200242          [.] 0x0000785ce62e70fd
+     0.11%  [JIT] tid 200242          [.] 0x0000785ce62e7117
+     0.10%  [kernel.kallsyms]         [k] yield_task_fair
+     0.10%  [JIT] tid 200242          [.] 0x0000785ce62e710e
+     0.10%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_mul_mat
+     0.09%  [kernel.kallsyms]         [k] native_sched_clock
+     0.09%  libggml-cpu.so.0.23.0     [.] ggml_compute_forward_argsort
+     0.09%  [kernel.kallsyms]         [k] do_syscall_64
+     0.08%  libomp.so.5               [.] 0x000000000007e97b
+     0.08%  [kernel.kallsyms]         [k] update_curr
+     0.08%  libc.so.6                 [.] __sched_yield
+     0.08%  libomp.so.5               [.] 0x000000000007e978
+     0.07%  [kernel.kallsyms]         [k] __calc_delta.constprop.0
+     0.07%  libomp.so.5               [.] 0x000000000004bc24
+     0.07%  libomp.so.5               [.] 0x000000000007e87f
+     0.07%  [kernel.kallsyms]         [k] entry_SYSCALL_64
+     0.07%  libomp.so.5               [.] 0x00000000000e1149
+     0.07%  libomp.so.5               [.] 0x000000000004bc37
+     0.07%  libomp.so.5               [.] 0x00000000000e1142
+     0.07%  libomp.so.5               [.] 0x000000000004bc36
+     0.07%  libomp.so.5               [.] 0x00000000000e1146
+     0.07%  libomp.so.5               [.] 0x000000000007e93c
+     0.06%  libomp.so.5               [.] 0x000000000004bc28
+     0.06%  [kernel.kallsyms]         [k] pick_task_fair
+     0.06%  libomp.so.5               [.] 0x000000000007e886
+     0.06%  libomp.so.5               [.] 0x000000000007e965
+     0.06%  [kernel.kallsyms]         [k] __schedule
+     0.06%  libomp.so.5               [.] 0x000000000007e943
+     0.06%  libomp.so.5               [.] 0x000000000004bc33
+     0.06%  libomp.so.5               [.] 0x000000000004bc2c
+     0.06%  libomp.so.5               [.] 0x000000000004bc20
+     0.06%  libomp.so.5               [.] 0x000000000007e9c8
+     0.06%  libomp.so.5               [.] 0x000000000007e98b
+     0.06%  libomp.so.5               [.] 0x000000000007e7e5
+     0.06%  libomp.so.5               [.] 0x000000000007e933
+     0.06%  libomp.so.5               [.] 0x000000000007e92b
+     0.06%  libomp.so.5               [.] 0x000000000007e7d9
+     0.06%  libomp.so.5               [.] 0x000000000007e922
+     0.06%  libomp.so.5               [.] 0x000000000007e98e
+     0.06%  libomp.so.5               [.] 0x000000000007e8c1
+     0.06%  libomp.so.5               [.] 0x000000000007e7d2
+     0.06%  libomp.so.5               [.] 0x000000000007e7ca
+     0.06%  libomp.so.5               [.] 0x000000000007e929
+     0.06%  libomp.so.5               [.] 0x000000000007e889
+     0.06%  libomp.so.5               [.] 0x000000000007e7c4
+     0.06%  libomp.so.5               [.] 0x000000000004bc25
+     0.06%  libomp.so.5               [.] 0x000000000007e92e
+     0.05%  [kernel.kallsyms]         [k] update_se
+     0.05%  libomp.so.5               [.] 0x000000000007e962
+     0.05%  libggml-cpu.so.0.23.0     [.] void ggml_compute_forward_rope_flt<float>(ggml_compute_params const*, ggml_tensor*, bool)
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

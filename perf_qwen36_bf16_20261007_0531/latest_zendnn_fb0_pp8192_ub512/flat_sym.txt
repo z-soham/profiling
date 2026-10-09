@@ -1,0 +1,174 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 359K of event 'cpu/cycles/P'
+# Event count (approx.): 966462117048
+#
+# Overhead  Shared Object                  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  .............................  ...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    25.84%  libomp.so.5                    [.] 0x000000000007df00
+    10.48%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_flash_attn_ext_tiled(ggml_compute_params const*, ggml_tensor*, int, int)
+     3.33%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_gated_delta_net
+     2.68%  libggml-base.so.0.26.0         [.] ggml_fp32_to_bf16_row_ref
+     2.17%  libggml-cpu.so.0.26.0          [.] ggml_vec_dot_f32
+     1.75%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_ssm_conv
+     1.57%  libomp.so.5                    [.] 0x00000000000e1140
+     1.33%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_mul
+     0.98%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_concat
+     0.93%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_rms_norm_mul_fused
+     0.81%  [JIT] tid 1961039              [.] 0x00007a614a64f165
+     0.78%  [JIT] tid 1961039              [.] 0x00007a614a64f144
+     0.73%  libggml-cpu.so.0.26.0          [.] ggml_vec_swiglu_f32
+     0.72%  libggml-cpu.so.0.26.0          [.] ggml_vec_silu_f32
+     0.66%  [JIT] tid 1961039              [.] 0x00007a614a64f0f0
+     0.66%  [JIT] tid 1961039              [.] 0x00007a614a64f129
+     0.65%  [JIT] tid 1961039              [.] 0x00007a614a64f177
+     0.65%  [JIT] tid 1961039              [.] 0x00007a614a64f135
+     0.64%  [JIT] tid 1961039              [.] 0x00007a614a64f1d8
+     0.64%  [JIT] tid 1961039              [.] 0x00007a614a64f171
+     0.64%  [JIT] tid 1961039              [.] 0x00007a614a64f1ad
+     0.64%  [JIT] tid 1961039              [.] 0x00007a614a64f1a7
+     0.63%  [JIT] tid 1961039              [.] 0x00007a614a64f1b3
+     0.63%  [JIT] tid 1961039              [.] 0x00007a614a64f1b9
+     0.63%  [JIT] tid 1961039              [.] 0x00007a614a64f12f
+     0.62%  [JIT] tid 1961039              [.] 0x00007a614a64f198
+     0.62%  [JIT] tid 1961039              [.] 0x00007a614a64f16b
+     0.62%  [JIT] tid 1961039              [.] 0x00007a614a64f11d
+     0.61%  [JIT] tid 1961039              [.] 0x00007a614a64f192
+     0.61%  [JIT] tid 1961039              [.] 0x00007a614a64f123
+     0.61%  [JIT] tid 1961039              [.] 0x00007a614a64f138
+     0.60%  [JIT] tid 1961039              [.] 0x00007a614a64f13e
+     0.60%  [JIT] tid 1961039              [.] 0x00007a614a64f18c
+     0.60%  [JIT] tid 1961039              [.] 0x00007a614a64f17a
+     0.60%  [JIT] tid 1961039              [.] 0x00007a614a64f186
+     0.60%  [JIT] tid 1961039              [.] 0x00007a614a64f1a1
+     0.60%  [JIT] tid 1961039              [.] 0x00007a614a64f19b
+     0.59%  [JIT] tid 1961039              [.] 0x00007a614a64f180
+     0.57%  [JIT] tid 1961039              [.] 0x00007a614a64f1c8
+     0.57%  [JIT] tid 1961039              [.] 0x00007a614a64f15f
+     0.57%  [JIT] tid 1961039              [.] 0x00007a614a64f1ce
+     0.55%  [JIT] tid 1961039              [.] 0x00007a614a64f150
+     0.54%  [JIT] tid 1961039              [.] 0x00007a614a64f159
+     0.54%  [JIT] tid 1961039              [.] 0x00007a614a64f156
+     0.54%  [JIT] tid 1961039              [.] 0x00007a614a64f1c2
+     0.52%  [JIT] tid 1961039              [.] 0x00007a614a64f1bc
+     0.51%  [JIT] tid 1961039              [.] 0x00007a614a64f14a
+     0.50%  [JIT] tid 1961039              [.] 0x00007a614a64f114
+     0.49%  [JIT] tid 1961039              [.] 0x00007a614a64f1d4
+     0.49%  [JIT] tid 1961039              [.] 0x00007a614a64f10e
+     0.48%  [JIT] tid 1961039              [.] 0x00007a614a64f117
+     0.48%  [JIT] tid 1961039              [.] 0x00007a614a64f0ed
+     0.47%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_add_non_quantized
+     0.45%  [JIT] tid 1961039              [.] 0x00007a614a64f0f6
+     0.43%  [JIT] tid 1961039              [.] 0x00007a614a64f10b
+     0.43%  libomp.so.5                    [.] 0x000000000007ad1f
+     0.42%  [JIT] tid 1961039              [.] 0x00007a614a64f104
+     0.42%  [JIT] tid 1961039              [.] 0x00007a614a64f0fd
+     0.41%  libggml-cpu.so.0.26.0          [.] ggml_cpu_fp16_to_fp32
+     0.41%  libomp.so.5                    [.] 0x000000000007dfc6
+     0.29%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_rms_norm
+     0.21%  libggml-cpu.so.0.26.0          [.] ggml_vec_soft_max_f32
+     0.19%  libc.so.6                      [.] 0x00000000001a1876
+     0.19%  libggml-cpu.so.0.26.0          [.] void std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> > >(int*, int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> >)
+     0.18%  libc.so.6                      [.] 0x00000000001a186f
+     0.18%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_scale
+     0.17%  libc.so.6                      [.] 0x00000000001a1868
+     0.15%  libomp.so.5                    [.] 0x000000000007df25
+     0.15%  libomp.so.5                    [.] 0x000000000007df90
+     0.15%  libomp.so.5                    [.] 0x000000000007de97
+     0.15%  libomp.so.5                    [.] 0x000000000007dea1
+     0.15%  libomp.so.5                    [.] 0x000000000007ddbd
+     0.15%  libomp.so.5                    [.] 0x000000000007dfa8
+     0.15%  libomp.so.5                    [.] 0x000000000007df23
+     0.14%  libomp.so.5                    [.] 0x000000000007ddc4
+     0.13%  libc.so.6                      [.] 0x00000000001a1862
+     0.13%  [JIT] tid 1961039              [.] 0x00007a614a5ff0bf
+     0.12%  [kernel.kallsyms]              [k] native_queued_spin_lock_slowpath
+     0.12%  [JIT] tid 1961039              [.] 0x00007a614a5ff0b9
+     0.12%  [JIT] tid 1961039              [.] 0x00007a614a5ff0cb
+     0.12%  [JIT] tid 1961039              [.] 0x00007a614a5ff0b3
+     0.11%  libomp.so.5                    [.] 0x000000000007df5b
+     0.11%  [JIT] tid 1961039              [.] 0x00007a614a5ff0c5
+     0.11%  libomp.so.5                    [.] 0x000000000007dfad
+     0.11%  libomp.so.5                    [.] 0x000000000007df75
+     0.10%  libomp.so.5                    [.] 0x000000000007df32
+     0.10%  [JIT] tid 1961039              [.] 0x00007a614a5ff0ad
+     0.10%  libomp.so.5                    [.] 0x000000000007df58
+     0.10%  [JIT] tid 1961039              [.] 0x00007a614a5ff0d4
+     0.10%  libomp.so.5                    [.] 0x000000000007de69
+     0.10%  libomp.so.5                    [.] 0x000000000007de66
+     0.09%  libomp.so.5                    [.] 0x000000000007dea8
+     0.09%  libomp.so.5                    [.] 0x000000000007df6e
+     0.09%  libomp.so.5                    [.] 0x000000000007df6b
+     0.09%  libc.so.6                      [.] 0x00000000001a1884
+     0.09%  libomp.so.5                    [.] 0x000000000007df1a
+     0.09%  [JIT] tid 1961039              [.] 0x00007a614a5ff0ce
+     0.09%  libc.so.6                      [.] 0x00000000001a187d
+     0.09%  [JIT] tid 1961039              [.] 0x00007a614a3ef3b5
+     0.09%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_argsort
+     0.08%  [JIT] tid 1961039              [.] 0x00007a614a5ff0aa
+     0.08%  [kernel.kallsyms]              [k] yield_task_fair
+     0.08%  [JIT] tid 1961039              [.] 0x00007a614a5ff0a4
+     0.08%  [JIT] tid 1961039              [.] 0x00007a614a5d70f2
+     0.08%  [JIT] tid 1961039              [.] 0x00007a614a3ef3a8
+     0.08%  [kernel.kallsyms]              [k] __calc_delta.constprop.0
+     0.08%  [JIT] tid 1961039              [.] 0x00007a614a3ef37f
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a5ff09a
+     0.07%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_sigmoid
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a3ef330
+     0.07%  libggml-cpu.so.0.26.0          [.] void ggml_compute_forward_rope_flt<float>(ggml_compute_params const*, ggml_tensor*, bool)
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a5d7113
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a5ff0a1
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a5d7119
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a3ef3da
+     0.07%  [JIT] tid 1961039              [.] 0x00007a614a3ef35d
+     0.07%  libomp.so.5                    [.] 0x00000000000e1142
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5d70f8
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5d710d
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5d7107
+     0.06%  [kernel.kallsyms]              [k] native_sched_clock
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5d7104
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5ff0da
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5d70fe
+     0.06%  libomp.so.5                    [.] 0x000000000007e0a4
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a3ef372
+     0.06%  libomp.so.5                    [.] 0x000000000007df1c
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a3ef386
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a3ef327
+     0.06%  libomp.so.5                    [.] 0x000000000007e09d
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a5af131
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a3ef3a2
+     0.06%  libomp.so.5                    [.] 0x000000000007df60
+     0.06%  [JIT] tid 1961039              [.] 0x00007a614a3ef399
+     0.06%  libomp.so.5                    [.] 0x00000000000e1146
+     0.06%  libomp.so.5                    [.] 0x000000000007df0b
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a5ff093
+     0.05%  libomp.so.5                    [.] 0x000000000007df02
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef32d
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef3bc
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef39c
+     0.05%  libggml-cpu.so.0.26.0          [.] ggml_vec_dot_f32@plt
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef3c2
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef379
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef336
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef3af
+     0.05%  libomp.so.5                    [.] 0x000000000007df13
+     0.05%  libomp.so.5                    [.] 0x000000000007df42
+     0.05%  libomp.so.5                    [.] 0x000000000007de90
+     0.05%  [JIT] tid 1961039              [.] 0x00007a614a3ef36c
+     0.05%  libggml-base.so.0.26.0         [.] ggml_row_size
+     0.05%  libomp.so.5                    [.] 0x000000000007df45
+     0.05%  libomp.so.5                    [.] 0x000000000007de54
+     0.05%  [kernel.kallsyms]              [k] do_syscall_64
+     0.05%  [kernel.kallsyms]              [k] entry_SYSCALL_64
+     0.05%  libomp.so.5                    [.] 0x000000000007df09
+     0.05%  libc.so.6                      [.] 0x00000000001a191b
+     0.05%  libomp.so.5                    [.] 0x000000000007ddc9
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

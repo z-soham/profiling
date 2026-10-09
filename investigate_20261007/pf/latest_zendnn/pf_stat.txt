@@ -1,0 +1,11 @@
+# started on Wed Oct  7 12:30:41 2026
+
+
+ Performance counter stats for process id '942574':
+
+             70677      page-faults                                                           
+             70677      minor-faults                                                          
+                 0      major-faults                                                          
+
+      10.005057628 seconds time elapsed
+

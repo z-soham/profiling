@@ -1,0 +1,112 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 382K of event 'cpu/cycles/P'
+# Event count (approx.): 1024734413762
+#
+# Overhead  Shared Object                                                   Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ..............................................................  ...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    31.47%  _C.abi3.so                                                      [.] void cpu_attention::(anonymous namespace)::TileGemm82<c10::BFloat16>::gemm_micro<8>(float*, c10::BFloat16*, float*, long, long, long, int, int, bool) [clone .constprop.0]
+    13.69%  libiomp5.so                                                     [.] kmp_flag_64<false, true>::wait(kmp_info*, int, void*)
+     3.17%  libtorch_cpu.so                                                 [.] void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(c10::BFloat16)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(at::vec::AVX2::Vectorized<c10::BFloat16>)#1}> >(long, char**, long const*, long, long)
+     1.28%  [JIT] tid 240911                                                [.] 0x000071dc5195a169
+     1.07%  libzentorch.so                                                  [.] zendnnl::lowoha::matmul::(anonymous namespace)::moe_weighted_reduce_avx512_bf16(zendnnl::lowoha::matmul::group_matmul_moe_postop_params const*, int, int) [clone ._omp_fn.0]
+     1.04%  [JIT] tid 240911                                                [.] 0x000071dc5195a1b7
+     1.04%  [JIT] tid 240911                                                [.] 0x000071dc5195a1b1
+     1.04%  [JIT] tid 240911                                                [.] 0x000071dc5195a148
+     1.03%  [JIT] tid 240911                                                [.] 0x000071dc5195a16f
+     1.01%  [JIT] tid 240911                                                [.] 0x000071dc5195a1bd
+     1.00%  [JIT] tid 240911                                                [.] 0x000071dc5195a1ab
+     0.99%  [JIT] tid 240911                                                [.] 0x000071dc5195a19f
+     0.97%  [JIT] tid 240911                                                [.] 0x000071dc5195a17b
+     0.97%  [JIT] tid 240911                                                [.] 0x000071dc5195a175
+     0.95%  [JIT] tid 240911                                                [.] 0x000071dc5195a19c
+     0.94%  [JIT] tid 240911                                                [.] 0x000071dc5195a1a5
+     0.91%  [JIT] tid 240911                                                [.] 0x000071dc5195a18a
+     0.91%  cjkl35cnfyz3knsmpysdahluwuqbz3vi44g32vo2k5eb3lpfcgvr.main.so    [.] kernel._omp_fn.0
+     0.91%  [JIT] tid 240911                                                [.] 0x000071dc5195a196
+     0.90%  [JIT] tid 240911                                                [.] 0x000071dc5195a17e
+     0.90%  [JIT] tid 240911                                                [.] 0x000071dc5195a190
+     0.89%  [JIT] tid 240911                                                [.] 0x000071dc5195a0f4
+     0.88%  [JIT] tid 240911                                                [.] 0x000071dc5195a133
+     0.88%  [JIT] tid 240911                                                [.] 0x000071dc5195a184
+     0.87%  [JIT] tid 240911                                                [.] 0x000071dc5195a12d
+     0.85%  [JIT] tid 240911                                                [.] 0x000071dc5195a139
+     0.85%  [JIT] tid 240911                                                [.] 0x000071dc5195a121
+     0.84%  [JIT] tid 240911                                                [.] 0x000071dc5195a15a
+     0.84%  [JIT] tid 240911                                                [.] 0x000071dc5195a127
+     0.83%  [JIT] tid 240911                                                [.] 0x000071dc5195a163
+     0.83%  [JIT] tid 240911                                                [.] 0x000071dc5195a154
+     0.82%  [JIT] tid 240911                                                [.] 0x000071dc5195a15d
+     0.81%  [JIT] tid 240911                                                [.] 0x000071dc5195a1dc
+     0.81%  [JIT] tid 240911                                                [.] 0x000071dc5195a142
+     0.79%  [JIT] tid 240911                                                [.] 0x000071dc5195a13c
+     0.73%  [JIT] tid 240911                                                [.] 0x000071dc5195a1d2
+     0.72%  [JIT] tid 240911                                                [.] 0x000071dc5195a1c0
+     0.72%  [JIT] tid 240911                                                [.] 0x000071dc5195a1c6
+     0.70%  [JIT] tid 240911                                                [.] 0x000071dc5195a1cc
+     0.70%  _C.abi3.so                                                      [.] (anonymous namespace)::tinygemm_kernel<c10::BFloat16, 4, 64, false, true>::apply(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*, c10::BFloat16 const*, c10::BFloat16 const*, bool, long, long, bool) [clone .constprop.0]
+     0.67%  [JIT] tid 240911                                                [.] 0x000071dc5195a14e
+     0.67%  [JIT] tid 240911                                                [.] 0x000071dc5195a0fa
+     0.65%  [JIT] tid 240911                                                [.] 0x000071dc5195a0f1
+     0.64%  [JIT] tid 240911                                                [.] 0x000071dc5195a1d8
+     0.63%  [JIT] tid 240911                                                [.] 0x000071dc5195a118
+     0.61%  [JIT] tid 240911                                                [.] 0x000071dc5195a112
+     0.60%  [JIT] tid 240911                                                [.] 0x000071dc5195a11b
+     0.60%  [JIT] tid 240911                                                [.] 0x000071dc5195a108
+     0.60%  [JIT] tid 240911                                                [.] 0x000071dc5195a10f
+     0.58%  [JIT] tid 240911                                                [.] 0x000071dc5195a101
+     0.45%  ctvju5drqthy3adws5jblb5tumifdpeifd4f4dqxoz7u4jz5eztt.main.so    [.] kernel._omp_fn.0
+     0.44%  _C.abi3.so                                                      [.] cpu_attention::AttentionMainLoop<cpu_attention::AttentionImpl<(cpu_attention::ISA)0, float, 256l, float> >::Attention<cpu_attention::(anonymous namespace)::TileGemm224<float, float> >::apply_softmax(float*, float*, float*, float*, long, int, int, bool, bool) [clone .constprop.0]
+     0.34%  libtorch_cpu.so                                                 [.] Sleef_finz_expf16_u10avx512f
+     0.28%  c2p6m3t4emmkzeip24xxcwhgl2v2b4wn2pcnzie2n3tr5ncgefb5.main.so    [.] kernel._omp_fn.0
+     0.27%  libzentorch.so                                                  [.] zendnnl::lowoha::matmul::(anonymous namespace)::silu_and_mul_row_avx512_bf16(zendnnl::common::bfloat16_t*, int)
+     0.25%  _C.abi3.so                                                      [.] (anonymous namespace)::update_kernel<c10::BFloat16, 128>::apply(c10::BFloat16*, float const*, int, int, int) [clone .constprop.0]
+     0.23%  cg4uldivffnmxssnvgc2mvtwhjoxcbtecv2a5ra5ddwdq3h3rsur.main.so    [.] kernel._omp_fn.0
+     0.20%  _C.abi3.so                                                      [.] (anonymous namespace)::solve_tril_kernel<c10::BFloat16, 64>::apply(c10::BFloat16*, int)
+     0.19%  _C.abi3.so                                                      [.] (anonymous namespace)::chunk_gated_delta_rule_fwd_intra_kernel_impl<c10::BFloat16, 128, 64>(c10::BFloat16*, c10::BFloat16*, float*, c10::BFloat16 const*, c10::BFloat16 const*, float const*, c10::BFloat16 const*, int const*, int const*, long, long, long, long, long, long, long)::{lambda(long, long)#1}::operator()(long, long) const
+     0.19%  _C.abi3.so                                                      [.] cpu_attention::AttentionMainLoop<cpu_attention::AttentionImpl<(cpu_attention::ISA)1, c10::BFloat16, 256l, c10::BFloat16> >::operator()(cpu_attention::AttentionInput const*) [clone ._omp_fn.0]
+     0.18%  ck6utlskpnvwob7pfdb7z7l2kxtr7i36rz6sau4spfo2ke5al2in.main.so    [.] kernel._omp_fn.0
+     0.17%  libtorch_cpu.so                                                 [.] void std::__introselect<__gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<at::native::AVX2::topk_impl_loop<c10::BFloat16, float>(long, long, long, long, long, bool, bool, char**, long const*, long)::{lambda(std::pair<float, long> const&, std::pair<float, long> const&)#3}> >(__gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, __gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, __gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<at::native::AVX2::topk_impl_loop<c10::BFloat16, float>(long, long, long, long, long, bool, bool, char**, long const*, long)::{lambda(std::pair<float, long> const&, std::pair<float, long> const&)#3}>)
+     0.14%  cimydndyut47bzsj6h3plzncmsqbjcgqayge227kcfjupzzl4sbh.main.so    [.] kernel._omp_fn.0
+     0.13%  _C.abi3.so                                                      [.] (anonymous namespace)::update_value_kernel<c10::BFloat16, 128>::apply(c10::BFloat16*, c10::BFloat16 const*, float const*, int, int, int)
+     0.11%  libiomp5.so                                                     [.] kmp_flag_native<unsigned long long, (flag_type)1, true>::notdone_check()
+     0.11%  _C.abi3.so                                                      [.] (anonymous namespace)::chunk_gated_delta_rule_fwd_inter_kernel_impl<c10::BFloat16, float, 128, 64>(c10::BFloat16*, float*, int const*, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, float const*, float const*, int const*, int const*, long, long, long, long, long, long, long, long)::{lambda(long, long)#1}::operator()(long, long) const
+     0.10%  libc.so.6                                                       [.] 0x00000000001a190d
+     0.10%  _C.abi3.so                                                      [.] (anonymous namespace)::l2norm_kernel<c10::BFloat16, 128, false>::apply(c10::BFloat16*, c10::BFloat16 const*, float)
+     0.09%  libc.so.6                                                       [.] 0x00000000001a1914
+     0.08%  _C.abi3.so                                                      [.] (anonymous namespace)::l2norm_kernel<c10::BFloat16, 128, true>::apply(c10::BFloat16*, c10::BFloat16 const*, float)
+     0.08%  libc.so.6                                                       [.] 0x00000000001a191b
+     0.08%  [JIT] tid 240911                                                [.] 0x000071dc5195a26e
+     0.06%  _C.abi3.so                                                      [.] (anonymous namespace)::decay_mask_kernel<float, 64>::apply(float*, float const*)
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a2b0
+     0.06%  [kernel.kallsyms]                                               [k] native_queued_spin_lock_slowpath
+     0.06%  libc.so.6                                                       [.] 0x00000000001a1906
+     0.06%  [kernel.kallsyms]                                               [k] __calc_delta.constprop.0
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a1ff
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a2bc
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a2b6
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a289
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a2c2
+     0.06%  [JIT] tid 240911                                                [.] 0x000071dc5195a29b
+     0.06%  _C.abi3.so                                                      [.] void (anonymous namespace)::pack_vnni2<c10::Half, int, false>(c10::Half*, c10::Half const*, int const*, int, int, int, int) [clone .constprop.0]
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a1f9
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a2a4
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a2a1
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a23e
+     0.05%  _C.abi3.so                                                      [.] (anonymous namespace)::apply_mask_kernel<c10::BFloat16, 64, false>::apply(c10::BFloat16*, float const*, c10::BFloat16 const*, float const*, int, int) [clone .constprop.0]
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a24d
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a28f
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a2aa
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a274
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a226
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a280
+     0.05%  [JIT] tid 240911                                                [.] 0x000071dc5195a22c
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

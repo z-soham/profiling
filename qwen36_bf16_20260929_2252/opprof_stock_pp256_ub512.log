@@ -1,0 +1,25 @@
+opprof: pp256 ub256  clean 1059.8 ms (241.6 t/s)  profiled 1135.9 ms (225.4 t/s)  sum(nodes) 1130.4 ms
+  MUL_MAT_ID	CPU                                120 calls      475.5 ms  42.06%
+  CONCAT	CPU                                     30 calls      285.9 ms  25.30%
+  MUL_MAT	CPU                                   391 calls      167.1 ms  14.78%
+  GATED_DELTA_NET	CPU                            30 calls       49.4 ms   4.37%
+  SIGMOID	CPU                                    80 calls       31.7 ms   2.81%
+  RMS_NORM	CPU                                  191 calls       20.7 ms   1.83%
+  MUL	CPU                                       281 calls       18.7 ms   1.65%
+  SSM_CONV	CPU                                   30 calls       13.3 ms   1.18%
+  SCALE	CPU                                     120 calls       11.9 ms   1.05%
+  ADD	CPU                                       430 calls        9.8 ms   0.86%
+  FLASH_ATTN_EXT	CPU                             10 calls        9.3 ms   0.82%
+  SILU	CPU                                       60 calls        7.9 ms   0.69%
+  SWIGLU	CPU                                     80 calls        7.3 ms   0.64%
+  GET_ROWS	CPU                                  162 calls        7.2 ms   0.64%
+  ARGSORT	CPU                                    40 calls        5.3 ms   0.47%
+  CPY	CPU                                       120 calls        3.4 ms   0.30%
+  CONT	CPU                                       10 calls        2.1 ms   0.18%
+  SOFTPLUS	CPU                                   30 calls        1.6 ms   0.14%
+  SOFT_MAX	CPU                                   40 calls        0.8 ms   0.07%
+  ROPE	CPU                                       20 calls        0.7 ms   0.06%
+  DIV	CPU                                        40 calls        0.5 ms   0.04%
+  SET_ROWS	CPU                                   20 calls        0.4 ms   0.03%
+  SUM_ROWS	CPU                                   40 calls        0.1 ms   0.01%
+  CLAMP	CPU                                      40 calls        0.0 ms   0.00%

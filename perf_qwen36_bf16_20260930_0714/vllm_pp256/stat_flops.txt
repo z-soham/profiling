@@ -1,0 +1,12 @@
+# started on Wed Sep 30 08:56:18 2026
+
+
+ Performance counter stats for 'CPU(s) 32-63':
+
+     1303726427516      cycles                                                                
+     1400119450852      instructions                                                          
+    35390011072365      fp_ret_sse_avx_ops.all                                                
+    35335519839094      fp_ret_sse_avx_ops.mac_flops                                          
+
+      15.007236793 seconds time elapsed
+

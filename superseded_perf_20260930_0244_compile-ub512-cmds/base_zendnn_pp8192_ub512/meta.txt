@@ -1,0 +1,1 @@
+cfg=base_zendnn pp=8192 ub=512 reps=10 load_s=84 settle_s=10 window_s=15

@@ -1,0 +1,13 @@
+# started on Wed Sep 30 02:51:23 2026
+
+
+ Performance counter stats for process id '197869':
+
+      193367666604      ls_any_fills_from_sys.local_l2                                        
+       12993963164      ls_any_fills_from_sys.local_ccx                                       
+        1436923279      ls_any_fills_from_sys.near_cache                                      
+        7780186866      ls_any_fills_from_sys.dram_io_near                                      
+            463182      ls_any_fills_from_sys.dram_io_far                                      
+
+      15.002503547 seconds time elapsed
+

@@ -1,0 +1,369 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 341K of event 'cpu/cycles/P'
+# Event count (approx.): 916566407270
+#
+# Overhead  Shared Object                  Symbol                                                                                                                                                                                                                                                                                                                                                                
+# ........  .............................  ......................................................................................................................................................................................................................................................................................................................................................................
+#
+    21.58%  libomp.so.5                    [.] 0x000000000007df00
+    11.28%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_flash_attn_ext_tiled(ggml_compute_params const*, ggml_tensor*, int, int)
+     3.49%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_gated_delta_net
+     2.53%  libggml-base.so.0.26.0         [.] ggml_fp32_to_bf16_row_ref
+     2.33%  libggml-cpu.so.0.26.0          [.] ggml_vec_dot_f32
+     1.81%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_ssm_conv
+     1.35%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_mul
+     1.33%  libomp.so.5                    [.] 0x00000000000e1140
+     1.01%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_rms_norm_mul_fused
+     0.78%  libggml-cpu.so.0.26.0          [.] ggml_vec_silu_f32
+     0.77%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_concat
+     0.68%  libggml-cpu.so.0.26.0          [.] ggml_vec_swiglu_f32
+     0.57%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_add_non_quantized
+     0.44%  libggml-cpu.so.0.26.0          [.] ggml_cpu_fp16_to_fp32
+     0.39%  libzendnnl.so                  [.] 0x00000000005f1b85
+     0.37%  [JIT] tid 921205               [.] 0x00007c9878f17165
+     0.35%  libzendnnl.so                  [.] 0x00000000005f1b69
+     0.33%  libomp.so.5                    [.] 0x000000000007dfc6
+     0.33%  libzendnnl.so                  [.] 0x00000000005f358b
+     0.31%  [JIT] tid 921205               [.] 0x00007c9878f171b9
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f17177
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f1716b
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f17171
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f171ad
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f17192
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f171a7
+     0.29%  [JIT] tid 921205               [.] 0x00007c9878f171a1
+     0.28%  [JIT] tid 921205               [.] 0x00007c9878f17144
+     0.28%  [JIT] tid 921205               [.] 0x00007c9878f171b3
+     0.28%  [JIT] tid 921205               [.] 0x00007c9878f1719b
+     0.28%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_rms_norm
+     0.27%  [JIT] tid 921205               [.] 0x00007c9878f17129
+     0.27%  libzendnnl.so                  [.] 0x00000000005f3534
+     0.26%  [JIT] tid 921205               [.] 0x00007c9878f170f0
+     0.26%  [JIT] tid 921205               [.] 0x00007c9878f1717a
+     0.26%  [JIT] tid 921205               [.] 0x00007c9878f17159
+     0.26%  [JIT] tid 921205               [.] 0x00007c9878f17135
+     0.26%  [JIT] tid 921205               [.] 0x00007c9878f17186
+     0.25%  libggml-cpu.so.0.26.0          [.] ggml_cpu_fp32_to_bf16
+     0.25%  [JIT] tid 921205               [.] 0x00007c9878f17198
+     0.25%  libzendnnl.so                  [.] 0x00000000005f1b8b
+     0.25%  [JIT] tid 921205               [.] 0x00007c9878f1718c
+     0.25%  libzendnnl.so                  [.] 0x00000000005f1c37
+     0.25%  libzendnnl.so                  [.] 0x00000000005f1c30
+     0.25%  libzendnnl.so                  [.] 0x00000000005f1c55
+     0.25%  [JIT] tid 921205               [.] 0x00007c9878f171d8
+     0.25%  libzendnnl.so                  [.] 0x00000000005f1c5b
+     0.25%  libzendnnl.so                  [.] 0x00000000005f1b6f
+     0.25%  [JIT] tid 921205               [.] 0x00007c9878f1711d
+     0.24%  [JIT] tid 921205               [.] 0x00007c9878f1712f
+     0.24%  [JIT] tid 921205               [.] 0x00007c9878f17150
+     0.24%  libzendnnl.so                  [.] 0x00000000005f1c48
+     0.24%  [JIT] tid 921205               [.] 0x00007c9878f17180
+     0.24%  libzendnnl.so                  [.] 0x00000000005f1c3d
+     0.24%  libzendnnl.so                  [.] 0x00000000005f1c4f
+     0.24%  libzendnnl.so                  [.] 0x00000000005f1c41
+     0.24%  [JIT] tid 921205               [.] 0x00007c9878f1715f
+     0.24%  libzendnnl.so                  [.] 0x00000000005f1b78
+     0.24%  [JIT] tid 921205               [.] 0x00007c9878f17123
+     0.24%  [JIT] tid 921205               [.] 0x00007c9878f17138
+     0.23%  [JIT] tid 921205               [.] 0x00007c9878f17156
+     0.23%  libzendnnl.so                  [.] 0x00000000005f1b7f
+     0.23%  [JIT] tid 921205               [.] 0x00007c9878f171bc
+     0.23%  libzendnnl.so                  [.] 0x00000000005f1b72
+     0.23%  [JIT] tid 921205               [.] 0x00007c9878f1713e
+     0.21%  [JIT] tid 921205               [.] 0x00007c9878f171c8
+     0.21%  libzendnnl.so                  [.] 0x00000000005f3448
+     0.21%  [JIT] tid 921205               [.] 0x00007c9878f171ce
+     0.21%  [JIT] tid 921205               [.] 0x00007c9878f171c2
+     0.20%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_scale
+     0.20%  libzendnnl.so                  [.] 0x00000000005f34bc
+     0.20%  libzendnnl.so                  [.] 0x00000000005f355f
+     0.20%  libzendnnl.so                  [.] 0x00000000005f34dc
+     0.20%  libzendnnl.so                  [.] 0x00000000005f34c9
+     0.19%  libzendnnl.so                  [.] 0x00000000005f34af
+     0.19%  [JIT] tid 921205               [.] 0x00007c9878f1714a
+     0.19%  [JIT] tid 921205               [.] 0x00007c9878f170ed
+     0.19%  libzendnnl.so                  [.] 0x00000000005f34cf
+     0.19%  libzendnnl.so                  [.] 0x00000000005f34d5
+     0.19%  libzendnnl.so                  [.] 0x00000000005f34c2
+     0.19%  libzendnnl.so                  [.] 0x00000000005f34b6
+     0.19%  libggml-cpu.so.0.26.0          [.] ggml_vec_soft_max_f32
+     0.19%  libzendnnl.so                  [.] 0x00000000005f346b
+     0.19%  libzendnnl.so                  [.] 0x00000000005f3471
+     0.19%  libzendnnl.so                  [.] 0x00000000005f345f
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f1710e
+     0.18%  libzendnnl.so                  [.] 0x00000000005f356b
+     0.18%  libc.so.6                      [.] 0x00000000001a1876
+     0.18%  libzendnnl.so                  [.] 0x00000000005f3452
+     0.18%  libzendnnl.so                  [.] 0x00000000005f3477
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f171d4
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f170f6
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f170fd
+     0.18%  libzendnnl.so                  [.] 0x00000000005f34a3
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f1710b
+     0.18%  libzendnnl.so                  [.] 0x00000000005f2f91
+     0.18%  libzendnnl.so                  [.] 0x00000000005f3459
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f17114
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f17117
+     0.18%  libc.so.6                      [.] 0x00000000001a1868
+     0.18%  libc.so.6                      [.] 0x00000000001a186f
+     0.18%  libggml-cpu.so.0.26.0          [.] void std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> > >(int*, int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> >)
+     0.18%  libzendnnl.so                  [.] 0x00000000005f2061
+     0.18%  [JIT] tid 921205               [.] 0x00007c9878f17104
+     0.17%  libzendnnl.so                  [.] 0x00000000005f347e
+     0.17%  libzendnnl.so                  [.] 0x00000000005f3465
+     0.17%  libzendnnl.so                  [.] 0x00000000005f3579
+     0.17%  libzendnnl.so                  [.] 0x00000000005f3591
+     0.17%  libzendnnl.so                  [.] 0x00000000005f357f
+     0.17%  libzendnnl.so                  [.] 0x00000000005f1d79
+     0.17%  libzendnnl.so                  [.] 0x00000000005f3587
+     0.16%  libzendnnl.so                  [.] 0x00000000005f3573
+     0.16%  libzendnnl.so                  [.] 0x00000000005f1ebf
+     0.16%  libzendnnl.so                  [.] 0x00000000005f3021
+     0.15%  libzendnnl.so                  [.] 0x00000000005f304c
+     0.15%  libzendnnl.so                  [.] 0x00000000005f1eb8
+     0.15%  libzendnnl.so                  [.] 0x00000000005f1d63
+     0.15%  libzendnnl.so                  [.] 0x00000000005f1eda
+     0.14%  libzendnnl.so                  [.] 0x00000000005f352c
+     0.14%  libzendnnl.so                  [.] 0x00000000005f1d6c
+     0.14%  libzendnnl.so                  [.] 0x00000000005f3526
+     0.14%  libzendnnl.so                  [.] 0x00000000005f1d72
+     0.14%  libzendnnl.so                  [.] 0x00000000005f1ecd
+     0.14%  libzendnnl.so                  [.] 0x00000000005f1d69
+     0.14%  libzendnnl.so                  [.] 0x00000000005f3520
+     0.14%  libzendnnl.so                  [.] 0x00000000005f1ef8
+     0.13%  libzendnnl.so                  [.] 0x00000000005f1ed4
+     0.13%  libzendnnl.so                  [.] 0x00000000005f353a
+     0.13%  libomp.so.5                    [.] 0x000000000007de97
+     0.13%  libomp.so.5                    [.] 0x000000000007ddbd
+     0.13%  libzendnnl.so                  [.] 0x00000000005f1eec
+     0.13%  libzendnnl.so                  [.] 0x00000000005f1ef2
+     0.13%  libomp.so.5                    [.] 0x000000000007dfa8
+     0.13%  libzendnnl.so                  [.] 0x00000000005f1ec6
+     0.13%  libzendnnl.so                  [.] 0x00000000005f3519
+     0.13%  libzendnnl.so                  [.] 0x00000000005f1d98
+     0.13%  libc.so.6                      [.] 0x00000000001a1862
+     0.13%  libomp.so.5                    [.] 0x000000000007df90
+     0.13%  libomp.so.5                    [.] 0x000000000007ddc4
+     0.13%  libomp.so.5                    [.] 0x000000000007dea1
+     0.13%  libomp.so.5                    [.] 0x000000000007df23
+     0.12%  libzendnnl.so                  [.] 0x00000000005f3513
+     0.12%  libzendnnl.so                  [.] 0x00000000005f1ee8
+     0.12%  libzendnnl.so                  [.] 0x00000000005f1d85
+     0.12%  libomp.so.5                    [.] 0x000000000007df25
+     0.12%  libzendnnl.so                  [.] 0x00000000005f1d7f
+     0.12%  libzendnnl.so                  [.] 0x00000000005f205a
+     0.12%  libzendnnl.so                  [.] 0x00000000005f1ee0
+     0.11%  libzendnnl.so                  [.] 0x00000000005f26fa
+     0.11%  libzendnnl.so                  [.] 0x00000000005f35ab
+     0.11%  libzendnnl.so                  [.] 0x00000000005f3440
+     0.11%  libzendnnl.so                  [.] 0x00000000005f35a5
+     0.11%  libzendnnl.so                  [.] 0x00000000005f1d8c
+     0.11%  libzendnnl.so                  [.] 0x00000000005f3548
+     0.11%  libzendnnl.so                  [.] 0x00000000005f359f
+     0.11%  libzendnnl.so                  [.] 0x00000000005f3058
+     0.11%  libzendnnl.so                  [.] 0x00000000005f2f6b
+     0.11%  libzendnnl.so                  [.] 0x00000000005f3597
+     0.11%  libzendnnl.so                  [.] 0x00000000005f344c
+     0.11%  libzendnnl.so                  [.] 0x00000000005f207a
+     0.11%  libzendnnl.so                  [.] 0x00000000005f2067
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3013
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3540
+     0.10%  libzendnnl.so                  [.] 0x00000000005f1d92
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3552
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2f8a
+     0.10%  libzendnnl.so                  [.] 0x00000000005f349d
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2f97
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2f71
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3558
+     0.10%  libzendnnl.so                  [.] 0x00000000005f204e
+     0.10%  libomp.so.5                    [.] 0x000000000007df58
+     0.10%  libzendnnl.so                  [.] 0x00000000005f354c
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2f7e
+     0.10%  libggml-cpu.so.0.26.0          [.] void (anonymous namespace)::tinyBLAS<32, float __vector(16), std::bfloat16_t __vector(32), ggml_bf16_t, ggml_bf16_t, float>::gemm_bloc<4, 6>(long, long)
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2733
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3491
+     0.10%  libzendnnl.so                  [.] 0x00000000005f20ac
+     0.10%  libzendnnl.so                  [.] 0x00000000005f20a6
+     0.10%  [kernel.kallsyms]              [k] __calc_delta.constprop.0
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2706
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2719
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2f84
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2047
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3060
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3497
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2054
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3052
+     0.10%  libzendnnl.so                  [.] 0x00000000005f303f
+     0.10%  libzendnnl.so                  [.] 0x00000000005f3006
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2713
+     0.10%  libzendnnl.so                  [.] 0x00000000005f2f59
+     0.10%  libc.so.6                      [.] 0x00000000001a1884
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3066
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3027
+     0.09%  libzendnnl.so                  [.] 0x00000000005f34a9
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3039
+     0.09%  libzendnnl.so                  [.] 0x00000000005f34ed
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3045
+     0.09%  libzendnnl.so                  [.] 0x00000000005f270d
+     0.09%  libzendnnl.so                  [.] 0x00000000005f272c
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2f65
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3484
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3565
+     0.09%  libomp.so.5                    [.] 0x000000000007ad1f
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2f5f
+     0.09%  libc.so.6                      [.] 0x00000000001a187d
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2f52
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3019
+     0.09%  libomp.so.5                    [.] 0x000000000007df5b
+     0.09%  libzendnnl.so                  [.] 0x00000000005f300d
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2041
+     0.09%  libzendnnl.so                  [.] 0x00000000005f34fb
+     0.09%  libzendnnl.so                  [.] 0x00000000005f350d
+     0.09%  libzendnnl.so                  [.] 0x00000000005f20a0
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2720
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2f77
+     0.09%  libzendnnl.so                  [.] 0x00000000005f20b4
+     0.09%  libomp.so.5                    [.] 0x000000000007dea8
+     0.09%  libzendnnl.so                  [.] 0x00000000005f348a
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3000
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3506
+     0.09%  libomp.so.5                    [.] 0x000000000007df6b
+     0.09%  libomp.so.5                    [.] 0x000000000007df6e
+     0.09%  libzendnnl.so                  [.] 0x00000000005f3035
+     0.09%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_argsort
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2f4c
+     0.09%  libzendnnl.so                  [.] 0x00000000005f2726
+     0.09%  libomp.so.5                    [.] 0x000000000007df32
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2b44
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2fb6
+     0.08%  libomp.so.5                    [.] 0x000000000007df1a
+     0.08%  libomp.so.5                    [.] 0x000000000007de66
+     0.08%  libzendnnl.so                  [.] 0x00000000005f34f4
+     0.08%  libomp.so.5                    [.] 0x000000000007df75
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2fbc
+     0.08%  libomp.so.5                    [.] 0x000000000007dfad
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2faf
+     0.08%  libzendnnl.so                  [.] 0x00000000005f3502
+     0.08%  libzendnnl.so                  [.] 0x00000000005f302d
+     0.08%  libzendnnl.so                  [.] 0x00000000005f34e2
+     0.08%  libomp.so.5                    [.] 0x000000000007de69
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2f9d
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2ba7
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2fc9
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2b18
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2fa3
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2fc2
+     0.08%  libzendnnl.so                  [.] 0x00000000005f34e8
+     0.08%  libggml-cpu.so.0.26.0          [.] void ggml_compute_forward_rope_flt<float>(ggml_compute_params const*, ggml_tensor*, bool)
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2f40
+     0.08%  [kernel.kallsyms]              [k] native_sched_clock
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2af2
+     0.08%  libzendnnl.so                  [.] 0x00000000005f2fa9
+     0.07%  libggml-cpu.so.0.26.0          [.] ggml_vec_dot_bf16
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b4f
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b2b
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b7f
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2f48
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b24
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2376
+     0.07%  libzendnnl.so                  [.] 0x00000000005f307e
+     0.07%  libzendnnl.so                  [.] 0x00000000005f26e7
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b05
+     0.07%  [kernel.kallsyms]              [k] yield_task_fair
+     0.07%  libzendnnl.so                  [.] 0x00000000005f3078
+     0.07%  libggml-cpu.so.0.26.0          [.] ggml_compute_forward_sigmoid
+     0.07%  libzendnnl.so                  [.] 0x00000000005f3074
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b1e
+     0.07%  libzendnnl.so                  [.] 0x00000000005f306c
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2fd5
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2774
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b0b
+     0.07%  libzendnnl.so                  [.] 0x00000000005f3084
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2ff3
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2bbf
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2ffa
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2b37
+     0.07%  libzendnnl.so                  [.] 0x00000000005f2fe1
+     0.06%  libzendnnl.so                  [.] 0x00000000005f208b
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2afe
+     0.06%  libzendnnl.so                  [.] 0x00000000005f278e
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2700
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2386
+     0.06%  libzendnnl.so                  [.] 0x00000000005f276c
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2788
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2b11
+     0.06%  libomp.so.5                    [.] 0x000000000007df60
+     0.06%  [kernel.kallsyms]              [k] update_curr
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2780
+     0.06%  libzendnnl.so                  [.] 0x00000000005f20ba
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2092
+     0.06%  libzendnnl.so                  [.] 0x00000000005f26e0
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2fe8
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2084
+     0.06%  libzendnnl.so                  [.] 0x00000000005f277a
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2744
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2fcf
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2fda
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2b99
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2b4a
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2b31
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2759
+     0.06%  libzendnnl.so                  [.] 0x00000000005f20c8
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2bd9
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2bbb
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2adf
+     0.06%  libzendnnl.so                  [.] 0x00000000005f26da
+     0.06%  libzendnnl.so                  [.] 0x00000000005f20cc
+     0.06%  libzendnnl.so                  [.] 0x00000000005f23d0
+     0.06%  libzendnnl.so                  [.] 0x00000000005f26f3
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2099
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2074
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2bcb
+     0.06%  [kernel.kallsyms]              [k] entry_SYSCALL_64
+     0.06%  libzendnnl.so                  [.] 0x00000000005f273f
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2bad
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2ace
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2fef
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2794
+     0.06%  libzendnnl.so                  [.] 0x00000000005f279c
+     0.06%  libzendnnl.so                  [.] 0x00000000005f2400
+     0.06%  libzendnnl.so                  [.] 0x00000000005f274b
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2766
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b71
+     0.05%  libzendnnl.so                  [.] 0x00000000005f206d
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2bdf
+     0.05%  libzendnnl.so                  [.] 0x00000000005f26ed
+     0.05%  libzendnnl.so                  [.] 0x00000000005f20c0
+     0.05%  libggml-cpu.so.0.26.0          [.] ggml_vec_dot_f32@plt
+     0.05%  libzendnnl.so                  [.] 0x00000000005f23bf
+     0.05%  [kernel.kallsyms]              [k] do_syscall_64
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2760
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2bb3
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2bd3
+     0.05%  libzendnnl.so                  [.] 0x00000000005f23b2
+     0.05%  libc.so.6                      [.] 0x00000000001a190d
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2739
+     0.05%  libzendnnl.so                  [.] 0x00000000005f23ec
+     0.05%  libc.so.6                      [.] 0x00000000001a1914
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b9f
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2bc5
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2752
+     0.05%  libzendnnl.so                  [.] 0x00000000005f23a5
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2af8
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b3e
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2418
+     0.05%  libzendnnl.so                  [.] 0x00000000005f23d7
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2080
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b56
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b8b
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b93
+     0.05%  libzendnnl.so                  [.] 0x00000000005f2b77
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

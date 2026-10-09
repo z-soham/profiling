@@ -1,0 +1,13 @@
+# started on Wed Sep 30 03:11:37 2026
+
+
+ Performance counter stats for process id '200808':
+
+      181033611657      ls_any_fills_from_sys.local_l2                                        
+       12319608023      ls_any_fills_from_sys.local_ccx                                       
+         590512750      ls_any_fills_from_sys.near_cache                                      
+        2893754566      ls_any_fills_from_sys.dram_io_near                                      
+            336892      ls_any_fills_from_sys.dram_io_far                                      
+
+      15.005442138 seconds time elapsed
+

@@ -1,0 +1,1 @@
+cfg=base_stock pp=8192 ub=4096 reps=10 load_s=85 settle_s=10 window_s=15

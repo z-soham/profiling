@@ -1,0 +1,1 @@
+engine=llama.cpp cfg=base_zendnn pp=256 ub=512 reps=600 load_s=87 settle_s=10 window_s=15

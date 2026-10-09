@@ -1,0 +1,26 @@
+opprof: pp256 ub256  clean 967.5 ms (264.6 t/s)  profiled 981.0 ms (261.0 t/s)  sum(nodes) 975.5 ms
+  MUL_MAT_ID	CPU                                120 calls      478.6 ms  49.06%
+  CONCAT	CPU                                     30 calls      166.2 ms  17.04%
+  MUL_MAT	ZenDNN                                290 calls      112.6 ms  11.54%
+  GATED_DELTA_NET	CPU                            30 calls       49.1 ms   5.04%
+  SIGMOID	CPU                                    80 calls       32.4 ms   3.32%
+  RMS_NORM	CPU                                  191 calls       20.9 ms   2.14%
+  MUL	CPU                                       281 calls       19.2 ms   1.96%
+  MUL_MAT	CPU                                   101 calls       14.2 ms   1.46%
+  SSM_CONV	CPU                                   30 calls       13.5 ms   1.38%
+  SCALE	CPU                                     120 calls       11.8 ms   1.21%
+  ADD	CPU                                       430 calls       10.1 ms   1.03%
+  FLASH_ATTN_EXT	CPU                             10 calls        9.3 ms   0.95%
+  SILU	CPU                                       60 calls        8.5 ms   0.87%
+  SWIGLU	CPU                                     80 calls        7.2 ms   0.74%
+  GET_ROWS	CPU                                  162 calls        7.1 ms   0.73%
+  ARGSORT	CPU                                    40 calls        5.3 ms   0.54%
+  CPY	CPU                                       120 calls        3.4 ms   0.35%
+  CONT	CPU                                       10 calls        2.1 ms   0.22%
+  SOFTPLUS	CPU                                   30 calls        1.6 ms   0.16%
+  SOFT_MAX	CPU                                   40 calls        0.8 ms   0.08%
+  ROPE	CPU                                       20 calls        0.7 ms   0.07%
+  DIV	CPU                                        40 calls        0.5 ms   0.05%
+  SET_ROWS	CPU                                   20 calls        0.4 ms   0.04%
+  SUM_ROWS	CPU                                   40 calls        0.1 ms   0.01%
+  CLAMP	CPU                                      40 calls        0.0 ms   0.00%

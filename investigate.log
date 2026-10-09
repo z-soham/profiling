@@ -1,0 +1,11 @@
+[10:24:41] mem_wc_default: start
+[10:28:12] mem_wc0: start
+[10:32:43] mem_wc1: start
+[10:36:14] mem_wc2: start
+[10:39:50] mem_prepack0: start
+[10:42:41] mem_stock: start
+[10:45:21] ub_latest_stock: start
+[10:50:58] ub_latest_zendnn: start
+[10:57:09] ub_latest_zendnn_algo3: start
+[11:03:41] ub_latest_zendnn_algo5: start
+[11:26:45] done

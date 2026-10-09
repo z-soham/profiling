@@ -1,0 +1,14 @@
+# started on Wed Sep 30 02:55:12 2026
+
+
+ Performance counter stats for process id '198419':
+
+     1306120327926      cycles                                                                
+      194650877685      l2_request_g1.all                                                     
+       12341318540      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        3970887647      l2_pf_miss_l2_l3.l2_hwpf                                              
+        7258109634      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        5493724563      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.006237082 seconds time elapsed
+

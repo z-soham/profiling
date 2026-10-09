@@ -1,0 +1,191 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 14K of event 'cpu/cycles/P'
+# Event count (approx.): 36403351062
+#
+# Overhead  Shared Object                                   Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ..............................................  ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    27.81%  python3.12                                      [.] _PyEval_EvalFrameDefault
+     2.69%  [kernel.kallsyms]                               [k] perf_iterate_ctx
+     1.81%  python3.12                                      [.] _PyObject_GenericGetAttrWithDict
+     1.44%  python3.12                                      [.] PyObject_Free
+     1.36%  [kernel.kallsyms]                               [k] broadcast_tlb_flush
+     1.10%  python3.12                                      [.] _PyType_Lookup
+     0.87%  python3.12                                      [.] PyObject_Malloc
+     0.80%  python3.12                                      [.] PyType_IsSubtype
+     0.62%  python3.12                                      [.] PyDict_GetItemWithError
+     0.57%  python3.12                                      [.] 0x000000000021d767
+     0.55%  python3.12                                      [.] 0x000000000021d760
+     0.55%  python3.12                                      [.] _PyObject_GC_New
+     0.50%  python3.12                                      [.] PyObject_IsInstance
+     0.49%  python3.12                                      [.] _PyTrash_end
+     0.47%  python3.12                                      [.] _PyObject_MakeTpCall
+     0.47%  python3.12                                      [.] PyObject_GetAttr
+     0.47%  python3.12                                      [.] _PyObject_LookupAttr
+     0.46%  python3.12                                      [.] PyObject_RichCompareBool
+     0.41%  python3.12                                      [.] PyObject_GC_Del
+     0.37%  python3.12                                      [.] 0x000000000021d763
+     0.36%  python3.12                                      [.] _Py_NewReference
+     0.35%  libtorch_python.so                              [.] pybind11::cpp_function::dispatcher(_object*, _object* const*, unsigned long, _object*)
+     0.34%  python3.12                                      [.] 0x000000000021ccf5
+     0.34%  python3.12                                      [.] _Py_HashBytes
+     0.34%  python3.12                                      [.] PyFunction_New
+     0.33%  python3.12                                      [.] 0x000000000021ccf0
+     0.33%  python3.12                                      [.] _PyDict_MaybeUntrack
+     0.32%  python3.12                                      [.] _PyType_GetDict
+     0.31%  libstdc++.so.6.0.33                             [.] std::_Hash_bytes(void const*, unsigned long, unsigned long)
+     0.29%  python3.12                                      [.] _PyObject_GetMethod
+     0.29%  python3.12                                      [.] _Py_Dealloc
+     0.29%  python3.12                                      [.] PyObject_GC_UnTrack
+     0.26%  python3.12                                      [.] _PyObject_VisitManagedDict
+     0.26%  python3.12                                      [.] PyType_GenericAlloc
+     0.26%  python3.12                                      [.] 0x000000000021cb40
+     0.25%  python3.12                                      [.] _PyTrash_begin
+     0.24%  python3.12                                      [.] PyImport_ImportModuleLevelObject
+     0.23%  python3.12                                      [.] PyObject_SetAttr
+     0.22%  python3.12                                      [.] _PyUnicode_JoinArray
+     0.22%  ld-linux-x86-64.so.2                            [.] __tls_get_addr
+     0.22%  python3.12                                      [.] 0x000000000021d6f3
+     0.21%  python3.12                                      [.] PyObject_IsTrue
+     0.21%  python3.12                                      [.] PyObject_Hash
+     0.20%  python3.12                                      [.] PyDict_Next
+     0.19%  python3.12                                      [.] PyTuple_GetSlice
+     0.19%  python3.12                                      [.] PyUnicode_FromFormatV
+     0.18%  python3.12                                      [.] 0x000000000021cb43
+     0.18%  python3.12                                      [.] 0x000000000021cb4a
+     0.18%  python3.12                                      [.] _PyDict_GetItem_KnownHash
+     0.17%  python3.12                                      [.] PyErr_Occurred
+     0.17%  python3.12                                      [.] PyMem_Free
+     0.17%  python3.12                                      [.] _PyTuple_MaybeUntrack
+     0.17%  python3.12                                      [.] PyObject_IS_GC
+     0.17%  python3.12                                      [.] 0x000000000021cb5a
+     0.17%  python3.12                                      [.] _PyObject_LookupSpecial
+     0.17%  python3.12                                      [.] 0x000000000021cb52
+     0.16%  python3.12                                      [.] 0x000000000021cb65
+     0.16%  python3.12                                      [.] 0x000000000021cb57
+     0.16%  libtorch_python.so                              [.] std::_Hashtable<std::type_index, std::pair<std::type_index const, pybind11::detail::type_info*>, std::allocator<std::pair<std::type_index const, pybind11::detail::type_info*> >, std::__detail::_Select1st, std::equal_to<std::type_index>, std::hash<std::type_index>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_find_before_node(unsigned long, std::type_index const&, unsigned long) const [clone .isra.0]
+     0.16%  python3.12                                      [.] 0x000000000021cb68
+     0.16%  python3.12                                      [.] 0x000000000021cb4e
+     0.16%  python3.12                                      [.] PyObject_Vectorcall
+     0.15%  python3.12                                      [.] _PyTrash_cond
+     0.15%  python3.12                                      [.] 0x000000000021cb47
+     0.15%  python3.12                                      [.] 0x000000000021d6f0
+     0.15%  python3.12                                      [.] 0x000000000021ccf8
+     0.15%  python3.12                                      [.] _Py_CheckFunctionResult
+     0.15%  [kernel.kallsyms]                               [k] mas_rev_awalk
+     0.14%  python3.12                                      [.] PyObject_GetIter
+     0.14%  python3.12                                      [.] 0x000000000021d984
+     0.14%  python3.12                                      [.] PyDict_Contains
+     0.14%  python3.12                                      [.] 0x000000000021cb61
+     0.14%  python3.12                                      [.] PyMethod_New
+     0.14%  python3.12                                      [.] PyMem_Malloc
+     0.13%  python3.12                                      [.] PyObject_CallOneArg
+     0.12%  python3.12                                      [.] _PyObject_Call_Prepend
+     0.12%  python3.12                                      [.] 0x000000000021d9ad
+     0.12%  python3.12                                      [.] _PyThreadState_UncheckedGet
+     0.12%  python3.12                                      [.] PyUnicode_InternInPlace
+     0.12%  python3.12                                      [.] 0x000000000021d9af
+     0.12%  python3.12                                      [.] PyDescr_IsData
+     0.12%  libtorch_python.so                              [.] torch::check_has_torch_function(_object*, bool)
+     0.11%  [kernel.kallsyms]                               [k] restore_fpregs_from_fpstate
+     0.11%  python3.12                                      [.] 0x000000000021cd09
+     0.11%  python3.12                                      [.] memcpy@plt
+     0.11%  python3.12                                      [.] _PyFunction_Vectorcall
+     0.11%  python3.12                                      [.] 0x000000000021d9e8
+     0.10%  python3.12                                      [.] PyCMethod_New
+     0.10%  python3.12                                      [.] _PyObject_GC_NewVar
+     0.10%  [kernel.kallsyms]                               [k] __refill_objects_node
+     0.10%  python3.12                                      [.] 0x000000000021ccfb
+     0.09%  python3.12                                      [.] memset@plt
+     0.09%  python3.12                                      [.] 0x000000000021d9e0
+     0.09%  python3.12                                      [.] 0x000000000021da2e
+     0.09%  python3.12                                      [.] 0x00000000001f786c
+     0.09%  libtorch_python.so                              [.] (anonymous namespace)::NodeBase_traverse((anonymous namespace)::NodeBase*, int (*)(_object*, void*), void*)
+     0.09%  libtorch_python.so                              [.] pybind11::detail::get_type_info(std::type_info const&, bool)
+     0.09%  [kernel.kallsyms]                               [k] dequeue_entities
+     0.09%  python3.12                                      [.] PyTuple_New
+     0.09%  python3.12                                      [.] 0x0000000000172698
+     0.09%  python3.12                                      [.] PyTuple_Pack
+     0.08%  python3.12                                      [.] 0x000000000021d9fc
+     0.08%  python3.12                                      [.] PyArg_UnpackTuple
+     0.08%  python3.12                                      [.] 0x000000000021d6fb
+     0.08%  [kernel.kallsyms]                               [k] mas_wr_node_store
+     0.08%  python3.12                                      [.] PyLong_FromSsize_t
+     0.08%  python3.12                                      [.] PyDict_New
+     0.08%  python3.12                                      [.] 0x000000000021d9e4
+     0.08%  python3.12                                      [.] PySequence_Contains
+     0.08%  [kernel.kallsyms]                               [k] asm_exc_page_fault
+     0.08%  python3.12                                      [.] PyObject_GetItem
+     0.07%  libtorch_python.so                              [.] pybind11::detail::get_local_internals()
+     0.07%  python3.12                                      [.] 0x000000000017267f
+     0.07%  python3.12                                      [.] 0x00000000001f7881
+     0.07%  [kernel.kallsyms]                               [k] error_entry
+     0.07%  python3.12                                      [.] 0x0000000000172686
+     0.07%  python3.12                                      [.] 0x000000000021d988
+     0.07%  libc.so.6                                       [.] 0x00000000001a1695
+     0.07%  python3.12                                      [.] 0x0000000000172690
+     0.07%  python3.12                                      [.] 0x0000000000172642
+     0.07%  libtcmalloc_minimal.so.4.5.16                   [.] operator delete[](void*, unsigned long)
+     0.07%  python3.12                                      [.] 0x0000000000176803
+     0.06%  libc.so.6                                       [.] 0x00000000001a1e44
+     0.06%  python3.12                                      [.] 0x000000000021d980
+     0.06%  python3.12                                      [.] 0x0000000000172683
+     0.06%  [kernel.kallsyms]                               [k] mas_store_gfp
+     0.06%  libtorch_python.so                              [.] torch::handle_torch_function_no_python_arg_parser(c10::ArrayRef<_object*>, _object*, _object*, char const*, _object*, char const*, c10::OperatorHandle const*, std::vector<c10::IValue, std::allocator<c10::IValue> >*, torch::TorchFunctionName)
+     0.06%  libtorch_cpu.so                                 [.] torch::jit::SharedParserData::match(torch::jit::StringCordView::Iterator, bool, bool, int*, torch::jit::StringCordView::Iterator*, torch::jit::StringCordView::Iterator*)
+     0.06%  libtorch_python.so                              [.] torch::FunctionSignature::parse(_object*, _object*, _object*, _object**, std::vector<_object*, std::allocator<_object*> >&, bool)
+     0.06%  python3.12                                      [.] 0x000000000017258a
+     0.06%  python3.12                                      [.] 0x0000000000172504
+     0.06%  python3.12                                      [.] 0x0000000000191559
+     0.06%  [kernel.kallsyms]                               [k] __mmap_region
+     0.06%  python3.12                                      [.] 0x00000000001f7797
+     0.06%  python3.12                                      [.] PyUnicode_FindChar
+     0.06%  [kernel.kallsyms]                               [k] mas_walk
+     0.06%  python3.12                                      [.] 0x0000000000172640
+     0.06%  python3.12                                      [.] PyNumber_Multiply
+     0.06%  python3.12                                      [.] PyBool_FromLong
+     0.06%  python3.12                                      [.] PyMem_Realloc
+     0.06%  python3.12                                      [.] 0x00000000001725a7
+     0.06%  python3.12                                      [.] _PyModuleSpec_IsInitializing
+     0.06%  libtorch_python.so                              [.] pybind11::detail::get_internals()
+     0.06%  [kernel.kallsyms]                               [k] reweight_entity
+     0.06%  python3.12                                      [.] 0x000000000021d6f8
+     0.06%  python3.12                                      [.] 0x000000000021cb5d
+     0.06%  python3.12                                      [.] PyCell_New
+     0.06%  python3.12                                      [.] _Py_HashPointer
+     0.06%  python3.12                                      [.] 0x00000000001b43d0
+     0.06%  python3.12                                      [.] 0x00000000001f7837
+     0.06%  python3.12                                      [.] PyList_New
+     0.06%  python3.12                                      [.] 0x000000000017268b
+     0.06%  [kernel.kallsyms]                               [k] __handle_mm_fault
+     0.06%  python3.12                                      [.] PyDict_SetDefault
+     0.06%  python3.12                                      [.] 0x0000000000208569
+     0.06%  python3.12                                      [.] 0x000000000021da07
+     0.06%  python3.12                                      [.] _PyUnicode_Equal
+     0.06%  python3.12                                      [.] 0x000000000021da00
+     0.06%  libtorch_python.so                              [.] torch::PyWarningHandler::~PyWarningHandler()
+     0.05%  python3.12                                      [.] PyLong_AsSsize_t
+     0.05%  python3.12                                      [.] 0x000000000017259a
+     0.05%  [kernel.kallsyms]                               [k] native_sched_clock
+     0.05%  python3.12                                      [.] _PyLong_AsInt
+     0.05%  python3.12                                      [.] 0x00000000001f7786
+     0.05%  python3.12                                      [.] 0x000000000019157b
+     0.05%  python3.12                                      [.] PyMember_GetOne
+     0.05%  [kernel.kallsyms]                               [k] xfd_validate_state
+     0.05%  python3.12                                      [.] 0x00000000001a6e01
+     0.05%  [kernel.kallsyms]                               [k] psi_group_change
+     0.05%  python3.12                                      [.] 0x000000000021cc6b
+     0.05%  python3.12                                      [.] PyMem_Calloc
+     0.05%  [kernel.kallsyms]                               [k] vruntime_eligible
+     0.05%  [kernel.kallsyms]                               [k] mas_find
+     0.05%  libtorch_python.so                              [.] pybind11::gil_scoped_acquire::gil_scoped_acquire()
+     0.05%  python3.12                                      [.] PyObject_ClearWeakRefs
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,10 @@
+# compiled binaries (rebuild from the .cpp sources)
+bin/
+concat_check
+concat_view_check
+concat_check_rebased
+concat_view_check_rebased
+__pycache__/
+*.pyc
+# report bundles: the same content is in the directories (and in the reports' REPORT.md)
+*.zip

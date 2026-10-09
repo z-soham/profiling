@@ -1,0 +1,4 @@
+ 224242   68 /proj/aigstaff/sacsharm/vllm/.venv/bin/python3 /proj/rdi/staff/sacsharm/vllm/.venv/bin/vllm bench latency --model /proj/rdi/staff/sacsharm/models/hf/Qwen3.6-35B-A3B --dtype auto --kv-cache-dtype auto --distributed-executor-backend mp --language-model-only --max-model-len 16384 --max-num-seqs 1 --max-num-batched-tokens 4096 --no-enable-prefix-caching --batch-size 1 --output-len 1 --input-len 8192 --num-iters 16 --num-iters-warmup 3 --output-json /tmp/perf_llama.0dyk5f/vllm_pp8192/bench.json
+ 224365    1 /proj/aigstaff/sacsharm/vllm/.venv/bin/python3 -c from multiprocessing.resource_tracker import main;main(23)
+ 224366   70 VLLM::EngineCore
+ 224457   84 VLLM::Worker

@@ -1,0 +1,93 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 384K of event 'cpu/cycles/P'
+# Event count (approx.): 1027806800322
+#
+# Overhead  Shared Object                  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+# ........  .............................  ......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    45.02%  libggml-cpu.so.0.23.0          [.] ggml_vec_dot_bf16
+    14.04%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_flash_attn_ext_tiled(ggml_compute_params const*, ggml_tensor*, int, int)
+     6.00%  libomp.so.5                    [.] 0x000000000007df00
+     4.84%  libggml-cpu.so.0.23.0          [.] ggml_graph_compute_thread.isra.0
+     3.16%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_gated_delta_net
+     2.30%  libggml-cpu.so.0.23.0          [.] ggml_vec_dot_f32
+     1.75%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_ssm_conv
+     1.13%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_mul
+     1.04%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_rms_norm_mul_fused
+     0.97%  libggml-base.so.0.23.0         [.] ggml_fp32_to_bf16_row_ref
+     0.88%  libggml-cpu.so.0.23.0          [.] ggml_vec_silu_f32
+     0.82%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_concat
+     0.68%  libggml-cpu.so.0.23.0          [.] ggml_vec_swiglu_f32
+     0.49%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_add_non_quantized
+     0.40%  libggml-cpu.so.0.23.0          [.] ggml_cpu_fp16_to_fp32
+     0.39%  libggml-cpu.so.0.23.0          [.] ggml_cpu_fp32_to_bf16
+     0.36%  libomp.so.5                    [.] 0x00000000000e1140
+     0.35%  [JIT] tid 218064               [.] 0x00007142c4b7a165
+     0.29%  [JIT] tid 218064               [.] 0x00007142c4b7a16b
+     0.28%  [JIT] tid 218064               [.] 0x00007142c4b7a1b3
+     0.28%  [JIT] tid 218064               [.] 0x00007142c4b7a177
+     0.28%  [JIT] tid 218064               [.] 0x00007142c4b7a171
+     0.27%  [JIT] tid 218064               [.] 0x00007142c4b7a1a1
+     0.27%  [JIT] tid 218064               [.] 0x00007142c4b7a19b
+     0.27%  [JIT] tid 218064               [.] 0x00007142c4b7a144
+     0.27%  [JIT] tid 218064               [.] 0x00007142c4b7a1a7
+     0.27%  [JIT] tid 218064               [.] 0x00007142c4b7a1b9
+     0.27%  [JIT] tid 218064               [.] 0x00007142c4b7a1ad
+     0.26%  libggml-cpu.so.0.23.0          [.] ggml_vec_soft_max_f32
+     0.25%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_rms_norm
+     0.25%  [JIT] tid 218064               [.] 0x00007142c4b7a180
+     0.25%  [JIT] tid 218064               [.] 0x00007142c4b7a0f0
+     0.25%  [JIT] tid 218064               [.] 0x00007142c4b7a192
+     0.25%  [JIT] tid 218064               [.] 0x00007142c4b7a186
+     0.25%  [JIT] tid 218064               [.] 0x00007142c4b7a18c
+     0.24%  [JIT] tid 218064               [.] 0x00007142c4b7a135
+     0.24%  [JIT] tid 218064               [.] 0x00007142c4b7a198
+     0.24%  [JIT] tid 218064               [.] 0x00007142c4b7a123
+     0.24%  [JIT] tid 218064               [.] 0x00007142c4b7a129
+     0.24%  [JIT] tid 218064               [.] 0x00007142c4b7a17a
+     0.23%  [JIT] tid 218064               [.] 0x00007142c4b7a12f
+     0.23%  [JIT] tid 218064               [.] 0x00007142c4b7a11d
+     0.22%  [JIT] tid 218064               [.] 0x00007142c4b7a156
+     0.22%  [JIT] tid 218064               [.] 0x00007142c4b7a13e
+     0.22%  [JIT] tid 218064               [.] 0x00007142c4b7a159
+     0.22%  [JIT] tid 218064               [.] 0x00007142c4b7a1d8
+     0.22%  [JIT] tid 218064               [.] 0x00007142c4b7a15f
+     0.22%  [JIT] tid 218064               [.] 0x00007142c4b7a1bc
+     0.21%  [JIT] tid 218064               [.] 0x00007142c4b7a150
+     0.21%  [JIT] tid 218064               [.] 0x00007142c4b7a138
+     0.20%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_scale
+     0.20%  [JIT] tid 218064               [.] 0x00007142c4b7a1c8
+     0.20%  [JIT] tid 218064               [.] 0x00007142c4b7a1c2
+     0.20%  [JIT] tid 218064               [.] 0x00007142c4b7a1ce
+     0.20%  libggml-cpu.so.0.23.0          [.] void std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> > >(int*, int*, long, __gnu_cxx::__ops::_Iter_comp_iter<cmp_argsort<(ggml_sort_order)1> >)
+     0.19%  [JIT] tid 218064               [.] 0x00007142c4b7a14a
+     0.18%  [JIT] tid 218064               [.] 0x00007142c4b7a0f6
+     0.18%  [JIT] tid 218064               [.] 0x00007142c4b7a117
+     0.18%  [JIT] tid 218064               [.] 0x00007142c4b7a0ed
+     0.17%  [JIT] tid 218064               [.] 0x00007142c4b7a114
+     0.17%  [JIT] tid 218064               [.] 0x00007142c4b7a104
+     0.17%  [JIT] tid 218064               [.] 0x00007142c4b7a1d4
+     0.17%  [JIT] tid 218064               [.] 0x00007142c4b7a10e
+     0.16%  [JIT] tid 218064               [.] 0x00007142c4b7a0fd
+     0.16%  [JIT] tid 218064               [.] 0x00007142c4b7a10b
+     0.12%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_mul_mat
+     0.10%  libomp.so.5                    [.] 0x000000000007dfc6
+     0.10%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_argsort
+     0.09%  libggml-cpu.so.0.23.0          [.] void (anonymous namespace)::tinyBLAS<32, float __vector(16), short __vector(32), ggml_bf16_t, ggml_bf16_t, float>::gemm_bloc<4, 6>(long, long)
+     0.09%  libomp.so.5                    [.] 0x000000000007ad1f
+     0.09%  libc.so.6                      [.] 0x00000000001a15c7
+     0.08%  libggml-cpu.so.0.23.0          [.] memcpy@plt
+     0.08%  libggml-cpu.so.0.23.0          [.] void ggml_compute_forward_rope_flt<float>(ggml_compute_params const*, ggml_tensor*, bool)
+     0.07%  libggml-base.so.0.23.0         [.] ggml_blck_size
+     0.07%  libggml-cpu.so.0.23.0          [.] ggml_vec_dot_f32@plt
+     0.06%  libggml-cpu.so.0.23.0          [.] ggml_compute_forward_sigmoid
+     0.06%  libggml-cpu.so.0.23.0          [.] ggml_cpu_fp16_to_fp32@plt
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

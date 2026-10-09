@@ -1,0 +1,26 @@
+opprof: pp4096 ub512  clean 13275.9 ms (308.5 t/s)  profiled 14266.6 ms (287.1 t/s)  sum(nodes) 14196.2 ms
+  MUL_MAT_ID	CPU                                960 calls     5795.0 ms  40.82%
+  CONCAT	CPU                                    240 calls     2738.9 ms  19.29%
+  MUL_MAT	CPU                                  3128 calls     2243.0 ms  15.80%
+  GATED_DELTA_NET	CPU                           240 calls      797.7 ms   5.62%
+  FLASH_ATTN_EXT	CPU                             80 calls      633.3 ms   4.46%
+  SIGMOID	CPU                                   640 calls      500.0 ms   3.52%
+  RMS_NORM	CPU                                 1528 calls      306.0 ms   2.16%
+  MUL	CPU                                      2248 calls      252.0 ms   1.78%
+  SSM_CONV	CPU                                  240 calls      212.6 ms   1.50%
+  SCALE	CPU                                     960 calls      162.8 ms   1.15%
+  SILU	CPU                                      480 calls      104.8 ms   0.74%
+  ADD	CPU                                      3440 calls      102.4 ms   0.72%
+  SWIGLU	CPU                                    640 calls       84.2 ms   0.59%
+  ARGSORT	CPU                                   320 calls       78.5 ms   0.55%
+  GET_ROWS	CPU                                  832 calls       73.2 ms   0.52%
+  CONT	CPU                                       80 calls       30.3 ms   0.21%
+  CPY	CPU                                       960 calls       26.4 ms   0.19%
+  SOFTPLUS	CPU                                  240 calls       25.0 ms   0.18%
+  SOFT_MAX	CPU                                  320 calls        8.5 ms   0.06%
+  ROPE	CPU                                      160 calls        8.2 ms   0.06%
+  SET_ROWS	CPU                                  168 calls        6.5 ms   0.05%
+  DIV	CPU                                       320 calls        4.0 ms   0.03%
+  CLAMP	CPU                                     320 calls        1.5 ms   0.01%
+  SUM_ROWS	CPU                                  320 calls        1.0 ms   0.01%
+  DUP	CPU                                         8 calls        0.4 ms   0.00%

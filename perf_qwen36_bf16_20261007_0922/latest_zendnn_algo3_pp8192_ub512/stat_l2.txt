@@ -1,0 +1,14 @@
+# started on Wed Oct  7 09:35:27 2026
+
+
+ Performance counter stats for process id '921205':
+
+      967791544394      cycles                                                                
+      199098437879      l2_request_g1.all                                                     
+        4417926576      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        4097570545      l2_pf_miss_l2_l3.l2_hwpf                                              
+        6505387512      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        5260995937      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.000901338 seconds time elapsed
+

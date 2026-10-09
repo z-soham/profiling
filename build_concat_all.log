@@ -1,0 +1,22 @@
+branch: zendnn-concat-fix
+711391cedce586fb05955da2956edd5fd0928e88 ggml-cpu: skip zero-length memcpy in concat row copy
+4aa3f1ca2ed61cd010eaf4744935534c5f2df820 ggml-cpu: thread CONCAT over all dst rows and copy rows with memcpy
+f012f20497201ae4b583af20601abacf0c064d63 ggml-zendnn: remove MUL_MAT_ID expert-count and rows-per-expert offload limits
+=== build_zendnn_concat
+-- ggml commit:  711391c
+[100%] Linking CXX executable ../../bin/llama-bench
+[100%] Linking CXX executable ../bin/test-backend-ops
+-rwxr-xr-x 1 sohroy grp10115 17880 Oct  7 19:08 build_zendnn_concat/bin/llama-bench
+=== build_concat
+-- ggml commit:  711391c
+[100%] Linking CXX executable ../../bin/llama-bench
+[100%] Linking CXX executable ../bin/test-backend-ops
+-rwxr-xr-x 1 sohroy grp10115 17880 Oct  7 19:08 build_concat/bin/llama-bench
+	libllama-bench-impl.so => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libllama-bench-impl.so (0x00007d848ef9f000)
+	libllama-common.so.0 => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libllama-common.so.0 (0x00007d848e5f4000)
+	libllama.so.0 => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libllama.so.0 (0x00007d848e1db000)
+	libggml.so.0 => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libggml.so.0 (0x00007d848e1cd000)
+	libggml-base.so.0 => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libggml-base.so.0 (0x00007d848e0f9000)
+	libggml-cpu.so.0 => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libggml-cpu.so.0 (0x00007d848de0a000)
+	libggml-zendnn.so.0 => /proj/aigstaff/sohroy/llama.cpp/build_zendnn_concat/bin/libggml-zendnn.so.0 (0x00007d848ddf7000)
+	libzendnnl.so => /proj/aigstaff/sohroy/ZenDNN-latest/build/install/zendnnl/lib/libzendnnl.so (0x00007d84897cd000)

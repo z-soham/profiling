@@ -1,0 +1,826 @@
+# model=/proj/rdi/staff/sohroy/models/Qwen3.6-35B-A3B-BF16.gguf n_prompt=4096 n_batch=4096 n_ubatch=512 threads=32 fa=on ctk=f16 ctv=f16 reps=1 warmup=1 load_mode=dio prompt=random zendnn_device=yes
+# clean_wall_ms=14908.3 clean_tps=274.75 profiled_wall_ms=15056.4 profiled_tps=272.04 sum_node_ms=14987.5
+op	stem	backend	wtype	wbuf	shape	calls	ms	pct
+CONCAT	conv_input	CPU	-	-	-	240	2829.37	18.88
+MUL_MAT_ID	ffn_moe_gate	ZenDNN	bf16	CPU	K=2048 M=512 E=256 used=8 tok=512	312	2406.58	16.06
+MUL_MAT_ID	ffn_moe_up	ZenDNN	bf16	CPU	K=2048 M=512 E=256 used=8 tok=512	312	2400.66	16.02
+MUL_MAT_ID	ffn_moe_down	ZenDNN	bf16	CPU	K=512 M=2048 E=256 used=8 tok=512	312	2220.36	14.81
+SIGMOID	gate_sigmoid	CPU	-	-	-	80	468.89	3.13
+MUL_MAT	linear_attn_out	ZenDNN	bf16	CPU	K=4096 M=2048 N=512 B=1	240	261.37	1.74
+MUL_MAT	z	ZenDNN	bf16	CPU	K=2048 M=4096 N=512 B=1	240	249.27	1.66
+SSM_CONV	conv_output_raw	CPU	-	-	-	240	216.50	1.44
+MUL	ffn_moe_weighted	CPU	-	-	-	320	195.85	1.31
+RMS_NORM	norm	CPU	-	-	-	1048	190.68	1.27
+MUL_MAT	Qcur_full	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	80	155.56	1.04
+MUL_MAT	attn_output	ZenDNN	bf16	CPU	K=4096 M=2048 N=512 B=1	80	87.09	0.58
+MUL_MAT	ffn_moe_logits	ZenDNN	f32	CPU	K=2048 M=256 N=512 B=1	312	84.78	0.57
+SCALE	q_conv_predelta	CPU	-	-	-	240	82.78	0.55
+ARGSORT	ffn_moe_argsort	CPU	-	-	-	320	78.88	0.53
+MUL_MAT	ffn_gate	ZenDNN	bf16	CPU	K=2048 M=512 N=512 B=1	312	75.76	0.51
+SWIGLU	ffn_moe_swiglu	CPU	-	-	-	320	75.13	0.50
+SCALE	k_conv_predelta	CPU	-	-	-	240	71.28	0.48
+MUL_MAT	ffn_up	ZenDNN	bf16	CPU	K=2048 M=512 N=512 B=1	312	68.72	0.46
+FLASH_ATTN_EXT	node_3793	CPU	-	-	-	8	62.36	0.42
+FLASH_ATTN_EXT	node_2641	CPU	-	-	-	8	62.29	0.42
+FLASH_ATTN_EXT	node_3409	CPU	-	-	-	8	62.21	0.42
+FLASH_ATTN_EXT	node_3025	CPU	-	-	-	8	62.01	0.41
+FLASH_ATTN_EXT	node_337	CPU	-	-	-	8	61.98	0.41
+FLASH_ATTN_EXT	node_1105	CPU	-	-	-	8	61.96	0.41
+FLASH_ATTN_EXT	node_2257	CPU	-	-	-	8	61.83	0.41
+FLASH_ATTN_EXT	node_721	CPU	-	-	-	8	61.76	0.41
+FLASH_ATTN_EXT	node_1489	CPU	-	-	-	8	61.62	0.41
+FLASH_ATTN_EXT	node_1873	CPU	-	-	-	8	61.57	0.41
+MUL_MAT	ffn_shexp	ZenDNN	bf16	CPU	K=512 M=2048 N=512 B=1	312	53.62	0.36
+SILU	conv_output_silu	CPU	-	-	-	240	48.56	0.32
+CONT	gate_reshaped	CPU	-	-	-	80	29.88	0.20
+GET_ROWS	ffn_moe_weights	CPU	-	-	-	320	29.41	0.20
+SIGMOID	beta_sigmoid	CPU	-	-	-	240	29.22	0.19
+ADD	attn_residual	CPU	-	-	-	320	28.15	0.19
+GATED_DELTA_NET	node_2943	CPU	-	-	-	8	28.01	0.19
+GATED_DELTA_NET	node_3327	CPU	-	-	-	8	27.97	0.19
+GATED_DELTA_NET	node_2737	CPU	-	-	-	8	26.98	0.18
+GATED_DELTA_NET	node_920	CPU	-	-	-	8	26.95	0.18
+GATED_DELTA_NET	node_433	CPU	-	-	-	8	26.95	0.18
+GATED_DELTA_NET	node_2559	CPU	-	-	-	8	26.95	0.18
+GATED_DELTA_NET	node_3505	CPU	-	-	-	8	26.95	0.18
+GATED_DELTA_NET	node_2072	CPU	-	-	-	8	26.94	0.18
+GATED_DELTA_NET	node_152	CPU	-	-	-	8	26.94	0.18
+GATED_DELTA_NET	node_1969	CPU	-	-	-	8	26.94	0.18
+GATED_DELTA_NET	node_2456	CPU	-	-	-	8	26.94	0.18
+GATED_DELTA_NET	node_1791	CPU	-	-	-	8	26.93	0.18
+GATED_DELTA_NET	node_3608	CPU	-	-	-	8	26.93	0.18
+GATED_DELTA_NET	node_1201	CPU	-	-	-	8	26.93	0.18
+GATED_DELTA_NET	node_639	CPU	-	-	-	8	26.93	0.18
+GATED_DELTA_NET	node_2840	CPU	-	-	-	8	26.93	0.18
+GATED_DELTA_NET	node_536	CPU	-	-	-	8	26.92	0.18
+GATED_DELTA_NET	node_3121	CPU	-	-	-	8	26.92	0.18
+GATED_DELTA_NET	node_2353	CPU	-	-	-	8	26.91	0.18
+GATED_DELTA_NET	node_817	CPU	-	-	-	8	26.91	0.18
+GATED_DELTA_NET	node_3711	CPU	-	-	-	8	26.91	0.18
+GATED_DELTA_NET	node_1304	CPU	-	-	-	8	26.90	0.18
+GATED_DELTA_NET	node_1023	CPU	-	-	-	8	26.90	0.18
+GATED_DELTA_NET	node_255	CPU	-	-	-	8	26.90	0.18
+GATED_DELTA_NET	node_2175	CPU	-	-	-	8	26.90	0.18
+GATED_DELTA_NET	node_1688	CPU	-	-	-	8	26.89	0.18
+GATED_DELTA_NET	node_3224	CPU	-	-	-	8	26.87	0.18
+GATED_DELTA_NET	node_1585	CPU	-	-	-	8	26.86	0.18
+GATED_DELTA_NET	node_49	CPU	-	-	-	8	26.86	0.18
+GATED_DELTA_NET	node_1407	CPU	-	-	-	8	26.85	0.18
+SOFTPLUS	a_softplus	CPU	-	-	-	240	24.85	0.17
+MUL	attn_norm	CPU	-	-	-	320	20.42	0.14
+MUL	attn_post_norm	CPU	-	-	-	320	20.13	0.13
+MUL	attn_gated	CPU	-	-	-	80	19.38	0.13
+MUL	ffn_shexp_gated	CPU	-	-	-	320	18.61	0.12
+MUL_MAT	Vcur	ZenDNN	bf16	CPU	K=2048 M=512 N=512 B=1	80	18.25	0.12
+MUL_MAT	node_2038	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	17.17	0.11
+MUL_MAT	Kcur	ZenDNN	bf16	CPU	K=2048 M=512 N=512 B=1	80	17.04	0.11
+MUL_MAT	node_15	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.87	0.11
+MUL_MAT	node_2909	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.65	0.10
+MUL_MAT	node_3293	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.64	0.10
+MUL_MAT	node_2525	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.63	0.10
+MUL_MAT	node_3677	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.63	0.10
+MUL_MAT	node_1373	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.63	0.10
+MUL_MAT	node_1167	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.62	0.10
+MUL_MAT	node_1935	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.62	0.10
+MUL_MAT	node_3087	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.61	0.10
+MUL_MAT	node_1757	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.60	0.10
+MUL_MAT	node_3574	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.60	0.10
+MUL_MAT	node_3471	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.60	0.10
+MUL_MAT	node_3190	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.59	0.10
+MUL_MAT	node_783	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.59	0.10
+MUL_MAT	node_2806	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.58	0.10
+MUL_MAT	node_1270	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.58	0.10
+MUL_MAT	node_2422	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.58	0.10
+MUL_MAT	node_1654	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.58	0.10
+MUL_MAT	node_605	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.58	0.10
+MUL_MAT	node_2319	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.57	0.10
+MUL_MAT	node_1551	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.57	0.10
+MUL_MAT	node_886	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.57	0.10
+MUL_MAT	node_2141	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.57	0.10
+MUL_MAT	node_118	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.56	0.10
+MUL_MAT	node_989	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.56	0.10
+MUL_MAT	node_399	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.55	0.10
+MUL_MAT	node_2703	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.54	0.10
+MUL_MAT	node_502	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.53	0.10
+MUL_MAT	node_221	ZenDNN	bf16	CPU	K=2048 M=8192 N=512 B=1	8	15.52	0.10
+ADD	l_out	CPU	-	-	-	320	14.96	0.10
+SWIGLU	ffn_swiglu	CPU	-	-	-	320	13.97	0.09
+MUL	Qcur_normed	CPU	-	-	-	80	10.14	0.07
+SOFT_MAX	ffn_moe_probs	CPU	-	-	-	320	8.89	0.06
+MUL_MAT	result_output	CPU	bf16	CPU	K=2048 M=248320 N=1 B=1	1	8.61	0.06
+MUL_MAT	shared_expert_gate	CPU	f32	CPU	K=2048 M=1 N=512 B=1	312	7.28	0.05
+CPY	conv_state_update	CPU	-	-	-	240	6.84	0.05
+ADD	ffn_out	CPU	-	-	-	320	6.80	0.05
+ADD	ffn_moe_out	CPU	-	-	-	320	5.68	0.04
+ROPE	Qcur	CPU	-	-	-	80	5.50	0.04
+DIV	ffn_moe_weights_norm	CPU	-	-	-	320	3.84	0.03
+MUL	gate	CPU	-	-	-	240	3.07	0.02
+ROPE	Kcur	CPU	-	-	-	80	2.85	0.02
+MUL	Kcur_normed	CPU	-	-	-	80	2.50	0.02
+RMS_NORM	node_3695	CPU	-	-	-	8	2.26	0.02
+RMS_NORM	node_2543	CPU	-	-	-	8	2.25	0.02
+RMS_NORM	node_1775	CPU	-	-	-	8	2.25	0.02
+RMS_NORM	node_3208	CPU	-	-	-	8	2.25	0.02
+RMS_NORM	node_801	CPU	-	-	-	8	2.25	0.01
+RMS_NORM	node_2440	CPU	-	-	-	8	2.25	0.01
+RMS_NORM	node_904	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_239	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_1569	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_1185	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_2159	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_3105	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_417	CPU	-	-	-	8	2.24	0.01
+RMS_NORM	node_2056	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_1007	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_3311	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_623	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_1391	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_1672	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_2721	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_1953	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_2337	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_2824	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_136	CPU	-	-	-	8	2.23	0.01
+RMS_NORM	node_2927	CPU	-	-	-	8	2.22	0.01
+RMS_NORM	node_1288	CPU	-	-	-	8	2.22	0.01
+RMS_NORM	node_3592	CPU	-	-	-	8	2.21	0.01
+RMS_NORM	node_520	CPU	-	-	-	8	2.21	0.01
+GET_ROWS	model.input_embed	CPU	-	-	-	8	2.21	0.01
+RMS_NORM	node_3489	CPU	-	-	-	8	2.21	0.01
+SILU	node_442	CPU	-	-	-	8	2.18	0.01
+SILU	node_648	CPU	-	-	-	8	2.17	0.01
+SILU	node_161	CPU	-	-	-	8	2.16	0.01
+RMS_NORM	node_33	CPU	-	-	-	8	2.16	0.01
+SILU	node_1800	CPU	-	-	-	8	2.16	0.01
+SILU	node_1416	CPU	-	-	-	8	2.16	0.01
+SILU	node_826	CPU	-	-	-	8	2.15	0.01
+SILU	node_1594	CPU	-	-	-	8	2.15	0.01
+SILU	node_1978	CPU	-	-	-	8	2.15	0.01
+SILU	node_3130	CPU	-	-	-	8	2.15	0.01
+SILU	node_1032	CPU	-	-	-	8	2.15	0.01
+SILU	node_2362	CPU	-	-	-	8	2.14	0.01
+SILU	node_2746	CPU	-	-	-	8	2.14	0.01
+SILU	node_2184	CPU	-	-	-	8	2.14	0.01
+SILU	node_2952	CPU	-	-	-	8	2.14	0.01
+SILU	node_1210	CPU	-	-	-	8	2.14	0.01
+SILU	node_3514	CPU	-	-	-	8	2.13	0.01
+SILU	node_2568	CPU	-	-	-	8	2.13	0.01
+SILU	node_3720	CPU	-	-	-	8	2.12	0.01
+SILU	node_3336	CPU	-	-	-	8	2.12	0.01
+SILU	node_1697	CPU	-	-	-	8	2.07	0.01
+SILU	node_1313	CPU	-	-	-	8	2.07	0.01
+SILU	node_2081	CPU	-	-	-	8	2.06	0.01
+SILU	node_2849	CPU	-	-	-	8	2.06	0.01
+SILU	node_3617	CPU	-	-	-	8	2.06	0.01
+SILU	node_545	CPU	-	-	-	8	2.05	0.01
+SILU	node_3233	CPU	-	-	-	8	2.05	0.01
+SILU	node_929	CPU	-	-	-	8	2.05	0.01
+SILU	node_58	CPU	-	-	-	8	2.04	0.01
+SILU	node_2465	CPU	-	-	-	8	2.03	0.01
+SILU	node_264	CPU	-	-	-	8	2.02	0.01
+SIGMOID	shared_expert_gate_sigmoid	CPU	-	-	-	320	1.81	0.01
+RMS_NORM	node_523	CPU	-	-	-	8	1.77	0.01
+RMS_NORM	node_804	CPU	-	-	-	8	1.76	0.01
+RMS_NORM	node_36	CPU	-	-	-	8	1.76	0.01
+RMS_NORM	node_1572	CPU	-	-	-	8	1.76	0.01
+RMS_NORM	node_1010	CPU	-	-	-	8	1.76	0.01
+RMS_NORM	node_1956	CPU	-	-	-	8	1.76	0.01
+RMS_NORM	node_2059	CPU	-	-	-	8	1.75	0.01
+RMS_NORM	node_420	CPU	-	-	-	8	1.75	0.01
+RMS_NORM	node_3492	CPU	-	-	-	8	1.75	0.01
+RMS_NORM	node_242	CPU	-	-	-	8	1.75	0.01
+RMS_NORM	node_2724	CPU	-	-	-	8	1.75	0.01
+RMS_NORM	node_3314	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_3595	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_2546	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_626	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_1291	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_1778	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_2443	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_907	CPU	-	-	-	8	1.74	0.01
+RMS_NORM	node_2827	CPU	-	-	-	8	1.73	0.01
+RMS_NORM	node_2930	CPU	-	-	-	8	1.73	0.01
+RMS_NORM	node_1675	CPU	-	-	-	8	1.73	0.01
+RMS_NORM	node_2340	CPU	-	-	-	8	1.72	0.01
+RMS_NORM	node_2162	CPU	-	-	-	8	1.72	0.01
+RMS_NORM	node_1188	CPU	-	-	-	8	1.72	0.01
+RMS_NORM	node_1394	CPU	-	-	-	8	1.72	0.01
+RMS_NORM	node_139	CPU	-	-	-	8	1.71	0.01
+RMS_NORM	node_3211	CPU	-	-	-	8	1.70	0.01
+RMS_NORM	node_3698	CPU	-	-	-	8	1.69	0.01
+RMS_NORM	node_3108	CPU	-	-	-	8	1.69	0.01
+GET_ROWS	node_793	CPU	-	-	-	8	1.59	0.01
+GET_ROWS	node_3481	CPU	-	-	-	8	1.58	0.01
+GET_ROWS	node_2713	CPU	-	-	-	8	1.58	0.01
+GET_ROWS	node_2329	CPU	-	-	-	8	1.58	0.01
+GET_ROWS	node_1177	CPU	-	-	-	8	1.58	0.01
+GET_ROWS	node_128	CPU	-	-	-	8	1.58	0.01
+GET_ROWS	node_1945	CPU	-	-	-	8	1.57	0.01
+GET_ROWS	node_2151	CPU	-	-	-	8	1.57	0.01
+GET_ROWS	node_1561	CPU	-	-	-	8	1.57	0.01
+GET_ROWS	node_3303	CPU	-	-	-	8	1.57	0.01
+GET_ROWS	node_3097	CPU	-	-	-	8	1.56	0.01
+GET_ROWS	node_999	CPU	-	-	-	8	1.55	0.01
+GET_ROWS	node_3687	CPU	-	-	-	8	1.55	0.01
+GET_ROWS	node_1383	CPU	-	-	-	8	1.55	0.01
+GET_ROWS	node_1767	CPU	-	-	-	8	1.55	0.01
+GET_ROWS	node_2919	CPU	-	-	-	8	1.54	0.01
+GET_ROWS	node_2535	CPU	-	-	-	8	1.54	0.01
+GET_ROWS	node_409	CPU	-	-	-	8	1.53	0.01
+GET_ROWS	node_615	CPU	-	-	-	8	1.52	0.01
+CLAMP	ffn_moe_weights_sum_clamped	CPU	-	-	-	320	1.51	0.01
+GET_ROWS	node_512	CPU	-	-	-	8	1.48	0.01
+GET_ROWS	node_1280	CPU	-	-	-	8	1.46	0.01
+GET_ROWS	node_2816	CPU	-	-	-	8	1.46	0.01
+GET_ROWS	node_2048	CPU	-	-	-	8	1.46	0.01
+GET_ROWS	node_1664	CPU	-	-	-	8	1.45	0.01
+GET_ROWS	node_896	CPU	-	-	-	8	1.45	0.01
+GET_ROWS	node_3584	CPU	-	-	-	8	1.45	0.01
+GET_ROWS	node_3200	CPU	-	-	-	8	1.45	0.01
+GET_ROWS	node_2432	CPU	-	-	-	8	1.44	0.01
+GET_ROWS	node_231	CPU	-	-	-	8	1.44	0.01
+SUM_ROWS	ffn_moe_weights_sum	CPU	-	-	-	320	1.37	0.01
+MUL	node_1797	CPU	-	-	-	8	1.07	0.01
+GET_ROWS	node_25	CPU	-	-	-	8	1.06	0.01
+MUL	node_3127	CPU	-	-	-	8	1.05	0.01
+MUL	node_2949	CPU	-	-	-	8	1.05	0.01
+MUL	node_3717	CPU	-	-	-	8	1.04	0.01
+MUL	node_1310	CPU	-	-	-	8	1.04	0.01
+MUL	node_2462	CPU	-	-	-	8	1.04	0.01
+MUL	node_645	CPU	-	-	-	8	1.03	0.01
+MUL	node_926	CPU	-	-	-	8	1.03	0.01
+MUL	node_2743	CPU	-	-	-	8	1.03	0.01
+MUL	node_2181	CPU	-	-	-	8	1.03	0.01
+MUL	node_1975	CPU	-	-	-	8	1.03	0.01
+MUL	node_55	CPU	-	-	-	8	1.03	0.01
+MUL	node_3333	CPU	-	-	-	8	1.03	0.01
+MUL	node_1591	CPU	-	-	-	8	1.03	0.01
+MUL	node_2565	CPU	-	-	-	8	1.03	0.01
+MUL	node_1413	CPU	-	-	-	8	1.03	0.01
+MUL	node_1694	CPU	-	-	-	8	1.03	0.01
+MUL	node_1207	CPU	-	-	-	8	1.02	0.01
+MUL	node_542	CPU	-	-	-	8	1.02	0.01
+MUL	node_158	CPU	-	-	-	8	1.02	0.01
+MUL	node_1029	CPU	-	-	-	8	1.02	0.01
+MUL_MAT	node_1397	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.02	0.01
+MUL	node_2846	CPU	-	-	-	8	1.02	0.01
+MUL	node_3230	CPU	-	-	-	8	1.02	0.01
+MUL_MAT	node_2830	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL	node_2359	CPU	-	-	-	8	1.01	0.01
+MUL_MAT	node_1294	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL	node_3511	CPU	-	-	-	8	1.01	0.01
+MUL_MAT	node_1678	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL_MAT	node_142	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL_MAT	node_2549	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL	node_439	CPU	-	-	-	8	1.01	0.01
+MUL	node_3614	CPU	-	-	-	8	1.01	0.01
+MUL	node_823	CPU	-	-	-	8	1.01	0.01
+MUL_MAT	node_3598	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL_MAT	node_1781	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL	node_261	CPU	-	-	-	8	1.01	0.01
+MUL_MAT	node_3317	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL_MAT	node_3214	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.01	0.01
+MUL	node_2078	CPU	-	-	-	8	1.01	0.01
+MUL_MAT	node_629	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_526	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_2446	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_39	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_2165	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_3701	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_3111	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_2933	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_1013	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	1.00	0.01
+MUL_MAT	node_3495	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.99	0.01
+MUL_MAT	node_2062	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.99	0.01
+MUL_MAT	node_910	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.99	0.01
+MUL_MAT	node_1959	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.99	0.01
+MUL_MAT	node_1575	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.99	0.01
+MUL_MAT	node_2343	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.99	0.01
+MUL_MAT	node_245	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.98	0.01
+MUL_MAT	node_1191	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.98	0.01
+MUL_MAT	node_2727	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.98	0.01
+MUL_MAT	node_807	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.98	0.01
+MUL_MAT	node_423	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.97	0.01
+MUL_MAT	node_1581	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.94	0.01
+MUL_MAT	node_532	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_3117	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_3707	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_813	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_1300	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_2939	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_1684	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_3220	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_3501	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_2171	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_1403	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_429	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_2349	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_1787	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_2068	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_635	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_148	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_2836	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_3323	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_3604	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_1019	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_1965	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.93	0.01
+MUL_MAT	node_2733	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+MUL_MAT	node_45	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+MUL_MAT	node_2555	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+MUL_MAT	node_1197	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+MUL_MAT	node_251	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+MUL_MAT	node_2452	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+MUL_MAT	node_916	CPU	bf16	CPU	K=2048 M=32 N=512 B=1	8	0.92	0.01
+CPY	cache_s_l14	CPU	-	-	-	16	0.67	0.00
+CPY	cache_s_l16	CPU	-	-	-	16	0.67	0.00
+CPY	cache_s_l28	CPU	-	-	-	16	0.66	0.00
+CPY	cache_s_l34	CPU	-	-	-	16	0.66	0.00
+CPY	cache_s_l38	CPU	-	-	-	16	0.66	0.00
+CPY	cache_s_l9	CPU	-	-	-	16	0.66	0.00
+CPY	cache_s_l2	CPU	-	-	-	16	0.66	0.00
+CPY	cache_s_l13	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l22	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l0	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l5	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l8	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l37	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l33	CPU	-	-	-	16	0.65	0.00
+CPY	cache_s_l10	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l4	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l24	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l6	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l30	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l29	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l25	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l12	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l17	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l18	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l36	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l32	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l1	CPU	-	-	-	16	0.64	0.00
+CPY	cache_s_l20	CPU	-	-	-	16	0.63	0.00
+CPY	cache_s_l21	CPU	-	-	-	16	0.63	0.00
+CPY	cache_s_l26	CPU	-	-	-	16	0.63	0.00
+ADD	node_578	CPU	-	-	-	8	0.52	0.00
+ADD	node_3060	CPU	-	-	-	8	0.50	0.00
+ADD	node_859	CPU	-	-	-	8	0.49	0.00
+ADD	node_1908	CPU	-	-	-	8	0.49	0.00
+ADD	node_91	CPU	-	-	-	8	0.49	0.00
+ADD	node_475	CPU	-	-	-	8	0.49	0.00
+ADD	node_1524	CPU	-	-	-	8	0.49	0.00
+ADD	node_2882	CPU	-	-	-	8	0.49	0.00
+ADD	node_756	CPU	-	-	-	8	0.48	0.00
+ADD	node_962	CPU	-	-	-	8	0.48	0.00
+ADD	node_1243	CPU	-	-	-	8	0.48	0.00
+ADD	node_2292	CPU	-	-	-	8	0.48	0.00
+ADD	node_2676	CPU	-	-	-	8	0.48	0.00
+ADD	node_2779	CPU	-	-	-	8	0.48	0.00
+ADD	node_2395	CPU	-	-	-	8	0.48	0.00
+ADD	node_1140	CPU	-	-	-	8	0.48	0.00
+ADD	node_1730	CPU	-	-	-	8	0.47	0.00
+ADD	node_2985	CPU	-	-	-	8	0.47	0.00
+ADD	node_3650	CPU	-	-	-	8	0.47	0.00
+ADD	node_3444	CPU	-	-	-	8	0.47	0.00
+ADD	node_1833	CPU	-	-	-	8	0.47	0.00
+ADD	node_1449	CPU	-	-	-	8	0.47	0.00
+ADD	node_681	CPU	-	-	-	8	0.47	0.00
+ADD	node_1627	CPU	-	-	-	8	0.47	0.00
+ADD	node_2601	CPU	-	-	-	8	0.47	0.00
+ADD	node_2498	CPU	-	-	-	8	0.47	0.00
+ADD	node_1065	CPU	-	-	-	8	0.47	0.00
+ADD	node_2011	CPU	-	-	-	8	0.46	0.00
+ADD	node_2217	CPU	-	-	-	8	0.46	0.00
+ADD	node_3266	CPU	-	-	-	8	0.46	0.00
+ADD	node_372	CPU	-	-	-	8	0.46	0.00
+ADD	node_3163	CPU	-	-	-	8	0.46	0.00
+ADD	node_1346	CPU	-	-	-	8	0.46	0.00
+ADD	node_3547	CPU	-	-	-	8	0.46	0.00
+ADD	node_194	CPU	-	-	-	8	0.45	0.00
+ADD	node_3753	CPU	-	-	-	8	0.45	0.00
+ADD	node_3369	CPU	-	-	-	8	0.45	0.00
+ADD	node_297	CPU	-	-	-	8	0.45	0.00
+ADD	node_2114	CPU	-	-	-	8	0.45	0.00
+DUP	node_2	CPU	-	-	-	8	0.42	0.00
+SET_ROWS	cache_k_l3	CPU	-	-	-	8	0.39	0.00
+SET_ROWS	cache_k_l27	CPU	-	-	-	8	0.38	0.00
+SET_ROWS	cache_k_l19	CPU	-	-	-	8	0.38	0.00
+SET_ROWS	cache_k_l31	CPU	-	-	-	8	0.38	0.00
+SET_ROWS	cache_k_l11	CPU	-	-	-	8	0.38	0.00
+SET_ROWS	cache_k_l35	CPU	-	-	-	8	0.38	0.00
+SET_ROWS	cache_k_l23	CPU	-	-	-	8	0.38	0.00
+SET_ROWS	cache_k_l39	CPU	-	-	-	8	0.37	0.00
+SET_ROWS	cache_k_l7	CPU	-	-	-	8	0.37	0.00
+SET_ROWS	cache_k_l15	CPU	-	-	-	8	0.37	0.00
+SET_ROWS	cache_v_l35	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l39	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l23	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l3	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l15	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l19	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l27	CPU	-	-	-	8	0.28	0.00
+SET_ROWS	cache_v_l11	CPU	-	-	-	8	0.27	0.00
+SET_ROWS	cache_v_l31	CPU	-	-	-	8	0.27	0.00
+SET_ROWS	cache_v_l7	CPU	-	-	-	8	0.27	0.00
+MUL	node_1033	CPU	-	-	-	8	0.27	0.00
+MUL	node_1979	CPU	-	-	-	8	0.27	0.00
+MUL	node_1211	CPU	-	-	-	8	0.26	0.00
+MUL	node_2363	CPU	-	-	-	8	0.26	0.00
+MUL	node_2953	CPU	-	-	-	8	0.26	0.00
+MUL	node_649	CPU	-	-	-	8	0.26	0.00
+MUL	node_1417	CPU	-	-	-	8	0.26	0.00
+MUL	node_3721	CPU	-	-	-	8	0.26	0.00
+MUL	node_2569	CPU	-	-	-	8	0.26	0.00
+MUL	node_2185	CPU	-	-	-	8	0.25	0.00
+MUL	node_827	CPU	-	-	-	8	0.25	0.00
+MUL	node_1595	CPU	-	-	-	8	0.25	0.00
+MUL	node_162	CPU	-	-	-	8	0.25	0.00
+MUL	node_3337	CPU	-	-	-	8	0.25	0.00
+MUL	node_3131	CPU	-	-	-	8	0.25	0.00
+MUL	node_546	CPU	-	-	-	8	0.25	0.00
+MUL	node_1801	CPU	-	-	-	8	0.25	0.00
+MUL	node_1314	CPU	-	-	-	8	0.25	0.00
+MUL	node_2747	CPU	-	-	-	8	0.25	0.00
+MUL	node_59	CPU	-	-	-	8	0.25	0.00
+MUL	node_443	CPU	-	-	-	8	0.25	0.00
+MUL	node_3515	CPU	-	-	-	8	0.25	0.00
+MUL	node_2082	CPU	-	-	-	8	0.25	0.00
+MUL	node_265	CPU	-	-	-	8	0.25	0.00
+MUL	node_3234	CPU	-	-	-	8	0.24	0.00
+MUL	node_1698	CPU	-	-	-	8	0.24	0.00
+MUL	node_2850	CPU	-	-	-	8	0.24	0.00
+MUL	node_2466	CPU	-	-	-	8	0.24	0.00
+MUL	node_930	CPU	-	-	-	8	0.24	0.00
+MUL	node_3618	CPU	-	-	-	8	0.24	0.00
+MUL_MAT_ID	ffn_moe_up	CPU	bf16	CPU	K=2048 M=512 E=256 used=8 tok=1	1	0.20	0.00
+MUL_MAT_ID	ffn_moe_down	CPU	bf16	CPU	K=512 M=2048 E=256 used=8 tok=1	1	0.20	0.00
+MUL_MAT_ID	ffn_moe_gate	CPU	bf16	CPU	K=2048 M=512 E=256 used=8 tok=1	1	0.19	0.00
+ADD	node_2396	CPU	-	-	-	8	0.15	0.00
+ADD	node_2400	CPU	-	-	-	8	0.15	0.00
+ADD	node_2503	CPU	-	-	-	8	0.15	0.00
+ADD	node_1247	CPU	-	-	-	8	0.15	0.00
+ADD	node_2606	CPU	-	-	-	8	0.15	0.00
+ADD	node_2989	CPU	-	-	-	8	0.15	0.00
+ADD	node_1454	CPU	-	-	-	8	0.15	0.00
+ADD	node_2887	CPU	-	-	-	8	0.15	0.00
+ADD	node_2885	CPU	-	-	-	8	0.15	0.00
+ADD	node_1529	CPU	-	-	-	8	0.15	0.00
+ADD	node_1248	CPU	-	-	-	8	0.15	0.00
+ADD	node_582	CPU	-	-	-	8	0.15	0.00
+ADD	node_1244	CPU	-	-	-	8	0.15	0.00
+ADD	node_1735	CPU	-	-	-	8	0.15	0.00
+ADD	node_2399	CPU	-	-	-	8	0.15	0.00
+ADD	node_2990	CPU	-	-	-	8	0.15	0.00
+ADD	node_2886	CPU	-	-	-	8	0.15	0.00
+ADD	node_96	CPU	-	-	-	8	0.15	0.00
+ADD	node_1069	CPU	-	-	-	8	0.15	0.00
+ADD	node_2883	CPU	-	-	-	8	0.15	0.00
+ADD	node_1070	CPU	-	-	-	8	0.15	0.00
+ADD	node_2220	CPU	-	-	-	8	0.15	0.00
+ADD	node_2605	CPU	-	-	-	8	0.15	0.00
+ADD	node_579	CPU	-	-	-	8	0.15	0.00
+ADD	node_2296	CPU	-	-	-	8	0.15	0.00
+ADD	node_2602	CPU	-	-	-	8	0.15	0.00
+ADD	node_583	CPU	-	-	-	8	0.15	0.00
+ADD	node_1733	CPU	-	-	-	8	0.15	0.00
+ADD	node_1734	CPU	-	-	-	8	0.15	0.00
+ADD	node_2398	CPU	-	-	-	8	0.15	0.00
+ADD	node_1246	CPU	-	-	-	8	0.15	0.00
+ADD	node_2986	CPU	-	-	-	8	0.15	0.00
+ADD	node_1450	CPU	-	-	-	8	0.15	0.00
+ADD	node_3449	CPU	-	-	-	8	0.15	0.00
+ADD	node_1453	CPU	-	-	-	8	0.15	0.00
+ADD	node_1838	CPU	-	-	-	8	0.15	0.00
+ADD	node_686	CPU	-	-	-	8	0.15	0.00
+ADD	node_1245	CPU	-	-	-	8	0.15	0.00
+ADD	node_761	CPU	-	-	-	8	0.15	0.00
+ADD	node_1451	CPU	-	-	-	8	0.15	0.00
+ADD	node_1452	CPU	-	-	-	8	0.15	0.00
+ADD	node_377	CPU	-	-	-	8	0.15	0.00
+ADD	node_2604	CPU	-	-	-	8	0.15	0.00
+ADD	node_2499	CPU	-	-	-	8	0.15	0.00
+ADD	node_581	CPU	-	-	-	8	0.15	0.00
+ADD	node_1834	CPU	-	-	-	8	0.15	0.00
+ADD	node_967	CPU	-	-	-	8	0.15	0.00
+ADD	node_2221	CPU	-	-	-	8	0.15	0.00
+ADD	node_1837	CPU	-	-	-	8	0.15	0.00
+ADD	node_1836	CPU	-	-	-	8	0.15	0.00
+ADD	node_2987	CPU	-	-	-	8	0.14	0.00
+ADD	node_1145	CPU	-	-	-	8	0.14	0.00
+ADD	node_757	CPU	-	-	-	8	0.14	0.00
+ADD	node_1732	CPU	-	-	-	8	0.14	0.00
+ADD	node_685	CPU	-	-	-	8	0.14	0.00
+ADD	node_1731	CPU	-	-	-	8	0.14	0.00
+ADD	node_2988	CPU	-	-	-	8	0.14	0.00
+ADD	node_2295	CPU	-	-	-	8	0.14	0.00
+ADD	node_1068	CPU	-	-	-	8	0.14	0.00
+ADD	node_373	CPU	-	-	-	8	0.14	0.00
+ADD	node_2222	CPU	-	-	-	8	0.14	0.00
+ADD	node_1525	CPU	-	-	-	8	0.14	0.00
+ADD	node_760	CPU	-	-	-	8	0.14	0.00
+ADD	node_2397	CPU	-	-	-	8	0.14	0.00
+ADD	node_1912	CPU	-	-	-	8	0.14	0.00
+ADD	node_2502	CPU	-	-	-	8	0.14	0.00
+ADD	node_759	CPU	-	-	-	8	0.14	0.00
+ADD	node_2218	CPU	-	-	-	8	0.14	0.00
+ADD	node_2293	CPU	-	-	-	8	0.14	0.00
+ADD	node_376	CPU	-	-	-	8	0.14	0.00
+ADD	node_95	CPU	-	-	-	8	0.14	0.00
+ADD	node_3061	CPU	-	-	-	8	0.14	0.00
+ADD	node_3064	CPU	-	-	-	8	0.14	0.00
+ADD	node_3447	CPU	-	-	-	8	0.14	0.00
+ADD	node_1913	CPU	-	-	-	8	0.14	0.00
+ADD	node_966	CPU	-	-	-	8	0.14	0.00
+ADD	node_1351	CPU	-	-	-	8	0.14	0.00
+ADD	node_199	CPU	-	-	-	8	0.14	0.00
+ADD	node_3448	CPU	-	-	-	8	0.14	0.00
+ADD	node_1628	CPU	-	-	-	8	0.14	0.00
+ADD	node_3167	CPU	-	-	-	8	0.14	0.00
+ADD	node_3065	CPU	-	-	-	8	0.14	0.00
+ADD	node_1911	CPU	-	-	-	8	0.14	0.00
+ADD	node_3063	CPU	-	-	-	8	0.14	0.00
+ADD	node_1528	CPU	-	-	-	8	0.14	0.00
+ADD	node_2603	CPU	-	-	-	8	0.14	0.00
+ADD	node_94	CPU	-	-	-	8	0.14	0.00
+ADD	node_1909	CPU	-	-	-	8	0.14	0.00
+ADD	node_2677	CPU	-	-	-	8	0.14	0.00
+ADD	node_1350	CPU	-	-	-	8	0.14	0.00
+ADD	node_197	CPU	-	-	-	8	0.14	0.00
+ADD	node_3548	CPU	-	-	-	8	0.14	0.00
+ADD	node_1527	CPU	-	-	-	8	0.14	0.00
+ADD	node_3655	CPU	-	-	-	8	0.14	0.00
+ADD	node_2884	CPU	-	-	-	8	0.14	0.00
+ADD	node_1144	CPU	-	-	-	8	0.14	0.00
+ADD	node_3168	CPU	-	-	-	8	0.14	0.00
+ADD	node_2780	CPU	-	-	-	8	0.14	0.00
+ADD	node_2297	CPU	-	-	-	8	0.14	0.00
+ADD	node_2117	CPU	-	-	-	8	0.14	0.00
+ADD	node_2680	CPU	-	-	-	8	0.14	0.00
+ADD	node_2015	CPU	-	-	-	8	0.14	0.00
+ADD	node_3445	CPU	-	-	-	8	0.14	0.00
+ADD	node_2119	CPU	-	-	-	8	0.14	0.00
+ADD	node_1347	CPU	-	-	-	8	0.14	0.00
+ADD	node_2118	CPU	-	-	-	8	0.14	0.00
+ADD	node_93	CPU	-	-	-	8	0.14	0.00
+ADD	node_2115	CPU	-	-	-	8	0.14	0.00
+ADD	node_3651	CPU	-	-	-	8	0.14	0.00
+ADD	node_3653	CPU	-	-	-	8	0.14	0.00
+ADD	node_682	CPU	-	-	-	8	0.14	0.00
+ADD	node_1632	CPU	-	-	-	8	0.14	0.00
+ADD	node_965	CPU	-	-	-	8	0.14	0.00
+ADD	node_963	CPU	-	-	-	8	0.14	0.00
+ADD	node_92	CPU	-	-	-	8	0.14	0.00
+ADD	node_375	CPU	-	-	-	8	0.14	0.00
+ADD	node_374	CPU	-	-	-	8	0.14	0.00
+ADD	node_1910	CPU	-	-	-	8	0.14	0.00
+ADD	node_1066	CPU	-	-	-	8	0.14	0.00
+ADD	node_3552	CPU	-	-	-	8	0.14	0.00
+ADD	node_2294	CPU	-	-	-	8	0.14	0.00
+ADD	node_196	CPU	-	-	-	8	0.14	0.00
+ADD	node_2681	CPU	-	-	-	8	0.14	0.00
+ADD	node_1835	CPU	-	-	-	8	0.14	0.00
+ADD	node_684	CPU	-	-	-	8	0.14	0.00
+ADD	node_863	CPU	-	-	-	8	0.14	0.00
+ADD	node_3551	CPU	-	-	-	8	0.14	0.00
+ADD	node_1631	CPU	-	-	-	8	0.14	0.00
+ADD	node_2016	CPU	-	-	-	8	0.14	0.00
+ADD	node_3549	CPU	-	-	-	8	0.14	0.00
+ADD	node_580	CPU	-	-	-	8	0.14	0.00
+ADD	node_1629	CPU	-	-	-	8	0.14	0.00
+ADD	node_3267	CPU	-	-	-	8	0.14	0.00
+ADD	node_1630	CPU	-	-	-	8	0.14	0.00
+ADD	node_3164	CPU	-	-	-	8	0.14	0.00
+ADD	node_3062	CPU	-	-	-	8	0.14	0.00
+ADD	node_1142	CPU	-	-	-	8	0.14	0.00
+ADD	node_479	CPU	-	-	-	8	0.14	0.00
+ADD	node_683	CPU	-	-	-	8	0.14	0.00
+ADD	node_1067	CPU	-	-	-	8	0.14	0.00
+ADD	node_2784	CPU	-	-	-	8	0.14	0.00
+ADD	node_2219	CPU	-	-	-	8	0.14	0.00
+ADD	node_2500	CPU	-	-	-	8	0.14	0.00
+ADD	node_1143	CPU	-	-	-	8	0.14	0.00
+ADD	node_864	CPU	-	-	-	8	0.14	0.00
+ADD	node_3550	CPU	-	-	-	8	0.14	0.00
+ADD	node_860	CPU	-	-	-	8	0.14	0.00
+ADD	node_2679	CPU	-	-	-	8	0.14	0.00
+ADD	node_758	CPU	-	-	-	8	0.14	0.00
+ADD	node_1141	CPU	-	-	-	8	0.14	0.00
+ADD	node_1526	CPU	-	-	-	8	0.14	0.00
+ADD	node_862	CPU	-	-	-	8	0.14	0.00
+ADD	node_480	CPU	-	-	-	8	0.14	0.00
+ADD	node_3758	CPU	-	-	-	8	0.14	0.00
+ADD	node_3654	CPU	-	-	-	8	0.14	0.00
+ADD	node_2501	CPU	-	-	-	8	0.14	0.00
+ADD	node_2782	CPU	-	-	-	8	0.14	0.00
+ADD	node_2012	CPU	-	-	-	8	0.14	0.00
+ADD	node_2013	CPU	-	-	-	8	0.14	0.00
+ADD	node_2014	CPU	-	-	-	8	0.14	0.00
+ADD	node_3652	CPU	-	-	-	8	0.14	0.00
+ADD	node_198	CPU	-	-	-	8	0.14	0.00
+ADD	node_2781	CPU	-	-	-	8	0.14	0.00
+ADD	node_195	CPU	-	-	-	8	0.14	0.00
+ADD	node_2783	CPU	-	-	-	8	0.14	0.00
+ADD	node_2116	CPU	-	-	-	8	0.14	0.00
+ADD	node_476	CPU	-	-	-	8	0.14	0.00
+ADD	node_3446	CPU	-	-	-	8	0.14	0.00
+ADD	node_1349	CPU	-	-	-	8	0.14	0.00
+ADD	node_3165	CPU	-	-	-	8	0.14	0.00
+ADD	node_1348	CPU	-	-	-	8	0.14	0.00
+ADD	node_3370	CPU	-	-	-	8	0.14	0.00
+ADD	node_3271	CPU	-	-	-	8	0.14	0.00
+ADD	node_3757	CPU	-	-	-	8	0.14	0.00
+ADD	node_964	CPU	-	-	-	8	0.14	0.00
+ADD	node_301	CPU	-	-	-	8	0.14	0.00
+ADD	node_3166	CPU	-	-	-	8	0.14	0.00
+ADD	node_478	CPU	-	-	-	8	0.14	0.00
+ADD	node_2678	CPU	-	-	-	8	0.14	0.00
+ADD	node_3268	CPU	-	-	-	8	0.14	0.00
+ADD	node_3270	CPU	-	-	-	8	0.14	0.00
+ADD	node_302	CPU	-	-	-	8	0.13	0.00
+ADD	node_300	CPU	-	-	-	8	0.13	0.00
+ADD	node_3373	CPU	-	-	-	8	0.13	0.00
+ADD	node_299	CPU	-	-	-	8	0.13	0.00
+ADD	node_3269	CPU	-	-	-	8	0.13	0.00
+ADD	node_3754	CPU	-	-	-	8	0.13	0.00
+ADD	node_3371	CPU	-	-	-	8	0.13	0.00
+ADD	node_861	CPU	-	-	-	8	0.13	0.00
+ADD	node_3374	CPU	-	-	-	8	0.13	0.00
+ADD	node_477	CPU	-	-	-	8	0.13	0.00
+ADD	node_298	CPU	-	-	-	8	0.13	0.00
+ADD	node_3372	CPU	-	-	-	8	0.13	0.00
+ADD	node_3756	CPU	-	-	-	8	0.13	0.00
+ADD	node_3755	CPU	-	-	-	8	0.13	0.00
+ADD	node_1193	CPU	-	-	-	8	0.10	0.00
+ADD	node_3497	CPU	-	-	-	8	0.10	0.00
+ADD	node_809	CPU	-	-	-	8	0.10	0.00
+ADD	node_144	CPU	-	-	-	8	0.10	0.00
+ADD	node_1680	CPU	-	-	-	8	0.10	0.00
+ADD	node_2345	CPU	-	-	-	8	0.10	0.00
+ADD	node_3113	CPU	-	-	-	8	0.10	0.00
+ADD	node_631	CPU	-	-	-	8	0.10	0.00
+ADD	node_2729	CPU	-	-	-	8	0.10	0.00
+ADD	node_2167	CPU	-	-	-	8	0.10	0.00
+ADD	node_2935	CPU	-	-	-	8	0.10	0.00
+ADD	node_1015	CPU	-	-	-	8	0.10	0.00
+ADD	node_247	CPU	-	-	-	8	0.10	0.00
+ADD	node_2551	CPU	-	-	-	8	0.10	0.00
+ADD	node_2832	CPU	-	-	-	8	0.10	0.00
+ADD	node_1783	CPU	-	-	-	8	0.10	0.00
+ADD	node_1577	CPU	-	-	-	8	0.10	0.00
+ADD	node_3703	CPU	-	-	-	8	0.10	0.00
+ADD	node_1961	CPU	-	-	-	8	0.10	0.00
+ADD	node_1296	CPU	-	-	-	8	0.10	0.00
+ADD	node_1399	CPU	-	-	-	8	0.10	0.00
+ADD	node_912	CPU	-	-	-	8	0.10	0.00
+ADD	node_41	CPU	-	-	-	8	0.10	0.00
+ADD	node_425	CPU	-	-	-	8	0.10	0.00
+ADD	node_528	CPU	-	-	-	8	0.10	0.00
+ADD	node_2448	CPU	-	-	-	8	0.10	0.00
+ADD	node_2064	CPU	-	-	-	8	0.10	0.00
+ADD	node_3600	CPU	-	-	-	8	0.10	0.00
+ADD	node_3319	CPU	-	-	-	8	0.10	0.00
+ADD	node_3216	CPU	-	-	-	8	0.09	0.00
+SCALE	cache_s_l18	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l6	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l9	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l34	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l20	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l21	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l25	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l2	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l16	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l14	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l12	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l1	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l0	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l17	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l5	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l29	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l30	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l36	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l33	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l13	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l24	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l28	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l32	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l37	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l38	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l4	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l8	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l26	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l22	CPU	-	-	-	8	0.07	0.00
+SCALE	cache_s_l10	CPU	-	-	-	8	0.07	0.00
+GET_ROWS	node_1367	CPU	-	-	-	8	0.07	0.00
+GET_ROWS	node_1751	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_2313	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_2903	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_1929	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_3287	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_3671	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_3465	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_2519	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_2697	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_777	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_1545	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_3081	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_983	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_393	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_1161	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_112	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_2135	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_599	CPU	-	-	-	8	0.06	0.00
+GET_ROWS	node_9	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_2416	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_2800	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_1648	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_880	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_1264	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_215	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_2032	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_3184	CPU	-	-	-	8	0.04	0.00
+MUL_MAT	ffn_gate	CPU	bf16	CPU	K=2048 M=512 N=1 B=1	1	0.04	0.00
+MUL_MAT	ffn_moe_logits	CPU	f32	CPU	K=2048 M=256 N=1 B=1	1	0.04	0.00
+GET_ROWS	node_3568	CPU	-	-	-	8	0.04	0.00
+GET_ROWS	node_496	CPU	-	-	-	8	0.04	0.00
+MUL_MAT	ffn_up	CPU	bf16	CPU	K=2048 M=512 N=1 B=1	1	0.04	0.00
+MUL_MAT	ffn_shexp	CPU	bf16	CPU	K=512 M=2048 N=1 B=1	1	0.04	0.00
+ADD	node_3831	CPU	-	-	-	8	0.01	0.00
+MUL_MAT	shared_expert_gate	CPU	f32	CPU	K=2048 M=1 N=1 B=1	1	0.01	0.00
+ADD	node_3834	CPU	-	-	-	8	0.01	0.00
+MUL	result_norm	CPU	-	-	-	8	0.01	0.00
+ADD	node_3835	CPU	-	-	-	8	0.01	0.00
+ADD	node_3833	CPU	-	-	-	8	0.01	0.00
+ADD	node_3830	CPU	-	-	-	8	0.01	0.00
+ADD	node_3832	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l8	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l38	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l14	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l36	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l25	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l24	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l20	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l21	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l26	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l30	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l29	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l2	CPU	-	-	-	8	0.01	0.00
+SET_ROWS	(unnamed)	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l4	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l6	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l22	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l28	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l12	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l9	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l22	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l20	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l28	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l16	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l1	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l32	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l13	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l34	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l37	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l5	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l9	CPU	-	-	-	8	0.01	0.00
+GET_ROWS	node_3800	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l18	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l17	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l0	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l16	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l21	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l13	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l12	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l10	CPU	-	-	-	8	0.01	0.00
+MUL_MAT	ffn_moe_logits	CPU	f32	CPU	K=2048 M=256 N=0 B=1	7	0.01	0.00
+CPY	cache_r_l4	CPU	-	-	-	8	0.01	0.00
+SCALE	cache_r_l33	CPU	-	-	-	8	0.01	0.00
+GET_ROWS	node_1	CPU	-	-	-	8	0.01	0.00
+CPY	cache_r_l0	CPU	-	-	-	8	0.00	0.00
+MUL_MAT	result_output	CPU	bf16	CPU	K=2048 M=248320 N=0 B=1	7	0.00	0.00
+MUL_MAT_ID	ffn_moe_gate	CPU	bf16	CPU	K=2048 M=512 E=256 used=8 tok=0	7	0.00	0.00
+CPY	cache_r_l17	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l2	CPU	-	-	-	8	0.00	0.00
+MUL_MAT	ffn_gate	CPU	bf16	CPU	K=2048 M=512 N=0 B=1	7	0.00	0.00
+CPY	cache_r_l8	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l6	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l5	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l36	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l34	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l33	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l29	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l32	CPU	-	-	-	8	0.00	0.00
+MUL_MAT_ID	ffn_moe_down	CPU	bf16	CPU	K=512 M=2048 E=256 used=8 tok=0	7	0.00	0.00
+CPY	cache_r_l14	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l26	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l1	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l10	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l25	CPU	-	-	-	8	0.00	0.00
+MUL_MAT	ffn_up	CPU	bf16	CPU	K=2048 M=512 N=0 B=1	7	0.00	0.00
+CPY	cache_r_l30	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l18	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l24	CPU	-	-	-	8	0.00	0.00
+CPY	cache_r_l38	CPU	-	-	-	8	0.00	0.00
+GET_ROWS	node_3801	CPU	-	-	-	8	0.00	0.00
+MUL_MAT_ID	ffn_moe_up	CPU	bf16	CPU	K=2048 M=512 E=256 used=8 tok=0	7	0.00	0.00
+CPY	cache_r_l37	CPU	-	-	-	8	0.00	0.00
+MUL_MAT	shared_expert_gate	CPU	f32	CPU	K=2048 M=1 N=0 B=1	7	0.00	0.00
+MUL_MAT	ffn_shexp	CPU	bf16	CPU	K=512 M=2048 N=0 B=1	7	0.00	0.00

@@ -1,0 +1,1 @@
+engine=vllm cfg=vllm pp=256 iters=300 load_s=206 settle_s=5 window_s=15 scope=cpus:32-63

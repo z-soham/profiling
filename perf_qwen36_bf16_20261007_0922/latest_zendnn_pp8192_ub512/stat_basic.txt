@@ -1,0 +1,14 @@
+# started on Wed Oct  7 09:29:38 2026
+
+
+ Performance counter stats for process id '920363':
+
+         393645.24 msec task-clock                                                            
+     1049420379033      cycles                                                                
+     1722211465989      instructions                                                          
+             15318      context-switches                                                      
+                 0      cpu-migrations                                                        
+             97375      page-faults                                                           
+
+      15.005566577 seconds time elapsed
+

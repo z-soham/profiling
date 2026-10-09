@@ -1,0 +1,46 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 15K of event 'cpu/cycles/P'
+# Event count (approx.): 44750540706
+#
+# Overhead  Command        Shared Object                                 
+# ........  .............  ..............................................
+#
+    69.43%  VLLM::Worker   python3.12                                    
+    10.10%  sleep          [kernel.kallsyms]                             
+     5.52%  VLLM::Worker   [kernel.kallsyms]                             
+     3.85%  sort           [kernel.kallsyms]                             
+     3.31%  VLLM::Worker   libtorch_python.so                            
+     1.48%  nft            [kernel.kallsyms]                             
+     1.01%  VLLM::Worker   libc.so.6                                     
+     0.79%  nc             [kernel.kallsyms]                             
+     0.68%  gloo_tcp_loop  [kernel.kallsyms]                             
+     0.68%  umount         [kernel.kallsyms]                             
+     0.67%  longhorn       [kernel.kallsyms]                             
+     0.60%  VLLM::Worker   libtorch_cpu.so                               
+     0.43%  VLLM::Worker   libc10.so                                     
+     0.40%  VLLM::Worker   libstdc++.so.6.0.33                           
+     0.24%  iptables       [kernel.kallsyms]                             
+     0.22%  runc           [kernel.kallsyms]                             
+     0.11%  runc:[2:INIT]  [kernel.kallsyms]                             
+     0.09%  VLLM::Worker   ld-linux-x86-64.so.2                          
+     0.09%  calico-node    [kernel.kallsyms]                             
+     0.09%  VLLM::Worker   libtcmalloc_minimal.so.4.5.16                 
+     0.05%  ps             [kernel.kallsyms]                             
+     0.04%  gloo_tcp_loop  libc.so.6                                     
+     0.03%  bash           [kernel.kallsyms]                             
+     0.03%  VLLM::Worker   libgcc_s.so.1                                 
+     0.02%  awk            [kernel.kallsyms]                             
+     0.01%  VLLM::Worker   _pydantic_core.cpython-312-x86_64-linux-gnu.so
+     0.01%  sleep          libc.so.6                                     
+     0.00%  VLLM::Worker   [vdso]                                        
+     0.00%  perf.bin       [kernel.kallsyms]                             
+     0.00%  perf.bin       perf.bin                                      
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

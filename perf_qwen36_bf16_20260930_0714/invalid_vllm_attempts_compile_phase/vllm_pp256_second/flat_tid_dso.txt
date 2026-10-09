@@ -1,0 +1,52 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 14K of event 'cpu/cycles/P'
+# Event count (approx.): 36403351062
+#
+# Overhead      Pid:Command        Shared Object                                 
+# ........  .....................  ..............................................
+#
+    84.39%   225437:VLLM::Worker   python3.12                                    
+     7.57%   225437:VLLM::Worker   [kernel.kallsyms]                             
+     3.89%   225437:VLLM::Worker   libtorch_python.so                            
+     1.11%   225437:VLLM::Worker   libc.so.6                                     
+     0.74%   225437:VLLM::Worker   libtorch_cpu.so                               
+     0.64%   225437:VLLM::Worker   libc10.so                                     
+     0.52%   225437:VLLM::Worker   libstdc++.so.6.0.33                           
+     0.22%   225437:VLLM::Worker   ld-linux-x86-64.so.2                          
+     0.15%   225437:VLLM::Worker   libtcmalloc_minimal.so.4.5.16                 
+     0.06%   225497:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.06%   225485:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.06%   225476:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.05%   225479:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.05%   225488:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.05%   225470:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.05%   225467:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225482:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225494:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225491:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225503:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225437:VLLM::Worker   libgcc_s.so.1                                 
+     0.04%   225500:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225506:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225473:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.04%   225509:gloo_tcp_loop  [kernel.kallsyms]                             
+     0.01%   225437:VLLM::Worker   _pydantic_core.cpython-312-x86_64-linux-gnu.so
+     0.01%   225437:VLLM::Worker   bpf_prog_61ad8e91551544c0_dfa_match           
+     0.01%   225437:VLLM::Worker   [vdso]                                        
+     0.01%   225437:VLLM::Worker   _ctypes.cpython-312-x86_64-linux-gnu.so       
+     0.00%   225479:gloo_tcp_loop  libc.so.6                                     
+     0.00%   225488:gloo_tcp_loop  libc.so.6                                     
+     0.00%   225494:gloo_tcp_loop  libc.so.6                                     
+     0.00%   225476:gloo_tcp_loop  libc.so.6                                     
+     0.00%   225545:VLLM::Worker   python3.12                                    
+     0.00%   225625:VLLM::Worker   [kernel.kallsyms]                             
+     0.00%   225545:VLLM::Worker   [kernel.kallsyms]                             
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

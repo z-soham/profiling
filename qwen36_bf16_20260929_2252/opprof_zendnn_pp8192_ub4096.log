@@ -1,0 +1,26 @@
+opprof: pp8192 ub4096  clean 33139.9 ms (247.2 t/s)  profiled 34544.8 ms (237.1 t/s)  sum(nodes) 34438.7 ms
+  CONCAT	CPU                                     60 calls    14571.2 ms  42.31%
+  MUL_MAT_ID	CPU                                240 calls     8498.1 ms  24.68%
+  FLASH_ATTN_EXT	CPU                             20 calls     2980.3 ms   8.65%
+  MUL_MAT	ZenDNN                                580 calls     2647.6 ms   7.69%
+  GATED_DELTA_NET	CPU                            60 calls     1540.3 ms   4.47%
+  SIGMOID	CPU                                   160 calls      970.1 ms   2.82%
+  MUL	CPU                                       562 calls      626.7 ms   1.82%
+  RMS_NORM	CPU                                  382 calls      522.0 ms   1.52%
+  SSM_CONV	CPU                                   60 calls      433.6 ms   1.26%
+  ADD	CPU                                       860 calls      423.1 ms   1.23%
+  SCALE	CPU                                     240 calls      351.4 ms   1.02%
+  SILU	CPU                                      120 calls      200.9 ms   0.58%
+  SWIGLU	CPU                                    160 calls      190.8 ms   0.55%
+  ARGSORT	CPU                                    80 calls      143.9 ms   0.42%
+  MUL_MAT	CPU                                   202 calls      132.1 ms   0.38%
+  GET_ROWS	CPU                                  324 calls       71.9 ms   0.21%
+  SOFTPLUS	CPU                                   60 calls       48.7 ms   0.14%
+  CONT	CPU                                       20 calls       39.1 ms   0.11%
+  ROPE	CPU                                       40 calls       13.6 ms   0.04%
+  SET_ROWS	CPU                                   40 calls       13.6 ms   0.04%
+  SOFT_MAX	CPU                                   80 calls       11.7 ms   0.03%
+  CPY	CPU                                       240 calls        4.3 ms   0.01%
+  DIV	CPU                                        80 calls        1.8 ms   0.01%
+  SUM_ROWS	CPU                                   80 calls        1.5 ms   0.00%
+  CLAMP	CPU                                      80 calls        0.4 ms   0.00%

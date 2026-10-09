@@ -1,0 +1,4 @@
+[ perf record: Woken up 14 times to write data ]
+[ perf record: Captured and wrote 16.120 MB /tmp/perf_llama.HC9Rvd/base_zendnn_pp256_ub512/flat.data (407647 samples) ]
+[ perf record: Woken up 20 times to write data ]
+[ perf record: Captured and wrote 15.002 MB /tmp/perf_llama.HC9Rvd/base_zendnn_pp256_ub512/stacks.data (203547 samples) ]

@@ -1,0 +1,27 @@
+[API    ][warning][0.424398]:[GRP_MATMUL.ALGO WARN] env_algo=2 (flat_m_tile) on a shape with active_ops > num_threads that the multi-tier hybrid declined: single-tier M-tile is infeasible (cannot give < 1 thread per active expert).  CLAMP to sequential full-team (ALGO 1 equivalent).
+opprof: pp8192 ub512  clean 29429.1 ms (278.4 t/s)  profiled 28392.5 ms (288.5 t/s)  sum(nodes) 28252.0 ms
+  MUL_MAT_ID	ZenDNN                            1920 calls    10998.9 ms  38.93%
+  CONCAT	CPU                                    480 calls     5534.3 ms  19.59%
+  MUL_MAT	ZenDNN                               6242 calls     3219.4 ms  11.40%
+  FLASH_ATTN_EXT	CPU                            160 calls     2657.0 ms   9.40%
+  GATED_DELTA_NET	CPU                           480 calls     1559.7 ms   5.52%
+  SIGMOID	CPU                                  1280 calls      997.3 ms   3.53%
+  MUL	CPU                                      4496 calls      687.2 ms   2.43%
+  RMS_NORM	CPU                                 3056 calls      609.4 ms   2.16%
+  SSM_CONV	CPU                                  480 calls      430.8 ms   1.52%
+  SCALE	CPU                                    1920 calls      337.3 ms   1.19%
+  SILU	CPU                                      960 calls      244.9 ms   0.87%
+  ADD	CPU                                      6880 calls      234.7 ms   0.83%
+  SWIGLU	CPU                                   1280 calls      201.3 ms   0.71%
+  ARGSORT	CPU                                   640 calls      159.8 ms   0.57%
+  GET_ROWS	CPU                                 2592 calls      156.6 ms   0.55%
+  CONT	CPU                                      160 calls       62.0 ms   0.22%
+  CPY	CPU                                      1920 calls       50.7 ms   0.18%
+  SOFTPLUS	CPU                                  480 calls       49.3 ms   0.17%
+  SOFT_MAX	CPU                                  640 calls       18.8 ms   0.07%
+  ROPE	CPU                                      320 calls       17.2 ms   0.06%
+  SET_ROWS	CPU                                  320 calls       13.4 ms   0.05%
+  DIV	CPU                                       640 calls        8.4 ms   0.03%
+  SUM_ROWS	CPU                                  640 calls        2.8 ms   0.01%
+  CLAMP	CPU                                     640 calls        0.8 ms   0.00%
+  MUL_MAT	CPU                                    14 calls        0.0 ms   0.00%

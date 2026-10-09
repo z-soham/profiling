@@ -1,0 +1,56 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                           zentorch::zentorch_fused_moe        58.08%     337.579ms        60.46%     351.382ms       8.785ms            40  
+                                  zentorch_linear_unary        16.85%      97.949ms        17.14%      99.636ms     369.021us           270  
+                 execute_context_1(256)_generation_0(0)         3.36%      19.543ms        99.85%     580.356ms     580.356ms             1  
+                        ## Call CompiledFxGraph None ##         3.35%      19.446ms        94.39%     548.618ms     548.618ms             1  
+                         _C::chunk_gated_delta_rule_cpu         3.05%      17.742ms         3.14%      18.248ms     608.263us            30  
+                                             aten::topk         2.88%      16.723ms         2.88%      16.723ms     418.081us            40  
+                           vllm::cpu_gdn_attention_core         1.67%       9.683ms         8.71%      50.625ms       1.688ms            30  
+                                            aten::copy_         1.60%       9.302ms         1.60%       9.302ms      29.625us           314  
+                        zentorch::zentorch_linear_unary         1.54%       8.947ms        18.68%     108.587ms     400.688us           271  
+             zentorch::fused_moe::pass2_parallel_memcpy         1.48%       8.580ms         1.48%       8.580ms     214.492us            40  
+                         _C::cpu_attn_reshape_and_cache         0.72%       4.198ms         0.72%       4.198ms     419.785us            10  
+                        _C::cpu_attention_with_kv_cache         0.72%       4.196ms         0.72%       4.196ms     419.607us            10  
+            zentorch::fused_moe::pass1_active_set_build         0.54%       3.136ms         0.54%       3.136ms      78.406us            40  
+                              _C::causal_conv1d_fwd_cpu         0.51%       2.980ms         0.53%       3.082ms     102.733us            30  
+                                              aten::cat         0.40%       2.310ms         0.45%       2.611ms      79.125us            33  
+             zentorch::fused_moe::scratchpad_allocation         0.30%       1.744ms         0.30%       1.744ms      43.590us            40  
+                                         aten::_to_copy         0.21%       1.203ms         0.28%       1.636ms      20.709us            79  
+                                 aten::_index_put_impl_         0.19%       1.088ms         0.23%       1.314ms      43.787us            30  
+                                            aten::clone         0.17%       1.016ms         1.61%       9.343ms      51.908us           180  
+                                            aten::slice         0.17%       1.003ms         0.20%       1.177ms       2.246us           524  
+                                           aten::select         0.16%     927.100us         0.17%     962.635us       8.371us           115  
+                                              aten::sum         0.15%     846.889us         0.15%     858.726us     286.242us             3  
+                                        aten::transpose         0.13%     740.840us         0.18%       1.022ms       2.832us           361  
+                          vllm::unified_kv_cache_update         0.12%     716.041us         0.92%       5.341ms     534.137us            10  
+                                            aten::empty         0.12%     713.652us         0.12%     713.652us       1.329us           537  
+                                            aten::index         0.12%     672.644us         0.28%       1.632ms      50.994us            32  
+                                       aten::as_strided         0.11%     668.074us         0.11%     668.074us       0.562us          1189  
+                                                aten::t         0.10%     594.142us         0.24%       1.376ms       5.079us           271  
+                                             aten::view         0.09%     550.288us         0.09%     550.288us       0.542us          1016  
+                                          aten::nonzero         0.09%     495.821us         0.12%     670.243us      22.341us            30  
+                    vllm::unified_attention_with_output         0.08%     467.233us         0.82%       4.775ms     477.477us            10  
+                                      Pregraph bytecode         0.08%     447.337us         0.08%     447.337us     223.669us             2  
+                               _C::fused_gdn_gating_cpu         0.08%     441.932us         0.09%     530.236us      17.675us            30  
+                                          aten::reshape         0.08%     441.133us         0.95%       5.505ms      36.220us           152  
+                                              aten::sub         0.07%     407.237us         0.15%     872.423us      19.387us            45  
+                                            aten::fill_         0.07%     394.006us         0.07%     394.937us       4.340us            91  
+                                       aten::empty_like         0.06%     357.358us         0.12%     711.221us       2.634us           270  
+             zentorch::fused_moe::token_expert_grouping         0.05%     314.934us         2.37%      13.803ms     345.083us            40  
+                   execute_context_0(0)_generation_0(0)         0.05%     279.455us         0.05%     294.496us     294.496us             1  
+                                           aten::narrow         0.05%     262.760us         0.09%     530.134us       3.870us           137  
+## Call CompiledFxGraph fiy6dve4qae7wub5lq5huedfdaug...         0.03%     200.487us         0.04%     234.914us     234.914us             1  
+                                    aten::empty_strided         0.03%     197.866us         0.03%     197.866us       1.171us           169  
+                                 aten::split_with_sizes         0.03%     183.373us         0.04%     237.059us       7.902us            30  
+                                      aten::as_strided_         0.03%     158.160us         0.03%     158.160us       5.272us            30  
+                                      aten::bitwise_not         0.02%     141.293us         0.02%     141.293us       4.710us            30  
+                                          aten::squeeze         0.02%     128.647us         0.03%     147.093us       4.903us            30  
+                                               aten::to         0.02%     127.641us         0.30%       1.764ms      20.042us            88  
+                                       aten::index_put_         0.02%     117.418us         0.25%       1.431ms      47.701us            30  
+                                       aten::contiguous         0.02%     105.192us         0.77%       4.477ms      49.746us            90  
+                                            aten::chunk         0.02%     103.705us         0.07%     382.840us      19.142us            20  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 581.212ms
+

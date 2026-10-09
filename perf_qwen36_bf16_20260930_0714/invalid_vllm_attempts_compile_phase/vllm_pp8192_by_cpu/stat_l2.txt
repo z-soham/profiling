@@ -1,0 +1,14 @@
+# started on Wed Sep 30 08:12:34 2026
+
+
+ Performance counter stats for 'CPU(s) 32-63':
+
+      638029543401      cycles                                                                
+      112381607066      l2_request_g1.all                                                     
+        2684425504      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        1666788207      l2_pf_miss_l2_l3.l2_hwpf                                              
+        2603893134      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        4659566540      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.005641008 seconds time elapsed
+

@@ -1,0 +1,297 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 384K of event 'cpu/cycles/P'
+# Event count (approx.): 1027806800322
+#
+# Overhead      Pid:Command      Shared Object                
+# ........  ...................  .............................
+#
+     3.24%   218064:llama-bench  libggml-cpu.so.0.23.0        
+     2.47%   218450:llama-bench  libggml-cpu.so.0.23.0        
+     2.47%   218458:llama-bench  libggml-cpu.so.0.23.0        
+     2.47%   218451:llama-bench  libggml-cpu.so.0.23.0        
+     2.46%   218447:llama-bench  libggml-cpu.so.0.23.0        
+     2.45%   218454:llama-bench  libggml-cpu.so.0.23.0        
+     2.45%   218457:llama-bench  libggml-cpu.so.0.23.0        
+     2.45%   218455:llama-bench  libggml-cpu.so.0.23.0        
+     2.45%   218448:llama-bench  libggml-cpu.so.0.23.0        
+     2.45%   218449:llama-bench  libggml-cpu.so.0.23.0        
+     2.45%   218466:llama-bench  libggml-cpu.so.0.23.0        
+     2.44%   218444:llama-bench  libggml-cpu.so.0.23.0        
+     2.44%   218453:llama-bench  libggml-cpu.so.0.23.0        
+     2.44%   218445:llama-bench  libggml-cpu.so.0.23.0        
+     2.44%   218459:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218467:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218462:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218456:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218446:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218452:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218465:llama-bench  libggml-cpu.so.0.23.0        
+     2.43%   218460:llama-bench  libggml-cpu.so.0.23.0        
+     2.42%   218463:llama-bench  libggml-cpu.so.0.23.0        
+     2.42%   218461:llama-bench  libggml-cpu.so.0.23.0        
+     2.42%   218474:llama-bench  libggml-cpu.so.0.23.0        
+     2.42%   218464:llama-bench  libggml-cpu.so.0.23.0        
+     2.42%   218472:llama-bench  libggml-cpu.so.0.23.0        
+     2.42%   218471:llama-bench  libggml-cpu.so.0.23.0        
+     2.41%   218473:llama-bench  libggml-cpu.so.0.23.0        
+     2.41%   218469:llama-bench  libggml-cpu.so.0.23.0        
+     2.41%   218470:llama-bench  libggml-cpu.so.0.23.0        
+     2.39%   218468:llama-bench  libggml-cpu.so.0.23.0        
+     0.36%   218466:llama-bench  [JIT] tid 218064             
+     0.36%   218455:llama-bench  [JIT] tid 218064             
+     0.36%   218459:llama-bench  [JIT] tid 218064             
+     0.36%   218462:llama-bench  [JIT] tid 218064             
+     0.36%   218451:llama-bench  [JIT] tid 218064             
+     0.36%   218463:llama-bench  [JIT] tid 218064             
+     0.36%   218457:llama-bench  [JIT] tid 218064             
+     0.36%   218467:llama-bench  [JIT] tid 218064             
+     0.36%   218469:llama-bench  [JIT] tid 218064             
+     0.35%   218458:llama-bench  [JIT] tid 218064             
+     0.35%   218452:llama-bench  [JIT] tid 218064             
+     0.35%   218468:llama-bench  [JIT] tid 218064             
+     0.35%   218465:llama-bench  [JIT] tid 218064             
+     0.35%   218461:llama-bench  [JIT] tid 218064             
+     0.35%   218472:llama-bench  [JIT] tid 218064             
+     0.35%   218464:llama-bench  [JIT] tid 218064             
+     0.35%   218474:llama-bench  [JIT] tid 218064             
+     0.35%   218453:llama-bench  [JIT] tid 218064             
+     0.35%   218473:llama-bench  [JIT] tid 218064             
+     0.35%   218471:llama-bench  [JIT] tid 218064             
+     0.35%   218454:llama-bench  [JIT] tid 218064             
+     0.35%   218460:llama-bench  [JIT] tid 218064             
+     0.34%   218456:llama-bench  [JIT] tid 218064             
+     0.34%   218470:llama-bench  [JIT] tid 218064             
+     0.34%   218064:llama-bench  [JIT] tid 218064             
+     0.34%   218449:llama-bench  [JIT] tid 218064             
+     0.34%   218446:llama-bench  [JIT] tid 218064             
+     0.34%   218445:llama-bench  [JIT] tid 218064             
+     0.34%   218450:llama-bench  [JIT] tid 218064             
+     0.34%   218447:llama-bench  [JIT] tid 218064             
+     0.33%   218444:llama-bench  [JIT] tid 218064             
+     0.33%   218448:llama-bench  [JIT] tid 218064             
+     0.27%   218469:llama-bench  libomp.so.5                  
+     0.27%   218470:llama-bench  libomp.so.5                  
+     0.27%   218468:llama-bench  libomp.so.5                  
+     0.26%   218473:llama-bench  libomp.so.5                  
+     0.26%   218471:llama-bench  libomp.so.5                  
+     0.26%   218472:llama-bench  libomp.so.5                  
+     0.26%   218461:llama-bench  libomp.so.5                  
+     0.26%   218464:llama-bench  libomp.so.5                  
+     0.26%   218460:llama-bench  libomp.so.5                  
+     0.26%   218465:llama-bench  libomp.so.5                  
+     0.25%   218446:llama-bench  libomp.so.5                  
+     0.25%   218444:llama-bench  libomp.so.5                  
+     0.25%   218474:llama-bench  libomp.so.5                  
+     0.25%   218445:llama-bench  libomp.so.5                  
+     0.25%   218448:llama-bench  libomp.so.5                  
+     0.25%   218463:llama-bench  libomp.so.5                  
+     0.25%   218462:llama-bench  libomp.so.5                  
+     0.25%   218449:llama-bench  libomp.so.5                  
+     0.24%   218447:llama-bench  libomp.so.5                  
+     0.23%   218456:llama-bench  libomp.so.5                  
+     0.23%   218466:llama-bench  libomp.so.5                  
+     0.23%   218454:llama-bench  libomp.so.5                  
+     0.22%   218453:llama-bench  libomp.so.5                  
+     0.22%   218457:llama-bench  libomp.so.5                  
+     0.22%   218455:llama-bench  libomp.so.5                  
+     0.22%   218467:llama-bench  libomp.so.5                  
+     0.22%   218459:llama-bench  libomp.so.5                  
+     0.22%   218450:llama-bench  libomp.so.5                  
+     0.22%   218452:llama-bench  libomp.so.5                  
+     0.19%   218458:llama-bench  libomp.so.5                  
+     0.19%   218451:llama-bench  libomp.so.5                  
+     0.17%   218064:llama-bench  libomp.so.5                  
+     0.04%   218453:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218064:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218458:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218450:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218470:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218456:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218452:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218444:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218451:llama-bench  libggml-base.so.0.23.0       
+     0.04%   218454:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218474:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218471:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218446:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218449:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218448:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218447:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218457:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218463:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218455:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218461:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218467:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218460:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218445:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218473:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218468:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218464:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218462:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218459:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218465:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218469:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218472:llama-bench  libggml-base.so.0.23.0       
+     0.03%   218456:llama-bench  libc.so.6                    
+     0.03%   218454:llama-bench  libc.so.6                    
+     0.03%   218457:llama-bench  libc.so.6                    
+     0.03%   218064:llama-bench  libc.so.6                    
+     0.03%   218453:llama-bench  libc.so.6                    
+     0.02%   218451:llama-bench  libc.so.6                    
+     0.02%   218455:llama-bench  libc.so.6                    
+     0.02%   218461:llama-bench  [kernel.kallsyms]            
+     0.02%   218452:llama-bench  libc.so.6                    
+     0.02%   218448:llama-bench  libc.so.6                    
+     0.02%   218466:llama-bench  libggml-base.so.0.23.0       
+     0.02%   218468:llama-bench  libc.so.6                    
+     0.02%   218467:llama-bench  [kernel.kallsyms]            
+     0.02%   218459:llama-bench  [kernel.kallsyms]            
+     0.02%   218452:llama-bench  [kernel.kallsyms]            
+     0.02%   218465:llama-bench  [kernel.kallsyms]            
+     0.02%   218458:llama-bench  libc.so.6                    
+     0.02%   218456:llama-bench  [kernel.kallsyms]            
+     0.02%   218464:llama-bench  [kernel.kallsyms]            
+     0.02%   218467:llama-bench  libc.so.6                    
+     0.02%   218463:llama-bench  libc.so.6                    
+     0.02%   218449:llama-bench  libc.so.6                    
+     0.02%   218449:llama-bench  [kernel.kallsyms]            
+     0.02%   218450:llama-bench  libc.so.6                    
+     0.02%   218446:llama-bench  [kernel.kallsyms]            
+     0.02%   218466:llama-bench  libc.so.6                    
+     0.02%   218469:llama-bench  libc.so.6                    
+     0.02%   218453:llama-bench  [kernel.kallsyms]            
+     0.02%   218445:llama-bench  libc.so.6                    
+     0.02%   218470:llama-bench  [kernel.kallsyms]            
+     0.02%   218444:llama-bench  libc.so.6                    
+     0.02%   218447:llama-bench  libc.so.6                    
+     0.02%   218455:llama-bench  [kernel.kallsyms]            
+     0.02%   218468:llama-bench  [kernel.kallsyms]            
+     0.02%   218459:llama-bench  libc.so.6                    
+     0.02%   218460:llama-bench  libc.so.6                    
+     0.02%   218448:llama-bench  [kernel.kallsyms]            
+     0.02%   218454:llama-bench  [kernel.kallsyms]            
+     0.02%   218473:llama-bench  [kernel.kallsyms]            
+     0.02%   218461:llama-bench  libc.so.6                    
+     0.02%   218445:llama-bench  [kernel.kallsyms]            
+     0.02%   218470:llama-bench  libc.so.6                    
+     0.02%   218464:llama-bench  libc.so.6                    
+     0.02%   218473:llama-bench  libc.so.6                    
+     0.02%   218447:llama-bench  [kernel.kallsyms]            
+     0.02%   218462:llama-bench  libc.so.6                    
+     0.02%   218451:llama-bench  [kernel.kallsyms]            
+     0.02%   218472:llama-bench  [kernel.kallsyms]            
+     0.02%   218472:llama-bench  libc.so.6                    
+     0.02%   218458:llama-bench  [kernel.kallsyms]            
+     0.02%   218474:llama-bench  [kernel.kallsyms]            
+     0.02%   218471:llama-bench  libc.so.6                    
+     0.02%   218450:llama-bench  [kernel.kallsyms]            
+     0.02%   218446:llama-bench  libc.so.6                    
+     0.01%   218462:llama-bench  [kernel.kallsyms]            
+     0.01%   218474:llama-bench  libc.so.6                    
+     0.01%   218064:llama-bench  [kernel.kallsyms]            
+     0.01%   218465:llama-bench  libc.so.6                    
+     0.01%   218457:llama-bench  [kernel.kallsyms]            
+     0.01%   218444:llama-bench  [kernel.kallsyms]            
+     0.01%   218460:llama-bench  [kernel.kallsyms]            
+     0.01%   218469:llama-bench  [kernel.kallsyms]            
+     0.01%   218463:llama-bench  [kernel.kallsyms]            
+     0.01%   218466:llama-bench  [kernel.kallsyms]            
+     0.01%   218471:llama-bench  [kernel.kallsyms]            
+     0.01%   218474:llama-bench  libm.so.6                    
+     0.00%   218471:llama-bench  libm.so.6                    
+     0.00%   218463:llama-bench  libm.so.6                    
+     0.00%   218064:llama-bench  libzendnnl.so                
+     0.00%   218467:llama-bench  libm.so.6                    
+     0.00%   218450:llama-bench  libm.so.6                    
+     0.00%   218457:llama-bench  libm.so.6                    
+     0.00%   218444:llama-bench  libm.so.6                    
+     0.00%   218447:llama-bench  libm.so.6                    
+     0.00%   218446:llama-bench  libm.so.6                    
+     0.00%   218473:llama-bench  libm.so.6                    
+     0.00%   218459:llama-bench  libm.so.6                    
+     0.00%   218445:llama-bench  libm.so.6                    
+     0.00%   218451:llama-bench  libm.so.6                    
+     0.00%   218458:llama-bench  libm.so.6                    
+     0.00%   218466:llama-bench  libm.so.6                    
+     0.00%   218468:llama-bench  libm.so.6                    
+     0.00%   218453:llama-bench  libm.so.6                    
+     0.00%   218454:llama-bench  libm.so.6                    
+     0.00%   218462:llama-bench  libm.so.6                    
+     0.00%   218472:llama-bench  libm.so.6                    
+     0.00%   218452:llama-bench  libm.so.6                    
+     0.00%   218464:llama-bench  libm.so.6                    
+     0.00%   218456:llama-bench  libm.so.6                    
+     0.00%   218470:llama-bench  libm.so.6                    
+     0.00%   218455:llama-bench  libm.so.6                    
+     0.00%   218473:llama-bench  libzendnnl.so                
+     0.00%   218064:llama-bench  libllama.so.0.4.0            
+     0.00%   218460:llama-bench  libm.so.6                    
+     0.00%   218469:llama-bench  libm.so.6                    
+     0.00%   218452:llama-bench  libzendnnl.so                
+     0.00%   218449:llama-bench  libm.so.6                    
+     0.00%   218471:llama-bench  libzendnnl.so                
+     0.00%   218064:llama-bench  libm.so.6                    
+     0.00%   218448:llama-bench  libm.so.6                    
+     0.00%   218465:llama-bench  libzendnnl.so                
+     0.00%   218445:llama-bench  libzendnnl.so                
+     0.00%   218465:llama-bench  libm.so.6                    
+     0.00%   218474:llama-bench  libzendnnl.so                
+     0.00%   218461:llama-bench  libm.so.6                    
+     0.00%   218450:llama-bench  libzendnnl.so                
+     0.00%   218453:llama-bench  libzendnnl.so                
+     0.00%   218458:llama-bench  libzendnnl.so                
+     0.00%   218451:llama-bench  libzendnnl.so                
+     0.00%   218446:llama-bench  libzendnnl.so                
+     0.00%   218448:llama-bench  libzendnnl.so                
+     0.00%   218467:llama-bench  libzendnnl.so                
+     0.00%   218455:llama-bench  libzendnnl.so                
+     0.00%   218468:llama-bench  libzendnnl.so                
+     0.00%   218457:llama-bench  libzendnnl.so                
+     0.00%   218447:llama-bench  libzendnnl.so                
+     0.00%   218449:llama-bench  libzendnnl.so                
+     0.00%   218460:llama-bench  libzendnnl.so                
+     0.00%   218463:llama-bench  libzendnnl.so                
+     0.00%   218445:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218064:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218471:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218472:llama-bench  libzendnnl.so                
+     0.00%   218461:llama-bench  libzendnnl.so                
+     0.00%   218470:llama-bench  libzendnnl.so                
+     0.00%   218444:llama-bench  libzendnnl.so                
+     0.00%   218444:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218469:llama-bench  libzendnnl.so                
+     0.00%   218464:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218474:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218462:llama-bench  libzendnnl.so                
+     0.00%   218466:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218456:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218447:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218465:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218458:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218460:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218064:llama-bench  ld-linux-x86-64.so.2         
+     0.00%   218456:llama-bench  libzendnnl.so                
+     0.00%   218064:llama-bench  libtcmalloc_minimal.so.4.5.16
+     0.00%   218468:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218472:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218464:llama-bench  ld-linux-x86-64.so.2         
+     0.00%   218474:llama-bench  ld-linux-x86-64.so.2         
+     0.00%   218455:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218457:llama-bench  ld-linux-x86-64.so.2         
+     0.00%   218450:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218469:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218458:llama-bench  ld-linux-x86-64.so.2         
+     0.00%   218459:llama-bench  libzendnnl.so                
+     0.00%   218453:llama-bench  libggml-zendnn.so.0.23.0     
+     0.00%   218444:llama-bench  ld-linux-x86-64.so.2         
+     0.00%   218454:llama-bench  libzendnnl.so                
+     0.00%   218467:llama-bench  libggml-zendnn.so.0.23.0     
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

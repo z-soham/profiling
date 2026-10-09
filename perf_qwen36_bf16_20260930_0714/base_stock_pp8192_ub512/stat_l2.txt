@@ -1,0 +1,14 @@
+# started on Wed Sep 30 07:21:38 2026
+
+
+ Performance counter stats for process id '218652':
+
+     1072756003961      cycles                                                                
+      334189613928      l2_request_g1.all                                                     
+       15330696491      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        2869747599      l2_pf_miss_l2_l3.l2_hwpf                                              
+        6588076124      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        5879517357      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.005373869 seconds time elapsed
+

@@ -1,0 +1,262 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 478K of event 'cpu/cycles/P'
+# Event count (approx.): 1288414585343
+#
+# Overhead  Shared Object                                                 Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ............................................................  ...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    20.48%  libiomp5.so                                                   [.] kmp_flag_64<false, true>::wait(kmp_info*, int, void*)
+     1.19%  [JIT] tid 242308                                              [.] 0x00007fe2544d8148
+     1.14%  libtorch_cpu.so                                               [.] void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::native::AVX2::VectorizedLoop2d<at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(c10::BFloat16)#1}, at::native::AVX2::direct_copy_kernel(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(at::vec::AVX2::Vectorized<c10::BFloat16>)#1}> >(long, char**, long const*, long, long)
+     1.12%  [JIT] tid 242308                                              [.] 0x00007fe2544d8169
+     1.03%  [JIT] tid 242308                                              [.] 0x00007fe2544d8121
+     1.01%  [JIT] tid 242308                                              [.] 0x00007fe2544d8133
+     1.00%  [JIT] tid 242308                                              [.] 0x00007fe2544d812d
+     0.99%  [JIT] tid 242308                                              [.] 0x00007fe2544d8139
+     0.98%  [JIT] tid 242308                                              [.] 0x00007fe2544d8127
+     0.92%  [JIT] tid 242308                                              [.] 0x00007fe2544d8142
+     0.90%  [JIT] tid 242308                                              [.] 0x00007fe2544d8175
+     0.90%  [JIT] tid 242308                                              [.] 0x00007fe2544d813c
+     0.90%  [JIT] tid 242308                                              [.] 0x00007fe2544d819c
+     0.89%  [JIT] tid 242308                                              [.] 0x00007fe2544d816f
+     0.88%  [JIT] tid 242308                                              [.] 0x00007fe2544d817b
+     0.88%  [JIT] tid 242308                                              [.] 0x00007fe2544d8196
+     0.88%  [JIT] tid 242308                                              [.] 0x00007fe2544d8190
+     0.87%  [JIT] tid 242308                                              [.] 0x00007fe2544d80f4
+     0.84%  [JIT] tid 242308                                              [.] 0x00007fe2544d817e
+     0.84%  [JIT] tid 242308                                              [.] 0x00007fe2544d81b7
+     0.84%  [JIT] tid 242308                                              [.] 0x00007fe2544d818a
+     0.84%  [JIT] tid 242308                                              [.] 0x00007fe2544d81ab
+     0.84%  [JIT] tid 242308                                              [.] 0x00007fe2544d8184
+     0.84%  [JIT] tid 242308                                              [.] 0x00007fe2544d81b1
+     0.83%  [JIT] tid 242308                                              [.] 0x00007fe2544d81bd
+     0.82%  [JIT] tid 242308                                              [.] 0x00007fe2544d81a5
+     0.82%  [JIT] tid 242308                                              [.] 0x00007fe2544d81dc
+     0.82%  [JIT] tid 242308                                              [.] 0x00007fe2544d819f
+     0.81%  [JIT] tid 242308                                              [.] 0x00007fe2544d8112
+     0.80%  [JIT] tid 242308                                              [.] 0x00007fe2544d8118
+     0.79%  [JIT] tid 242308                                              [.] 0x00007fe2544d811b
+     0.78%  [JIT] tid 242308                                              [.] 0x00007fe2544d81d2
+     0.78%  [JIT] tid 242308                                              [.] 0x00007fe2544d8163
+     0.78%  [JIT] tid 242308                                              [.] 0x00007fe2544d815a
+     0.77%  [JIT] tid 242308                                              [.] 0x00007fe2544d814e
+     0.77%  [JIT] tid 242308                                              [.] 0x00007fe2544d8154
+     0.77%  [JIT] tid 242308                                              [.] 0x00007fe2544d815d
+     0.76%  [JIT] tid 242308                                              [.] 0x00007fe2544d81cc
+     0.71%  libzentorch.so                                                [.] zendnnl::lowoha::matmul::(anonymous namespace)::moe_weighted_reduce_avx512_bf16(zendnnl::lowoha::matmul::group_matmul_moe_postop_params const*, int, int) [clone ._omp_fn.0]
+     0.70%  [JIT] tid 242308                                              [.] 0x00007fe2544d81c0
+     0.69%  [JIT] tid 242308                                              [.] 0x00007fe2544d81c6
+     0.64%  [JIT] tid 242308                                              [.] 0x00007fe2544d8108
+     0.64%  _C.abi3.so                                                    [.] void cpu_attention::(anonymous namespace)::TileGemm82<c10::BFloat16>::gemm_micro<8>(float*, c10::BFloat16*, float*, long, long, long, int, int, bool) [clone .constprop.0]
+     0.64%  [JIT] tid 242308                                              [.] 0x00007fe2544d810f
+     0.62%  [JIT] tid 242308                                              [.] 0x00007fe2544d81d8
+     0.62%  [JIT] tid 242308                                              [.] 0x00007fe2544d80f1
+     0.62%  [JIT] tid 242308                                              [.] 0x00007fe2544d8101
+     0.62%  [JIT] tid 242308                                              [.] 0x00007fe2544d80fa
+     0.61%  _C.abi3.so                                                    [.] cpu_attention::AttentionImpl<(cpu_attention::ISA)1, c10::BFloat16, 256l, c10::BFloat16>::reshape_and_cache(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*, c10::BFloat16*, long const*, long, long, long, long, long, long, long, long, long, long, long, float, float) [clone ._omp_fn.0]
+     0.49%  [JIT] tid 242308                                              [.] 0x00007fe2544880ba
+     0.48%  [JIT] tid 242308                                              [.] 0x00007fe2544880c0
+     0.48%  [JIT] tid 242308                                              [.] 0x00007fe2544880c6
+     0.47%  [JIT] tid 242308                                              [.] 0x00007fe254b0f330
+     0.47%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3b5
+     0.46%  [JIT] tid 242308                                              [.] 0x00007fe2544880cc
+     0.45%  [JIT] tid 242308                                              [.] 0x00007fe2544880d2
+     0.44%  cjkl35cnfyz3knsmpysdahluwuqbz3vi44g32vo2k5eb3lpfcgvr.main.so  [.] kernel._omp_fn.0
+     0.44%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3da
+     0.39%  [JIT] tid 242308                                              [.] 0x00007fe254b0f35d
+     0.39%  [JIT] tid 242308                                              [.] 0x00007fe2544880b4
+     0.39%  [JIT] tid 242308                                              [.] 0x00007fe254b0f327
+     0.38%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3a8
+     0.38%  [JIT] tid 242308                                              [.] 0x00007fe254b0f37f
+     0.37%  [JIT] tid 242308                                              [.] 0x00007fe254b0f33c
+     0.37%  [JIT] tid 242308                                              [.] 0x00007fe254b0f366
+     0.36%  [JIT] tid 242308                                              [.] 0x00007fe2544880db
+     0.36%  [JIT] tid 242308                                              [.] 0x00007fe254b0f393
+     0.35%  [JIT] tid 242308                                              [.] 0x00007fe2544880d5
+     0.34%  [kernel.kallsyms]                                             [k] native_queued_spin_lock_slowpath
+     0.34%  [JIT] tid 242308                                              [.] 0x00007fe254b0f32d
+     0.33%  [JIT] tid 242308                                              [.] 0x00007fe254b0f336
+     0.33%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3af
+     0.32%  [JIT] tid 242308                                              [.] 0x00007fe254b0f399
+     0.32%  [JIT] tid 242308                                              [.] 0x00007fe254b0f320
+     0.32%  [JIT] tid 242308                                              [.] 0x00007fe254b0f39c
+     0.31%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3bc
+     0.31%  _C.abi3.so                                                    [.] (anonymous namespace)::tinygemm_kernel<c10::BFloat16, 4, 64, false, true>::apply(c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16*, c10::BFloat16 const*, c10::BFloat16 const*, bool, long, long, bool) [clone .constprop.0]
+     0.31%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3d2
+     0.31%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3cf
+     0.31%  [JIT] tid 242308                                              [.] 0x00007fe254b0f379
+     0.31%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3d6
+     0.31%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3a2
+     0.30%  [JIT] tid 242308                                              [.] 0x00007fe254b0f386
+     0.30%  [JIT] tid 242308                                              [.] 0x00007fe2544600f9
+     0.30%  [JIT] tid 242308                                              [.] 0x00007fe2544880ab
+     0.30%  [JIT] tid 242308                                              [.] 0x00007fe254b0f2df
+     0.30%  [JIT] tid 242308                                              [.] 0x00007fe254b0f372
+     0.30%  [JIT] tid 242308                                              [.] 0x00007fe254b0f363
+     0.29%  [JIT] tid 242308                                              [.] 0x00007fe254b0f36c
+     0.29%  [JIT] tid 242308                                              [.] 0x00007fe2544880b1
+     0.29%  [JIT] tid 242308                                              [.] 0x00007fe254b0f349
+     0.28%  [JIT] tid 242308                                              [.] 0x00007fe254b0f38c
+     0.28%  [JIT] tid 242308                                              [.] 0x00007fe254b0f343
+     0.28%  [JIT] tid 242308                                              [.] 0x00007fe254b0f356
+     0.27%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3c9
+     0.27%  [JIT] tid 242308                                              [.] 0x00007fe254b0f3c2
+     0.26%  [JIT] tid 242308                                              [.] 0x00007fe254b0f350
+     0.26%  [JIT] tid 242308                                              [.] 0x00007fe254b0f31a
+     0.26%  [JIT] tid 242308                                              [.] 0x00007fe254b0f2dc
+     0.26%  [JIT] tid 242308                                              [.] 0x00007fe254b0f313
+     0.26%  [JIT] tid 242308                                              [.] 0x00007fe2544880e1
+     0.25%  c2p6m3t4emmkzeip24xxcwhgl2v2b4wn2pcnzie2n3tr5ncgefb5.main.so  [.] kernel._omp_fn.0
+     0.25%  libzentorch.so                                                [.] zendnnl::lowoha::matmul::(anonymous namespace)::silu_and_mul_row_avx512_bf16(zendnnl::common::bfloat16_t*, int)
+     0.25%  [JIT] tid 242308                                              [.] 0x00007fe2544880a1
+     0.24%  [JIT] tid 242308                                              [.] 0x00007fe25446011a
+     0.24%  [JIT] tid 242308                                              [.] 0x00007fe254460120
+     0.23%  [JIT] tid 242308                                              [.] 0x00007fe254460105
+     0.23%  [JIT] tid 242308                                              [.] 0x00007fe25446010e
+     0.23%  [JIT] tid 242308                                              [.] 0x00007fe2544600ff
+     0.23%  [JIT] tid 242308                                              [.] 0x00007fe254460114
+     0.23%  [JIT] tid 242308                                              [.] 0x00007fe25446010b
+     0.22%  ctvju5drqthy3adws5jblb5tumifdpeifd4f4dqxoz7u4jz5eztt.main.so  [.] kernel._omp_fn.0
+     0.21%  [JIT] tid 242308                                              [.] 0x00007fe2544880a8
+     0.21%  [JIT] tid 242308                                              [.] 0x00007fe254b0f2e5
+     0.20%  libiomp5.so                                                   [.] kmp_flag_native<unsigned long long, (flag_type)1, true>::notdone_check()
+     0.17%  ck6utlskpnvwob7pfdb7z7l2kxtr7i36rz6sau4spfo2ke5al2in.main.so  [.] kernel._omp_fn.0
+     0.16%  _C.abi3.so                                                    [.] (anonymous namespace)::update_kernel<c10::BFloat16, 128>::apply(c10::BFloat16*, float const*, int, int, int) [clone .constprop.0]
+     0.16%  [JIT] tid 242308                                              [.] 0x00007fe254b0f2fa
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe2544880ed
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe2544600ed
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe254b0f306
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe2544880e7
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe2544600a5
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe2544600f3
+     0.15%  [JIT] tid 242308                                              [.] 0x00007fe25448809a
+     0.14%  [JIT] tid 242308                                              [.] 0x00007fe254b0f30d
+     0.14%  [JIT] tid 242308                                              [.] 0x00007fe254b0f2ec
+     0.14%  cg4uldivffnmxssnvgc2mvtwhjoxcbtecv2a5ra5ddwdq3h3rsur.main.so  [.] kernel._omp_fn.0
+     0.14%  [JIT] tid 242308                                              [.] 0x00007fe2540f819c
+     0.14%  libtorch_cpu.so                                               [.] Sleef_finz_expf16_u10avx512f
+     0.14%  [JIT] tid 242308                                              [.] 0x00007fe254438138
+     0.14%  [JIT] tid 242308                                              [.] 0x00007fe254438132
+     0.13%  _C.abi3.so                                                    [.] (anonymous namespace)::l2norm_kernel<c10::BFloat16, 128, true>::apply(c10::BFloat16*, c10::BFloat16 const*, float)
+     0.13%  [JIT] tid 242308                                              [.] 0x00007fe254460126
+     0.13%  [JIT] tid 242308                                              [.] 0x00007fe25446012a
+     0.13%  [JIT] tid 242308                                              [.] 0x00007fe2544600de
+     0.13%  [JIT] tid 242308                                              [.] 0x00007fe254b0f2f3
+     0.13%  libzentorch.so                                                [.] amdzen::gen::jitAmdZenBF16::executeKernel(dlp::kernels::kernelParams*)
+     0.12%  _C.abi3.so                                                    [.] (anonymous namespace)::solve_tril_kernel<c10::BFloat16, 64>::apply(c10::BFloat16*, int)
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe2544600e4
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe25443813e
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe254438159
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe254b0f300
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe25443812c
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe254438147
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe254438144
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe25443814d
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe254488093
+     0.12%  [JIT] tid 242308                                              [.] 0x00007fe2544600ea
+     0.12%  libtorch_cpu.so                                               [.] void c10::function_ref<void (char**, long const*, long, long)>::callback_fn<at::TensorIteratorBase::loop_2d_from_1d<at::native::cpu_index_kernel<float, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(char*, char*, long)#3}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(char*, char*, long)#3} const&, bool)::{lambda(char**, long const*, long)#1}>(at::native::cpu_index_kernel<float, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(char*, char*, long)#3}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(char*, char*, long)#3} const&, bool)::{lambda(char**, long const*, long)#1} const&)::{lambda(char**, long const*, long, long)#1}>(long, char**, long const*, long, long)
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438111
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe25448808d
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe2544380fc
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438105
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438123
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438126
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe25443811d
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438102
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438153
+     0.11%  _C.abi3.so                                                    [.] (anonymous namespace)::l2norm_kernel<c10::BFloat16, 128, false>::apply(c10::BFloat16*, c10::BFloat16 const*, float)
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe2540f814a
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe2544880f1
+     0.11%  cimydndyut47bzsj6h3plzncmsqbjcgqayge227kcfjupzzl4sbh.main.so  [.] kernel._omp_fn.0
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe25443810b
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe254438117
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe2544380e4
+     0.11%  [JIT] tid 242308                                              [.] 0x00007fe2544380f6
+     0.10%  [JIT] tid 242308                                              [.] 0x00007fe2544380ea
+     0.09%  libtorch_cpu.so                                               [.] void std::__introselect<__gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<at::native::AVX2::topk_impl_loop<c10::BFloat16, float>(long, long, long, long, long, bool, bool, char**, long const*, long)::{lambda(std::pair<float, long> const&, std::pair<float, long> const&)#3}> >(__gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, __gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, __gnu_cxx::__normal_iterator<std::pair<float, long>*, std::vector<std::pair<float, long>, std::allocator<std::pair<float, long> > > >, long, __gnu_cxx::__ops::_Iter_comp_iter<at::native::AVX2::topk_impl_loop<c10::BFloat16, float>(long, long, long, long, long, bool, bool, char**, long const*, long)::{lambda(std::pair<float, long> const&, std::pair<float, long> const&)#3}>)
+     0.09%  [JIT] tid 242308                                              [.] 0x00007fe2544380f0
+     0.09%  [JIT] tid 242308                                              [.] 0x00007fe254438163
+     0.09%  [JIT] tid 242308                                              [.] 0x00007fe25443815f
+     0.08%  libzentorch.so                                                [.] dlp_gemm_rowvar_avx512bf16_bf16bf16f32of32
+     0.08%  [JIT] tid 242308                                              [.] 0x00007fe2544600cc
+     0.08%  [JIT] tid 242308                                              [.] 0x00007fe2544600d2
+     0.08%  [JIT] tid 242308                                              [.] 0x00007fe2544600d8
+     0.08%  [JIT] tid 242308                                              [.] 0x00007fe2540f80d2
+     0.08%  libc.so.6                                                     [.] 0x00000000001a1914
+     0.08%  [JIT] tid 242308                                              [.] 0x00007fe2540f8180
+     0.08%  [JIT] tid 242308                                              [.] 0x00007fe2540f8198
+     0.07%  libc.so.6                                                     [.] 0x00000000001a191b
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe25448808a
+     0.07%  libc.so.6                                                     [.] 0x00000000001a190d
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2540f8192
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2540f818c
+     0.07%  _C.abi3.so                                                    [.] (anonymous namespace)::chunk_gated_delta_rule_fwd_intra_kernel_impl<c10::BFloat16, 128, 64>(c10::BFloat16*, c10::BFloat16*, float*, c10::BFloat16 const*, c10::BFloat16 const*, float const*, c10::BFloat16 const*, int const*, int const*, long, long, long, long, long, long, long)::{lambda(long, long)#1}::operator()(long, long) const
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2544600a2
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2544d824d
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2540f815f
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2544600ab
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2540f8177
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2540f816b
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2544d822c
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2540f817d
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2544600c3
+     0.07%  [JIT] tid 242308                                              [.] 0x00007fe2544600c9
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d8232
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f8165
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f8171
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f8186
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d823e
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d8226
+     0.06%  _C.abi3.so                                                    [.] (anonymous namespace)::decay_mask_kernel<float, 64>::apply(float*, float const*)
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80e2
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d826e
+     0.06%  _C.abi3.so                                                    [.] (anonymous namespace)::update_value_kernel<c10::BFloat16, 128>::apply(c10::BFloat16*, c10::BFloat16 const*, float const*, int, int, int)
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f815c
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80f9
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f8156
+     0.06%  [kernel.kallsyms]                                             [k] native_sched_clock
+     0.06%  libzentorch.so                                                [.] dlp_execute_kernel
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80e9
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d8238
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d8247
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80f0
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d81f9
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80fc
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80db
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f8135
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80d5
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d829b
+     0.06%  [kernel.kallsyms]                                             [k] do_syscall_64
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f8144
+     0.06%  [kernel.kallsyms]                                             [k] entry_SYSCALL_64
+     0.06%  libc.so.6                                                     [.] 0x00000000001a1f4e
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d8241
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2544d8274
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f813b
+     0.06%  [JIT] tid 242308                                              [.] 0x00007fe2540f80f3
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d8289
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d8206
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d821d
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d8295
+     0.05%  libc.so.6                                                     [.] 0x00000000001a1f47
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2540f812f
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d8283
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d8280
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d828f
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2540f813e
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d82b0
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d8220
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d82a1
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d827a
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d82bc
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2540f8150
+     0.05%  [JIT] tid 242308                                              [.] 0x00007fe2544d82e1
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

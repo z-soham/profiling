@@ -1,0 +1,13 @@
+# started on Wed Sep 30 08:12:19 2026
+
+
+ Performance counter stats for 'CPU(s) 32-63':
+
+       17626309300      ls_any_fills_from_sys.local_l2                                        
+         253325682      ls_any_fills_from_sys.local_ccx                                       
+          31390763      ls_any_fills_from_sys.near_cache                                      
+         359047548      ls_any_fills_from_sys.dram_io_near                                      
+            685864      ls_any_fills_from_sys.dram_io_far                                      
+
+      15.003789843 seconds time elapsed
+

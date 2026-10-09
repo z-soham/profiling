@@ -1,0 +1,26 @@
+[API    ][warning][0.363272]:[GRP_MATMUL.ALGO WARN] env_algo=2 (flat_m_tile) on a shape with active_ops > num_threads that the multi-tier hybrid declined: single-tier M-tile is infeasible (cannot give < 1 thread per active expert).  CLAMP to sequential full-team (ALGO 1 equivalent).
+opprof: pp256 ub256  clean 2475.1 ms (103.4 t/s)  profiled 2112.6 ms (121.2 t/s)  sum(nodes) 2106.8 ms
+  MUL_MAT_ID	ZenDNN                             120 calls     1540.4 ms  73.12%
+  CONCAT	CPU                                     30 calls      231.0 ms  10.96%
+  MUL_MAT	ZenDNN                                391 calls      124.0 ms   5.88%
+  GATED_DELTA_NET	CPU                            30 calls       49.0 ms   2.33%
+  SIGMOID	CPU                                    80 calls       32.3 ms   1.53%
+  MUL	CPU                                       281 calls       27.1 ms   1.29%
+  RMS_NORM	CPU                                  191 calls       21.0 ms   1.00%
+  SSM_CONV	CPU                                   30 calls       13.6 ms   0.65%
+  SCALE	CPU                                     120 calls       12.1 ms   0.57%
+  ADD	CPU                                       430 calls        9.9 ms   0.47%
+  FLASH_ATTN_EXT	CPU                             10 calls        9.1 ms   0.43%
+  SILU	CPU                                       60 calls        8.3 ms   0.39%
+  GET_ROWS	CPU                                  162 calls        7.1 ms   0.34%
+  SWIGLU	CPU                                     80 calls        7.1 ms   0.34%
+  ARGSORT	CPU                                    40 calls        5.3 ms   0.25%
+  CPY	CPU                                       120 calls        3.3 ms   0.16%
+  CONT	CPU                                       10 calls        2.1 ms   0.10%
+  SOFTPLUS	CPU                                   30 calls        1.6 ms   0.07%
+  SOFT_MAX	CPU                                   40 calls        0.8 ms   0.04%
+  ROPE	CPU                                       20 calls        0.7 ms   0.03%
+  DIV	CPU                                        40 calls        0.5 ms   0.02%
+  SET_ROWS	CPU                                   20 calls        0.4 ms   0.02%
+  SUM_ROWS	CPU                                   40 calls        0.1 ms   0.01%
+  CLAMP	CPU                                      40 calls        0.0 ms   0.00%

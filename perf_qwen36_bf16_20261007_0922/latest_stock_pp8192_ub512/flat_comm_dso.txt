@@ -1,0 +1,24 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 396K of event 'cpu/cycles/P'
+# Event count (approx.): 1054518154979
+#
+# Overhead  Command      Shared Object         
+# ........  ...........  ......................
+#
+    91.84%  llama-bench  libggml-cpu.so.0.26.0 
+     6.61%  llama-bench  libomp.so.5           
+     0.74%  llama-bench  libc.so.6             
+     0.67%  llama-bench  [kernel.kallsyms]     
+     0.10%  llama-bench  libm.so.6             
+     0.04%  llama-bench  libggml-base.so.0.26.0
+     0.01%  llama-bench  ld-linux-x86-64.so.2  
+     0.00%  llama-bench  libllama.so.0.6.0     
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

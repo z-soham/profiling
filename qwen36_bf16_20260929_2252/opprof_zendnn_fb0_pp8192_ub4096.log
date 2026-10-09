@@ -1,0 +1,25 @@
+opprof: pp8192 ub4096  clean 30074.6 ms (272.4 t/s)  profiled 31910.6 ms (256.7 t/s)  sum(nodes) 31803.9 ms
+  CONCAT	CPU                                     60 calls    14688.1 ms  46.18%
+  MUL_MAT_ID	ZenDNN                             240 calls     5739.1 ms  18.05%
+  FLASH_ATTN_EXT	CPU                             20 calls     2992.7 ms   9.41%
+  MUL_MAT	ZenDNN                                782 calls     2727.9 ms   8.58%
+  GATED_DELTA_NET	CPU                            60 calls     1538.7 ms   4.84%
+  SIGMOID	CPU                                   160 calls      969.0 ms   3.05%
+  MUL	CPU                                       562 calls      673.2 ms   2.12%
+  RMS_NORM	CPU                                  382 calls      524.3 ms   1.65%
+  SSM_CONV	CPU                                   60 calls      439.4 ms   1.38%
+  ADD	CPU                                       860 calls      416.8 ms   1.31%
+  SCALE	CPU                                     240 calls      339.8 ms   1.07%
+  SWIGLU	CPU                                    160 calls      207.1 ms   0.65%
+  SILU	CPU                                      120 calls      198.2 ms   0.62%
+  ARGSORT	CPU                                    80 calls      142.5 ms   0.45%
+  GET_ROWS	CPU                                  324 calls       71.9 ms   0.23%
+  SOFTPLUS	CPU                                   60 calls       48.6 ms   0.15%
+  CONT	CPU                                       20 calls       40.2 ms   0.13%
+  ROPE	CPU                                       40 calls       14.0 ms   0.04%
+  SET_ROWS	CPU                                   40 calls       13.3 ms   0.04%
+  SOFT_MAX	CPU                                   80 calls       11.1 ms   0.03%
+  CPY	CPU                                       240 calls        4.3 ms   0.01%
+  DIV	CPU                                        80 calls        1.9 ms   0.01%
+  SUM_ROWS	CPU                                   80 calls        1.4 ms   0.00%
+  CLAMP	CPU                                      80 calls        0.4 ms   0.00%

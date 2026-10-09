@@ -1,0 +1,14 @@
+# started on Wed Sep 30 08:47:41 2026
+
+
+ Performance counter stats for 'CPU(s) 32-63':
+
+         480130.38 msec task-clock                                                            
+     1018004777913      cycles                                                                
+     2236618619407      instructions                                                          
+             98293      context-switches                                                      
+                32      cpu-migrations                                                        
+             19220      page-faults                                                           
+
+      15.003897544 seconds time elapsed
+

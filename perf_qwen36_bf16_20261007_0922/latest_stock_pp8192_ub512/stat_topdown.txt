@@ -1,0 +1,29 @@
+# started on Wed Oct  7 09:25:04 2026
+
+
+ Performance counter stats for process id '919673':
+
+         606507481      ex_ret_brn_misp                  #      0.7 %ops  bad_speculation_from_mispredicts
+                                                         #      0.1 %ops  bad_speculation_from_pipeline_restarts  (20.03%)
+          54571606      bp_redirects.resync                                                     (20.03%)
+     1779480781248      de_src_op_disp.all               #      0.8 %ops  bad_speculation       (20.03%)
+     1058264751363      ls_not_halted_cyc                                                       (20.03%)
+     1711450118856      ex_ret_ops                       #     20.2 %slots  retiring            (20.03%)
+      486324383514      ex_no_retire.load_not_complete   #     15.6 %slots  backend_bound_by_cpu
+                                                         #     55.3 %slots  backend_bound_by_memory  (21.38%)
+     5989206959086      de_no_dispatch_per_slot.backend_stalls #     70.8 %slots  backend_bound       (21.38%)
+      623224531669      ex_no_retire.not_complete                                               (21.38%)
+     1056822892417      ls_not_halted_cyc                                                       (21.38%)
+       31279645432      ex_ret_ucode_ops                 #     19.8 %slots  retiring_from_fastpath
+                                                         #      0.4 %slots  retiring_from_microcode  (20.00%)
+     1056377087575      ls_not_halted_cyc                                                       (20.00%)
+     1707517135375      ex_ret_ops                                                              (20.00%)
+      692408499635      de_no_dispatch_per_slot.no_ops_from_frontend #      8.2 %slots  frontend_bound    
+                                                         #      3.7 %slots  frontend_bound_by_bandwidth  (39.99%)
+     1056527009434      ls_not_halted_cyc                                                       (39.99%)
+       47033463646      cpu/de_no_dispatch_per_slot.no_ops_from_frontend,cmask=0x8/ #      4.5 %slots  frontend_bound_by_latency  (39.99%)
+                 0      de_no_dispatch_per_slot.smt_contention #      0.0 %slots  smt_contention      (40.00%)
+     1057296024561      ls_not_halted_cyc                                                       (40.00%)
+
+      15.006165193 seconds time elapsed
+

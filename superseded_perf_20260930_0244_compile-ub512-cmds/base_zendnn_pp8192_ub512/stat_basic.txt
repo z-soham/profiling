@@ -1,0 +1,14 @@
+# started on Wed Sep 30 02:47:03 2026
+
+
+ Performance counter stats for process id '197296':
+
+         480194.57 msec task-clock                                                            
+     1305647580365      cycles                                                                
+     2269472697186      instructions                                                          
+                30      context-switches                                                      
+                 0      cpu-migrations                                                        
+                 0      page-faults                                                           
+
+      15.007315109 seconds time elapsed
+

@@ -1,0 +1,21 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'page-faults'
+# Event count (approx.): 70150
+#
+# Children      Self  Symbol                
+# ........  ........  ......................
+#
+    86.10%    86.10%  [.] 0x000073e49e69c290
+    86.10%     0.00%  [.] 0x000073e4aea947f8
+    13.90%    13.90%  [.] 0x00000000005e6656
+    13.90%     0.00%  [.] 0x000073e4ae50f656
+    13.90%     0.00%  [.] 0x7ffd6bf98d1f73f6
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

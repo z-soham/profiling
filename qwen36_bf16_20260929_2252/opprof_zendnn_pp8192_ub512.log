@@ -1,0 +1,26 @@
+opprof: pp8192 ub512  clean 34008.6 ms (240.9 t/s)  profiled 31262.7 ms (262.0 t/s)  sum(nodes) 31124.4 ms
+  MUL_MAT_ID	CPU                               1920 calls    12338.1 ms  39.64%
+  CONCAT	CPU                                    480 calls     7193.9 ms  23.11%
+  MUL_MAT	ZenDNN                               4640 calls     3086.7 ms   9.92%
+  FLASH_ATTN_EXT	CPU                            160 calls     2662.2 ms   8.55%
+  GATED_DELTA_NET	CPU                           480 calls     1565.7 ms   5.03%
+  SIGMOID	CPU                                  1280 calls      990.0 ms   3.18%
+  RMS_NORM	CPU                                 3056 calls      610.0 ms   1.96%
+  MUL	CPU                                      4496 calls      535.4 ms   1.72%
+  SSM_CONV	CPU                                  480 calls      443.0 ms   1.42%
+  SCALE	CPU                                    1920 calls      331.8 ms   1.07%
+  SILU	CPU                                      960 calls      247.5 ms   0.80%
+  ADD	CPU                                      6880 calls      229.9 ms   0.74%
+  SWIGLU	CPU                                   1280 calls      196.5 ms   0.63%
+  ARGSORT	CPU                                   640 calls      159.6 ms   0.51%
+  MUL_MAT	CPU                                  1616 calls      158.7 ms   0.51%
+  GET_ROWS	CPU                                 2592 calls      154.2 ms   0.50%
+  CONT	CPU                                      160 calls       61.5 ms   0.20%
+  SOFTPLUS	CPU                                  480 calls       49.4 ms   0.16%
+  CPY	CPU                                      1920 calls       48.8 ms   0.16%
+  SOFT_MAX	CPU                                  640 calls       19.0 ms   0.06%
+  ROPE	CPU                                      320 calls       17.9 ms   0.06%
+  SET_ROWS	CPU                                  320 calls       13.5 ms   0.04%
+  DIV	CPU                                       640 calls        8.2 ms   0.03%
+  SUM_ROWS	CPU                                  640 calls        2.3 ms   0.01%
+  CLAMP	CPU                                     640 calls        0.7 ms   0.00%

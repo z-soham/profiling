@@ -1,0 +1,14 @@
+# started on Wed Sep 30 08:04:54 2026
+
+
+ Performance counter stats for process id '225437':
+
+      575913055727      cycles                                                                
+       57863298751      l2_request_g1.all                                                     
+        3279935810      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        1867635572      l2_pf_miss_l2_l3.l2_hwpf                                              
+        3582144657      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        1827361795      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.004869476 seconds time elapsed
+

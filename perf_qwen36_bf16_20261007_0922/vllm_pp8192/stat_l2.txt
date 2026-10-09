@@ -1,0 +1,14 @@
+# started on Wed Oct  7 09:43:02 2026
+
+
+ Performance counter stats for 'CPU(s) 192-223':
+
+     1024522695109      cycles                                                                
+      215315606169      l2_request_g1.all                                                     
+        4758802577      l2_cache_req_stat.ic_dc_miss_in_l2                                      
+        2752424384      l2_pf_miss_l2_l3.l2_hwpf                                              
+        4334076355      l2_pf_miss_l2_l3.l1_dc_l2_hwpf                                        
+        9030845726      l2_pf_miss_l2_hit_l3.l2_hwpf                                          
+
+      15.006560610 seconds time elapsed
+
